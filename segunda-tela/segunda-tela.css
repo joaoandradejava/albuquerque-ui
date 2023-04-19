@@ -1,0 +1,207 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.menu-bar-topo {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.menu-bar-topo a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-bar-topo a:hover {
+  text-decoration: underline;
+}
+
+.fundo {
+  background: url("../assets/images/foto-loja.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+}
+
+.fundo-azul {
+  background-color: rgb(32, 32, 124);
+  font-size: 30px;
+}
+
+.fundo-vermelho {
+  background-color: red;
+  font-size: 18px;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 240px;
+  height: 240px;
+  margin: 10px 0px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.c-1-fundo {
+  background: url("../assets/images/suspensao.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.c-2-fundo {
+  background: url("../assets/images/mecanica.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.c-3-fundo {
+  background: url("../assets/images/group-20.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.c-4-fundo {
+  background: url("../assets/images/pecas.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.c-5-fundo {
+  background: url("../assets/images/alinhamento.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.c-6-fundo {
+  background: url("../assets/images/pneu.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btn-escolher-servico {
+  background-color: red;
+  color: white;
+}
+
+.btn-escolher-servico:hover {
+  background-color: rgb(172, 1, 1) !important ;
+  color: white;
+}
+
+.fundo-conheca-nosso-espaco {
+  background-color: rgb(19, 19, 58);
+  font-size: 40px;
+}
+
+.centralizar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-help {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.label-avaliacao {
+  font-size: 50px;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.avaliacao {
+  border: 1px solid black;
+  height: 200px;
+  border-radius: 30px;
+}
+
+.fundo-escuro {
+  background-color: rgb(12, 1, 22);
+}
+
+.options-footer {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.options-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.options-footer a:hover {
+  text-decoration: underline;
+}
+
+.options-footer-img {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 5%;
+  padding: 0;
+  margin: 0;
+}
+
+.options-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 5%;
+}
+
+.options-rodape a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.options-rodape a:hover {
+  text-decoration: underline;
+}
