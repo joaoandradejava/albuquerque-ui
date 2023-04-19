@@ -1,0 +1,38 @@
+ 
+ 
+ * {
+    padding: 0;
+    margin: 0;
+ }
+
+ body {
+    overflow-x: hidden; 
+ }
+
+
+
+.menu-bar-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 2 rem;
+}
+
+@media screen and (min-width: 280px)  and (max-width: 600px){
+    .menu-bar-topo {
+        font-size: 0.8rem;
+    }
+  }
+
+.menu-bar-topo a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-bar-topo a:hover {
+    text-decoration: underline;
+}
