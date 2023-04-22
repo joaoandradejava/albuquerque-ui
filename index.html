@@ -12,42 +12,80 @@
     />
     <title>Albuergue</title>
     <link rel="stylesheet" href="./styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container-fluid p-1 p-md-3">
+    <div class="container-fluid p-1 p-md-4">
       <div class="row align-items-center">
         <div class="col-6 col-md-6">
           <img
             src="assets/images/logo-albuquerque.png"
+            height="100px"
             class="img-fluid"
             alt=""
           />
         </div>
-        <div class="col-6 col-md-3 mt-2 d-none d-md-block">
+
+        <div class="col-6 d-md-none d-block navbar d-flex justify-content-end">
+          <button
+            style="margin-right: 10%"
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="col-6 col-md-6 mt-2 d-none d-md-block">
           <ul class="menu-bar-topo">
             <li><a href="">Home</a></li>
-            <li><a href="">Literatura</a></li>
-            <li><a href="">Whatsapp <img src="assets/images/whatsapp-preto-cima.png" height="13px"  alt=""></a></li>
+            <li><a href="">Unidades</a></li>
+            <li>
+              <a href=""
+                >Whatsapp
+                <img
+                  src="assets/images/whatsapp-preto-cima.png"
+                  height="13px"
+                  alt=""
+              /></a>
+            </li>
           </ul>
-        </div>
-        <div class="col-0 d-none d-md-block col-md-3">
-          <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" />
-            </div>
-          </div>
         </div>
       </div>
     </div>
 
-    <div class="container-fluid mb-5 p-1 p-md-5 text-light fundo">
+    <div class="container-fluid mb-5 p-1 p-md-4 text-light fundo">
       <div class="row mt-5">
-        <div class="col-12 col-md-4">
-          <span class="texto-fundo-tamanho">
-            Manutenção automotiva com segurança,
-            <b>Só na <br /></b>
-            <b>G Albugueque</b>
-          </span>
+        <div class="col-12">
+          <div class="fundo-comportamento">
+            <span class="texto-fundo-tamanho d-none d-md-block">
+              Manutenção <br />
+              automotiva com <br />
+              segurança,<br />
+              <b>Só na <br /></b>
+              <b>G Albugueque</b>
+            </span>
+            <span class="texto-fundo-tamanho d-block d-md-none text-center">
+              Manutenção automotiva com segurança,
+              <b>Só na</b>
+              <b>G Albugueque</b>
+            </span>
+            <div>
+              <button class="btn btn-azul mt-3 d-block">
+                Outro botão teste
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -58,7 +96,8 @@
           <h3 class="fw-bold mb-3">Confira nossas unidades</h3>
           <div class="row mb-3">
             <div class="col">
-              <button class="btn btn-primary">Test</button>
+              <button class="btn btn-azul">Pernambuco</button>
+              <button class="btn">Paraiba</button>
             </div>
           </div>
           <h4 class="fw-bold">Pam pneus</h4>
@@ -79,14 +118,9 @@
       </div>
     </div>
 
-    <div
-      class="container-fluid text-light p-md-5 p-2"
-      style="background-color: black"
-    >
-      <div class="row mb-5" >
-        <div class="col" style="display: flex; justify-content: center;">
-            <img src="assets/images/logo-albuquerque-branco.png"  alt="">
-        </div>
+    <div class="container-fluid text-light p-md-1 p-4 fundo-footer">
+      <div class="row mb-5">
+        <div class="col" style="display: flex; justify-content: center"></div>
       </div>
       <div class="row justify-content-center">
         <div class="col-12 col-md-8">
@@ -98,6 +132,16 @@
             vehicula id felis vel venenatis. Duis sed enim lorem. Suspendisse
             non ligula vitae orci placerat porttitor non non dui.</span
           >
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-12 col-md-8">
+          <div class="cards">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
         </div>
       </div>
     </div>

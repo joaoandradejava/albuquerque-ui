@@ -1,55 +1,103 @@
- 
- 
- * {
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 
- }
+html {
+  overflow-x: hidden;
+}
 
- html {
-    overflow-x: hidden; 
-
- }
-
- body {
-    overflow-x: hidden; 
- }
+body {
+  overflow-x: hidden;
+}
 
 .fundo {
-    background:url('assets/images/loja-topo-gradiente.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 450px;
+  background: url("assets/images/loja-topo-gradiente.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 450px;
+}
+
+.fundo-comportamento {
+  margin-left: 10%;
+}
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .fundo-comportamento {
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .texto-fundo-tamanho {
-    font-size: 35px;
-    display: block;
+  font-size: 35px;
+  display: block;
 }
 
 .menu-bar-topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-size: 13px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
 }
 
-@media screen and (min-width: 280px)  and (max-width: 600px){
-    .menu-bar-topo {
-        font-size: 0.8rem;
-    }
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .menu-bar-topo {
+    font-size: 0.8rem;
   }
+}
 
 .menu-bar-topo a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .menu-bar-topo a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+.fundo-footer {
+  background: url("assets/images/pneus-banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  margin: 5px 5%;
+}
+
+.btn-azul {
+  background-color: rgb(6, 6, 68);
+  color: white;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.btn-azul:hover {
+  background-color: rgb(0, 0, 29);
+  color: white;
 }
