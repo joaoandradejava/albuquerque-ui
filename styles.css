@@ -45,7 +45,7 @@ body {
 }
 
 .fundo-footer {
-  background: url("assets/images/pneus-banner.png");
+  background: url("assets/images/PNEU.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -66,7 +66,7 @@ body {
 }
 
 .btn-azul {
-  background-color: rgb(6, 6, 68);
+  background-color: #355993;
   color: white;
   border-radius: 15px;
   font-weight: bold;
@@ -76,6 +76,6 @@ body {
 }
 
 .btn-azul:hover {
-  background-color: rgb(0, 0, 29);
+  background-color: #28436d;
   color: white;
 }
