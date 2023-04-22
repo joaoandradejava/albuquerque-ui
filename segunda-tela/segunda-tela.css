@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -20,7 +20,13 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 280px) and (max-width: 920px) {
+  .menu-bar-topo {
+    font-size: 13px;
+  }
 }
 
 .menu-bar-topo a {
@@ -42,12 +48,18 @@ body {
 }
 
 .fundo-azul {
-  background-color: #365A96;
+  background-color: #365a96;
   font-size: 30px;
 }
 
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .fundo-azul {
+    font-size: 21px;
+  }
+}
+
 .fundo-vermelho {
-  background-color: #CA171D;
+  background-color: #ca171d;
   font-size: 18px;
 }
 
@@ -119,7 +131,7 @@ body {
 }
 
 .btn-escolher-servico {
-  background-color: #CA171D;
+  background-color: #ca171d;
   color: white;
 }
 
@@ -129,7 +141,7 @@ body {
 }
 
 .fundo-conheca-nosso-espaco {
-  background-color: #253C65;
+  background-color: #253c65;
   font-size: 40px;
 }
 
@@ -160,7 +172,7 @@ body {
 }
 
 .fundo-escuro {
-  background-color: #14243D;
+  background-color: #14243d;
 }
 
 .options-footer {
