@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -35,35 +35,13 @@ body {
   }
 }
 
+.menu-bar-topo {
+  justify-content: space-around;
+}
+
 .texto-fundo-tamanho {
   font-size: 35px;
   display: block;
-}
-
-.menu-bar-topo {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  justify-content: space-around;
-  padding: 0;
-  margin: 0;
-  font-size: 13px;
-}
-
-@media screen and (min-width: 280px) and (max-width: 600px) {
-  .menu-bar-topo {
-    font-size: 0.8rem;
-  }
-}
-
-.menu-bar-topo a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.menu-bar-topo a:hover {
-  text-decoration: underline;
 }
 
 .fundo-footer {
