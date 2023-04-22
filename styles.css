@@ -82,6 +82,10 @@ body {
   margin: 5px 5%;
 }
 
+.card:hover {
+  cursor: pointer;
+}
+
 .btn-azul {
   background-color: #355993;
   color: white;
@@ -95,4 +99,9 @@ body {
 .btn-azul:hover {
   background-color: #28436d;
   color: white;
+}
+
+
+.lista-unidades li{
+  margin: 20px 0px;
 }
