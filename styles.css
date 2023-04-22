@@ -14,7 +14,7 @@ body {
 }
 
 .fundo {
-  background: url("assets/images/loja-topo-gradiente.png") !important;
+  background: url("assets/images/loja-topo-gradiente.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -61,7 +61,7 @@ body {
 }
 
 .background-confira-unidades {
-  background: url("assets/images/mapa-pontos.png") !important;
+  background: url("assets/images/mapa-pontos.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
