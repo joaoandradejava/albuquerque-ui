@@ -54,7 +54,7 @@ body {
 }
 
 .fundo-footer {
-  background: url("assets/images/pneu-footer.png");
+  background: url("assets/images/pneu-footer.png") !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -104,4 +104,13 @@ body {
 
 .lista-unidades li{
   margin: 20px 0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .fundo-footer {
+    background: url("assets/images/pneu-footer.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
