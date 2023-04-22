@@ -30,6 +30,16 @@
             alt=""
           />
         </div>
+        <div class="col-6 d-md-none d-block navbar d-flex justify-content-end">
+          <button
+            id="hamburguer"
+            style="margin-right: 10%"
+            class="navbar-toggler"
+            type="button"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
         <div class="col-6 col-md-6 d-none d-md-block">
           <ul class="menu-bar-topo">
             <li><a href="">Home</a></li>
@@ -37,6 +47,16 @@
             <li><a href="">Serviços</a></li>
             <li><a href="">Ofertas</a></li>
           </ul>
+        </div>
+        <div class="row d-none" id="menu-hamburguer">
+          <div class="col">
+            <ul class="menu-bar-topo">
+              <li><a href="">Home</a></li>
+              <li><a href="">Sobre a Empresa</a></li>
+              <li><a href="">Serviços</a></li>
+              <li><a href="">Ofertas</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -105,12 +125,15 @@
         >Conheça o nosso espaço</span
       >
       <div class="mt-2" style="display: flex; justify-content: center">
-        <img
-          src="../assets/images/test.jpg"
-          width="40%"
-          class="img-fluid"
-          alt=""
-        />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63217.27490881238!2d-34.92641914248478!3d-7.990708133800338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18f5c5a7ca19%3A0x441495aae2d7adb2!2sAlbuquerque%20Pneus%20Av%20Norte!5e0!3m2!1spt-BR!2sbr!4v1682144958263!5m2!1spt-BR!2sbr"
+          width="900"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
       <div class="mt-4 mb-3" style="display: flex; justify-content: center">
         <button
@@ -124,28 +147,40 @@
       <div class="row">
         <div
           class="col-12 col-md-6 centralizar p-2"
-          style="background-color: #D9DFEB"
+          style="background-color: #d9dfeb"
         >
           <img
             src="../assets/images/mapa-como-chegar.png"
             height="80px"
             alt=""
           />
-          <div style="border-left: 2px solid black; padding-left: 10px">
+          <div
+            style="
+              border-left: 2px solid black;
+              padding-left: 20px;
+              margin-left: 20px;
+            "
+          >
             <span class="label-help">como</span><br />
             <span class="label-help">chegar</span>
           </div>
         </div>
         <div
           class="col-12 col-md-6 centralizar p-2"
-          style="background-color: #D8ECE1"
+          style="background-color: #d8ece1"
         >
           <img
             src="../assets/images/celular-whatsapp.png"
             height="80px"
             alt=""
           />
-          <div style="border-left: 2px solid black; padding-left: 10px">
+          <div
+            style="
+              border-left: 2px solid black;
+              padding-left: 20px;
+              margin-left: 20px;
+            "
+          >
             <span class="label-help">Fale conosco</span><br />
             <span class="label-help">Pelo whatsapp</span>
           </div>
@@ -165,11 +200,59 @@
             class="avaliacao p-2"
             style="display: flex; justify-content: center"
           >
-            <img
-              src="../assets/images/avaliacao-fake.png"
-              class="img-fluid"
-              alt=""
-            />
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-theme="dark"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../assets/images/avaliacao-fake.png"
+                    class="d-block h-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/images/avaliacao-fake.png"
+                    class="d-block h-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../assets/images/avaliacao-fake.png"
+                    class="d-block h-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -177,15 +260,19 @@
 
     <div class="container-fluid fundo-escuro text-light p-5 mt-4">
       <div class="container">
-        <div class="row justify-content-center" >
-          <div class="col-12 col-md-2 d-flex justify-content-center align-items-center mb-4 mb-md-0" >
+        <div class="row justify-content-center">
+          <div
+            class="col-12 col-md-2 d-flex justify-content-center align-items-center mb-4 mb-md-0"
+          >
             <img
               src="../assets/images/logo-albuquerque-branco.png"
               class="img-fluid"
               alt=""
             />
           </div>
-          <div class="col-12 col-md-2 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0">
+          <div
+            class="col-12 col-md-2 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+          >
             <h6 class="text-uppercase">Institucional</h6>
             <ul class="options-footer text-center text-md-start">
               <li><a href="">Quem somos</a></li>
@@ -194,17 +281,54 @@
               <li><a href="">Troca e devoluções</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md-2 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0">
+          <div
+            class="col-12 col-md-2 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+          >
             <h6 class="text-uppercase">Fale conosco</h6>
             <ul class="options-footer text-center text-md-start">
               <li><a href="">(00)0000-0000</a></li>
               <li><a href="">Albuergue@atendimento.com</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md-2 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0">
+          <div
+            class="col-12 col-md-2 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+          >
             <h6 class="text-uppercase">Pagamentos</h6>
+            <ul class="options-pagamentos-footer">
+              <li>
+                <img src="../assets/images/hipercard.png" width="30px" alt="" />
+              </li>
+              <li>
+                <img
+                  src="../assets/images/mastercard.png"
+                  height="20px"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img src="../assets/images/visa.png" width="30px" alt="" />
+              </li>
+              <li>
+                <img src="../assets/images/diners.png" height="20px" alt="" />
+              </li>
+              <li>
+                <img src="../assets/images/elo.png" height="20px" alt="" />
+              </li>
+              <li>
+                <img
+                  src="../assets/images/american-express.png"
+                  height="20px"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img src="../assets/images/boleto.png" width="30px" alt="" />
+              </li>
+            </ul>
           </div>
-          <div class="col-12 col-md-2 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0">
+          <div
+            class="col-12 col-md-2 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+          >
             <h6 class="text-uppercase">Segue a gente</h6>
             <ul class="options-footer-img">
               <li>
@@ -241,5 +365,23 @@
         </div>
       </div>
     </div>
+    <script>
+      var btnHamburguer = document.getElementById("hamburguer");
+      btnHamburguer.onclick = () => {
+        var menuHamburguer = document
+          .getElementById("menu-hamburguer")
+          .classList.toggle("menu-hamburguer");
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

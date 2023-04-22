@@ -34,14 +34,10 @@
 
         <div class="col-6 d-md-none d-block navbar d-flex justify-content-end">
           <button
+            id="hamburguer"
             style="margin-right: 10%"
             class="navbar-toggler"
             type="button"
-            data-toggle="collapse"
-            data-target="#navbarToggleExternalContent"
-            aria-controls="navbarToggleExternalContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -49,7 +45,24 @@
         <div class="col-6 col-md-6 mt-2 d-none d-md-block">
           <ul class="menu-bar-topo">
             <li><a href="">Home</a></li>
-            <li><a href="">Unidades</a></li>
+            <li><a href="#unidades">Unidades</a></li>
+            <li>
+              <a href=""
+                >Whatsapp
+                <img
+                  src="assets/images/whatsapp-preto-cima.png"
+                  height="13px"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row d-none" id="menu-hamburguer">
+        <div class="col">
+          <ul class="menu-bar-topo">
+            <li><a href="">Home</a></li>
+            <li><a href="#unidades">Unidades</a></li>
             <li>
               <a href=""
                 >Whatsapp
@@ -93,7 +106,7 @@
     <div class="container mb-5">
       <div class="row p-4 p-md-1">
         <div class="col-12 col-md-6">
-          <h3 class="fw-bold mb-3">Confira nossas unidades</h3>
+          <h3 class="fw-bold mb-3" id="unidades">Confira nossas unidades</h3>
           <div class="row mb-3">
             <div class="col">
               <button class="btn btn-azul">Pernambuco</button>
@@ -135,6 +148,15 @@
         </div>
       </div>
     </div>
+
+    <script>
+      var btnHamburguer = document.getElementById("hamburguer");
+      btnHamburguer.onclick = () => {
+        var menuHamburguer = document
+          .getElementById("menu-hamburguer")
+          .classList.toggle("menu-hamburguer");
+      };
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
