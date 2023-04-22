@@ -40,8 +40,9 @@ body {
 }
 
 .texto-fundo-tamanho {
-  font-size: 35px;
+  font-size: 50px;
   display: block;
+  line-height: 55px;
 }
 
 .fundo-footer {
