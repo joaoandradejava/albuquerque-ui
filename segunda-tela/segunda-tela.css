@@ -42,12 +42,12 @@ body {
 }
 
 .fundo-azul {
-  background-color: rgb(32, 32, 124);
+  background-color: #365A96;
   font-size: 30px;
 }
 
 .fundo-vermelho {
-  background-color: red;
+  background-color: #CA171D;
   font-size: 18px;
 }
 
@@ -119,7 +119,7 @@ body {
 }
 
 .btn-escolher-servico {
-  background-color: red;
+  background-color: #CA171D;
   color: white;
 }
 
@@ -129,7 +129,7 @@ body {
 }
 
 .fundo-conheca-nosso-espaco {
-  background-color: rgb(19, 19, 58);
+  background-color: #253C65;
   font-size: 40px;
 }
 
@@ -160,7 +160,7 @@ body {
 }
 
 .fundo-escuro {
-  background-color: rgb(12, 1, 22);
+  background-color: #14243D;
 }
 
 .options-footer {
