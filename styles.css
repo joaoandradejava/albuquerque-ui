@@ -60,6 +60,14 @@ body {
   background-repeat: no-repeat;
 }
 
+.background-confira-unidades {
+  background: url("assets/images/mapa-pontos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+
 .cards {
   display: flex;
   align-items: center;
