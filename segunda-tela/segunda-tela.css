@@ -49,10 +49,25 @@ body {
   width: 240px;
   height: 240px;
   margin: 10px 0px;
+  float: left;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  backface-visibility: hidden;
 }
 
 .card:hover {
   cursor: pointer;
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
 }
 
 .center-all {
@@ -143,11 +158,23 @@ body {
   display: block;
   text-transform: uppercase;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.estrela {
+  font-size: 25px;
 }
 
 @media screen and (min-width: 280px) and (max-width: 600px) {
   .label-avaliacao {
     font-size: 25px;
+  }
+
+  .estrela {
+    font-size: 14px;
   }
 }
 
@@ -190,6 +217,10 @@ body {
 
 .options-footer-img li {
   margin: 5px;
+}
+
+.options-footer-img li a:hover{
+  cursor: pointer;
 }
 
 .options-rodape {
