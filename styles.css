@@ -68,6 +68,16 @@ body {
   height: 400px;
 }
 
+.confira-unidade-label {
+  font-size: 32px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 520px) {
+  .confira-unidade-label {
+    font-size: 27px;
+  }
+}
+
 .cards {
   display: flex;
   align-items: center;
