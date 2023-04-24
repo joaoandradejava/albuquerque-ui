@@ -248,22 +248,40 @@ body {
   align-items: center;
   justify-content: center;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
   gap: 5%;
+}
+
+.options-rodape li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .options-rodape a {
   color: black;
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
 }
 
 .options-rodape a:hover {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 280px) and (max-width: 600px) {
-  .options-rodape {
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .options-rodape a {
     font-size: 11px;
+  }
+
+  .options-rodape li {
+    width: 100%;
+  }
+
+  .options-rodape {
+    justify-content: space-around;
+    gap: 0%;
   }
 }
 
