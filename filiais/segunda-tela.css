@@ -204,6 +204,18 @@ body {
   border-radius: 30px;
 }
 
+@media screen and (min-width: 480px) and (max-width: 700px) {
+  .avaliacao {
+    height: 200px !important;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 479px) {
+  .avaliacao {
+    height: 140px !important;
+  }
+}
+
 .fundo-escuro {
   background-color: #14243d;
 }
