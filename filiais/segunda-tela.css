@@ -270,21 +270,6 @@ body {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 0px) and (max-width: 600px) {
-  .options-rodape a {
-    font-size: 11px;
-  }
-
-  .options-rodape li {
-    width: 100%;
-  }
-
-  .options-rodape {
-    justify-content: space-around;
-    gap: 0%;
-  }
-}
-
 .options-pagamentos-footer {
   display: flex;
   align-items: center;

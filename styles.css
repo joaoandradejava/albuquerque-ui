@@ -99,7 +99,7 @@ body {
 .btn-azul {
   background-color: #355993;
   color: white;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -110,7 +110,7 @@ body {
 
 .btn {
   width: 150px;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
