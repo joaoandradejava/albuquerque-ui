@@ -304,3 +304,54 @@ body {
 .cursor-pointer:hover {
   cursor: pointer;
 }
+
+.fundo-busca-pneu {
+  background-image: url("../assets/images/pneus-banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+}
+
+.cards-pneus {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-pneu {
+  background-color: white;
+  width: 40%;
+  height: 100px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 5px;
+  padding: 5px;
+}
+
+.card-pneu:hover {
+  cursor: pointer;
+}
+
+.card-pneu-categoria {
+  width: 120px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .card-pneu {
+    width: 100%;
+  }
+
+  .card-pneu img {
+    height: 20px !important;
+  }
+}
