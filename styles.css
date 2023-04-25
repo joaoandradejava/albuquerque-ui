@@ -97,10 +97,14 @@ body {
 }
 
 .btn-azul {
-  background-color: #355993;
-  color: white;
+  background-color: #355993 !important;
+  color: white !important;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.fundo-escuro {
+  background-color: #14243d;
 }
 
 .btn-azul:hover {
@@ -112,6 +116,62 @@ body {
   width: 150px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  color: black;
+}
+
+.options-pagamentos-footer {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.options-pagamentos-footer li {
+  background-color: white;
+  margin: 5px;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-footer {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.options-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.options-footer a:hover {
+  text-decoration: underline;
+}
+
+.options-footer-img {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 5%;
+  padding: 0;
+  margin: 0;
+}
+
+.options-footer-img li {
+  margin: 5px;
+}
+
+.options-footer-img li a:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 0px) and (max-width: 520px) {
