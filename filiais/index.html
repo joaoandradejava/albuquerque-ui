@@ -2057,15 +2057,23 @@
         });
       }
 
+      function defaultMarcaOption() {
+        modeloInputVeiculo.innerHTML = "";
+        modeloInputVeiculo.options[modeloInputVeiculo.options.length] =
+          new Option("Modelo", "");
+        modeloInputVeiculo.options[modeloInputVeiculo.options.length] =
+          new Option("Outros", "outros");
+      }
+
       function selecionarMarca() {
+        defaultMarcaOption();
+
         if (marcaInputVeiculo.value) {
           modeloInputVeiculo.disabled = false;
           numberId = marcaInputVeiculo.value;
-          console.log(modeloInputVeiculo);
           modelos
             .filter((x) => x.numero == numberId)
             .forEach((m) => {
-              console.log(m);
               modeloInputVeiculo.options[modeloInputVeiculo.options.length] =
                 new Option(m.nome, m.numero);
             });
