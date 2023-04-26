@@ -353,6 +353,19 @@ body {
   font-weight: bold;
 }
 
+.card-pneu-categoria select:hover {
+  cursor: pointer;
+}
+
+.card-pneu-categoria select:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.card-pneu-categoria select option {
+  font-weight: bold;
+}
+
 .fundo-vermelho-card-categoria {
   background-color: red;
   color: white;
