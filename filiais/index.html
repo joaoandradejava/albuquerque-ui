@@ -68,12 +68,12 @@
     <div class="container-fluid fundo"></div>
     <div class="fundo-azul text-light p-1 p-sm-0">
       <span class="text-uppercase text-center d-block"
-        >Unidade <b>Abreu e Lima</b></span
+        >Unidade <b id="unidadeHtml">Abreu e Lima</b></span
       >
     </div>
     <div class="fundo-vermelho text-light p-1 p-sm-0">
-      <span class="text-uppercase text-center d-block"
-        >AV BRASIL, 53 - CENTRO, 53525-790</span
+      <span class="text-uppercase text-center d-block" id="enderecoHtml"
+        >AV BRASIL, 93 - CENTRO, 53525-790</span
       >
     </div>
 
@@ -431,6 +431,7 @@
       <div class="mt-2" style="display: flex; justify-content: center">
         <iframe
           src="https://www.google.com/maps/embed?pb=!4v1682223837673!6m8!1m7!1smHI3LI4wnRtbj1O-RWYnLw!2m2!1d-7.912229712938185!2d-34.90059009478548!3f239.3617279018131!4f2.5726450038717132!5f1.5280058584250606"
+          id="iframeMap"
           width="900"
           height="450"
           style="border: 6px solid white; border-radius: 15px"
@@ -2096,7 +2097,36 @@
         { numero: 13, nome: "KA SEDAN" },
         { numero: 13, nome: "FOCUS FASTBACK" },
       ];
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
 
+      let lugares = [
+        {
+          id: "abreu",
+          unidade: "Abreu e Lima",
+          endereco: "AV BRASIL, 53 - CENTRO, 53525-790",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1682223837673!6m8!1m7!1smHI3LI4wnRtbj1O-RWYnLw!2m2!1d-7.912229712938185!2d-34.90059009478548!3f239.3617279018131!4f2.5726450038717132!5f1.5280058584250606",
+        },
+        {
+          id: "jardim",
+          unidade: "Jardim São Paulo",
+          endereco:
+            "Rod. Br Cento e Um, 1139 - Jardim São Paulo, Recife - PE, 50910-520",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1682565961551!6m8!1m7!1sCAoSLEFGMVFpcE9USlRTYjVYamdlUEhFVnRfSTg5N3ZXMkU1Y2IxemJBSC1EMldV!2m2!1d-8.086050877951457!2d-34.94548893743439!3f115.47534001871598!4f11.841653334521524!5f0.7820865974627469",
+        },
+        {
+          id: "sape",
+          unidade: "Sapé",
+          endereco: "PB-073 - Centro, Sapé - PB, 58400-000",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1682566245866!6m8!1m7!1sgMOt3fkqmn_c-rbwkV5JFA!2m2!1d-7.106820560170669!2d-35.23460678882225!3f94.69859512361617!4f-5.072721494829381!5f2.759987639794943",
+        },
+        {
+          id: "bayeux",
+          unidade: "Bayeux",
+          endereco: "BR-230, 83 - Rio do Meio, Bayeux - PB, 58308-000",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1682566777545!6m8!1m7!1sQZTS5U-3EOhsMZ88DQNwlA!2m2!1d-7.134746332168431!2d-34.92900575005793!3f210.46066901484687!4f6.797427764325235!5f0.5536595996004573",
+        },
+      ];
       var btnHamburguer = document.getElementById("hamburguer");
       let isPorVeiculoFilter = true;
       let divMedida = document.getElementById("medida");
@@ -2109,6 +2139,22 @@
       let modeloInputVeiculo = document.getElementById("modeloInput");
       modeloInputVeiculo.disabled = true;
       montarMarcaInputDoVeiculo();
+      atualizarLugar();
+
+      function atualizarLugar() {
+        const idParam = urlParams.get("id");
+
+        if (idParam) {
+          let lugar = lugares.filter((x) => x.id == idParam)[0];
+          if (lugar) {
+            let unidade = (document.getElementById("unidadeHtml").innerHTML =
+              lugar.unidade);
+            let endereco = (document.getElementById("enderecoHtml").innerHTML =
+              lugar.endereco);
+            let mapa = (document.getElementById("iframeMap").src = lugar.mapa);
+          }
+        }
+      }
 
       function montarMarcaInputDoVeiculo() {
         marcas.forEach((m) => {
