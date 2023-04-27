@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <div class="container-fluid fundo"></div>
+    <div class="container-fluid fundo" id="fundoImagemLoja"></div>
     <div class="fundo-azul text-light p-1 p-sm-0">
       <span class="text-uppercase text-center d-block"
         >Unidade <b id="unidadeHtml">Abreu e Lima</b></span
@@ -2104,12 +2104,14 @@
         {
           id: "abreu",
           unidade: "Abreu e Lima",
+          imagemUrl: "../assets/images/alb-abreu.jpg",
           endereco: "AV BRASIL, 53 - CENTRO, 53525-790",
           mapa: "https://www.google.com/maps/embed?pb=!4v1682223837673!6m8!1m7!1smHI3LI4wnRtbj1O-RWYnLw!2m2!1d-7.912229712938185!2d-34.90059009478548!3f239.3617279018131!4f2.5726450038717132!5f1.5280058584250606",
         },
         {
           id: "jardim",
           unidade: "Jardim São Paulo",
+          imagemUrl: "../assets/images/alb-jardim.jpg",
           endereco:
             "Rod. Br Cento e Um, 1139 - Jardim São Paulo, Recife - PE, 50910-520",
           mapa: "https://www.google.com/maps/embed?pb=!4v1682565961551!6m8!1m7!1sCAoSLEFGMVFpcE9USlRTYjVYamdlUEhFVnRfSTg5N3ZXMkU1Y2IxemJBSC1EMldV!2m2!1d-8.086050877951457!2d-34.94548893743439!3f115.47534001871598!4f11.841653334521524!5f0.7820865974627469",
@@ -2117,12 +2119,14 @@
         {
           id: "sape",
           unidade: "Sapé",
+          imagemUrl: "../assets/images/alb-sape.jpg",
           endereco: "PB-073 - Centro, Sapé - PB, 58400-000",
           mapa: "https://www.google.com/maps/embed?pb=!4v1682566245866!6m8!1m7!1sgMOt3fkqmn_c-rbwkV5JFA!2m2!1d-7.106820560170669!2d-35.23460678882225!3f94.69859512361617!4f-5.072721494829381!5f2.759987639794943",
         },
         {
           id: "bayeux",
           unidade: "Bayeux",
+          imagemUrl: "../assets/images/alb-bayeux.jpg",
           endereco: "BR-230, 83 - Rio do Meio, Bayeux - PB, 58308-000",
           mapa: "https://www.google.com/maps/embed?pb=!4v1682566777545!6m8!1m7!1sQZTS5U-3EOhsMZ88DQNwlA!2m2!1d-7.134746332168431!2d-34.92900575005793!3f210.46066901484687!4f6.797427764325235!5f0.5536595996004573",
         },
@@ -2152,6 +2156,9 @@
             let endereco = (document.getElementById("enderecoHtml").innerHTML =
               lugar.endereco);
             let mapa = (document.getElementById("iframeMap").src = lugar.mapa);
+            let fundoImagem = (document.getElementById(
+              "fundoImagemLoja"
+            ).style.backgroundImage = `url('${lugar.imagemUrl}')`);
           }
         }
       }
