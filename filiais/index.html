@@ -745,6 +745,8 @@
       </div>
     </div>
 
+    <button class="btn-flutuante"><img src="../assets/images/btn-g-albu.png" height="50px" alt=""></button>
+
     <script>
       const marcas = [
         { id: 1, nome: "CHEVROLET" },
@@ -2057,7 +2059,7 @@
         });
       }
 
-      function defaultMarcaOption() {
+      function defaultModeloOption() {
         modeloInputVeiculo.innerHTML = "";
         modeloInputVeiculo.options[modeloInputVeiculo.options.length] =
           new Option("Modelo", "");
@@ -2066,7 +2068,7 @@
       }
 
       function selecionarMarca() {
-        defaultMarcaOption();
+        defaultModeloOption();
 
         if (marcaInputVeiculo.value) {
           modeloInputVeiculo.disabled = false;
@@ -2075,7 +2077,7 @@
             .filter((x) => x.numero == numberId)
             .forEach((m) => {
               modeloInputVeiculo.options[modeloInputVeiculo.options.length] =
-                new Option(m.nome, m.numero);
+                new Option(m.nome, m.numero.toString());
             });
         } else {
           modeloInputVeiculo.disabled = true;
@@ -2102,15 +2104,71 @@
       }
 
       function filtrar() {
+        let mensagemWhatsapp = "";
+
         if (isPorVeiculoFilter) {
+          mensagemWhatsapp =
+            "Olá, estou interessado em saber a cotação de pneu para o carro";
+          let tipoValue = document.getElementById("tipoInput2").value;
+          let marcaValue = document.getElementById("marcaInput2");
+          let modeloValue = document.getElementById("modeloInput");
+          if (!tipoValue && !marcaValue && !modeloValue) {
+            alert("selecione algum filtro");
+          }
+
+          if (tipoValue) {
+            mensagemWhatsapp += ` do tipo ${tipoValue} `;
+          }
+          if (marcaValue.value) {
+            mensagemWhatsapp += ` da marca ${marcaValue.selectedOptions[0].text} `;
+          }
+
+          if (modeloValue.value) {
+            mensagemWhatsapp += ` do modelo ${modeloValue.selectedOptions[0].text} `;
+          }
         } else {
+          mensagemWhatsapp =
+            "Olá, estou interessado em saber a cotação do pneu";
           let tipoValue = document.getElementById("tipoInput1").value;
           let larguraValue = document.getElementById("larguraInput").value;
           let perfilValue = document.getElementById("perfilInput").value;
           let aroValue = document.getElementById("aroInput").value;
+          let marcaValue = document.getElementById("marcaInput").value;
 
-          console.log(larguraValue);
+          if (
+            !tipoValue &&
+            !larguraValue &&
+            !perfilValue &&
+            !aroValue & !marcaValue
+          ) {
+            alert("selecione algum filtro");
+          }
+
+          if (tipoValue) {
+            mensagemWhatsapp += ` do tipo ${tipoValue} `;
+          }
+
+          if (larguraValue) {
+            mensagemWhatsapp += ` da largura ${larguraValue} `;
+          }
+
+          if (perfilValue) {
+            mensagemWhatsapp += ` do perfil ${perfilValue} `;
+          }
+
+          if (aroValue) {
+            mensagemWhatsapp += ` do aro ${aroValue} `;
+          }
+
+          if (marcaValue) {
+            mensagemWhatsapp += ` da marca ${marcaValue} `;
+          }
         }
+
+        window.open(
+          `https://wa.me/5581991812871?text=${mensagemWhatsapp}`,
+          "_blank"
+        );
       }
 
       btnHamburguer.onclick = () => {
