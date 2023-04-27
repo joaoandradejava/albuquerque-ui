@@ -745,7 +745,66 @@
       </div>
     </div>
 
-    <button class="btn-flutuante"><img src="../assets/images/btn-g-albu.png" height="50px" alt=""></button>
+    <button
+      type="button"
+      class="btn-flutuante"
+      data-bs-toggle="modal"
+      data-bs-target="#popupsobre"
+    >
+      <img src="../assets/images/btn-g-albu.png" height="50px" alt="" />
+    </button>
+
+    <div
+      class="modal fade"
+      id="popupsobre"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sobre</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <span
+                    >Nós somos a G Albuquerque, nosso objetivo é proporcionar
+                    uma excelente experiência de atendimento e produtos para
+                    nossos clientes. Nossa equipe de profissionais altamente
+                    capacitados está pronta para oferecer soluções eficientes
+                    para manter seu veículo em ótimas condições. Oferecemos
+                    serviços de manutenção preventiva, corretiva, reparos
+                    elétricos e mecânicos, além de pneus. Nosso compromisso é
+                    oferecer o melhor serviço possível com atendimento
+                    personalizado.
+                  </span>
+                  <br />
+                  <span>⭐ Venha experimentar nosso serviço! ⭐</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script>
       const marcas = [
@@ -2049,7 +2108,6 @@
       let marcaInputVeiculo = document.getElementById("marcaInput2");
       let modeloInputVeiculo = document.getElementById("modeloInput");
       modeloInputVeiculo.disabled = true;
-
       montarMarcaInputDoVeiculo();
 
       function montarMarcaInputDoVeiculo() {
@@ -2112,8 +2170,9 @@
           let tipoValue = document.getElementById("tipoInput2").value;
           let marcaValue = document.getElementById("marcaInput2");
           let modeloValue = document.getElementById("modeloInput");
-          if (!tipoValue && !marcaValue && !modeloValue) {
+          if (!tipoValue && !marcaValue.value && !modeloValue.value) {
             alert("selecione algum filtro");
+            return;
           }
 
           if (tipoValue) {
@@ -2142,6 +2201,7 @@
             !aroValue & !marcaValue
           ) {
             alert("selecione algum filtro");
+            return;
           }
 
           if (tipoValue) {
@@ -2166,7 +2226,7 @@
         }
 
         window.open(
-          `https://wa.me/5581991812871?text=${mensagemWhatsapp}`,
+          `https://wa.me/5581991812871?text=${mensagemWhatsapp.trim()}`,
           "_blank"
         );
       }

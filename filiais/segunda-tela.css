@@ -320,7 +320,7 @@ body {
 }
 
 .card-pneu {
-  background-color: gray;
+  background-color: white;
   width: 40%;
   height: 80px;
   color: black;
@@ -339,7 +339,7 @@ body {
 .card-pneu-categoria {
   width: 120px;
   height: 40px;
-  background-color: gray;
+  background-color: white;
   color: black;
   display: flex;
   justify-content: center;
@@ -359,7 +359,6 @@ body {
 }
 
 .card-pneu-categoria select:disabled {
-  background-color: gray;
   cursor: not-allowed;
 }
 
@@ -377,7 +376,7 @@ body {
 }
 
 .selecionado {
-  background-color: white;
+  background-color: gray;
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
