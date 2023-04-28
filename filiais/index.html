@@ -475,6 +475,7 @@
         <div
           class="col-12 col-md-6 centralizar p-2 cursor-pointer"
           style="background-color: #d8ece1"
+          id="faleConoscoWhatsapp"
           onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços.','_blank')"
         >
           <img
@@ -664,7 +665,7 @@
           >
             <h6 class="text-uppercase">Fale conosco</h6>
             <ul class="options-footer text-center text-md-start">
-              <li>(81) 9 9181-2871</li>
+              <li id="numeroWhatsappLabel">(81) 9 9181-2871</li>
               <li>Albuergue@atendimento.com</li>
             </ul>
           </div>
@@ -2141,9 +2142,30 @@
       atualizarDivSelecionada();
       let marcaInputVeiculo = document.getElementById("marcaInput2");
       let modeloInputVeiculo = document.getElementById("modeloInput");
+      let numeroWhatsapp = urlParams.get("whatsapp")
+        ? urlParams.get("whatsapp")
+        : "81991812871";
+      document.getElementById("numeroWhatsappLabel").innerHTML =
+        formatacaoNumeroTelefone(numeroWhatsapp);
+      document.getElementById("faleConoscoWhatsapp").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre seus serviços.`,
+          "_blank"
+        );
       modeloInputVeiculo.disabled = true;
       montarMarcaInputDoVeiculo();
       atualizarLugar();
+
+      function formatacaoNumeroTelefone(numeroTelefone) {
+        if (numeroTelefone.length == 11) {
+          return numeroTelefone.replace(
+            /^(\d{2})(\d{1})(\d{4})(\d{4})$/,
+            "($1) $2 $3-$4"
+          );
+        }
+
+        return numeroTelefone.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1) $2-$3");
+      }
 
       function atualizarLugar() {
         const idParam = urlParams.get("id");
@@ -2279,7 +2301,7 @@
         }
 
         window.open(
-          `https://wa.me/5581991812871?text=${mensagemWhatsapp.trim()}`,
+          `https://wa.me/55${numeroWhatsapp}?text=${mensagemWhatsapp.trim()}`,
           "_blank"
         );
       }
