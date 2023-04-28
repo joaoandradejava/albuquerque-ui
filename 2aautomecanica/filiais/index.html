@@ -451,7 +451,7 @@
       <div class="mt-4 mb-3" style="display: flex; justify-content: center">
         <button
           class="text-ligth text-uppercase text-center btn btn-escolher-servico"
-          onclick="window.open('https://www.google.com/maps/@-7.9122297,-34.9005901,3a,55y,239.36h,92.57t/data=!3m6!1e1!3m4!1smHI3LI4wnRtbj1O-RWYnLw!2e0!7i16384!8i8192','_blank')"
+          onclick="cliqueAquiEVisiteNos()"
         >
           Clique aqui e visite-nos
         </button>
@@ -462,7 +462,7 @@
         <div
           class="col-12 col-md-6 centralizar p-2 cursor-pointer"
           style="background-color: #d9dfeb"
-          onclick="window.open('https://www.google.com/maps/@-7.9122297,-34.9005901,3a,55y,239.36h,92.57t/data=!3m6!1e1!3m4!1smHI3LI4wnRtbj1O-RWYnLw!2e0!7i16384!8i8192','_blank')"
+          onclick="cliqueAquiEVisiteNos()"
         >
           <img
             src="../../assets/images/mapa-como-chegar.png"
@@ -2116,6 +2116,7 @@
           imagemUrl: "../../assets/images/2A - Prazeres.jpg",
           endereco: "Av Marechal Masc de Moraes ,1736, 51170-000",
           mapa: "https://www.google.com/maps/embed?pb=!4v1682649797164!6m8!1m7!1sO1qur3ahTrY0z1xG7EShRA!2m2!1d-8.09694133031941!2d-34.90990129188308!3f298.4183527511786!4f3.5390940981196906!5f0.8064818425608558",
+          mapaLink: "https://www.google.com/maps/@-8.0969413,-34.9099013,3a,48.6y,292.07h,91.7t,0.92r/data=!3m6!1e1!3m4!1sO1qur3ahTrY0z1xG7EShRA!2e0!7i16384!8i8192"
         },
         {
           id: "jaboatao",
@@ -2124,6 +2125,7 @@
           endereco:
             "Av Dr Júlio Maranhão, 306, 54325-440",
           mapa: "https://www.google.com/maps/embed?pb=!4v1682649833345!6m8!1m7!1srY6cJfio3jeBQPT0-slEJA!2m2!1d-8.1612302240787!2d-34.92953361495623!3f322.0269815708394!4f8.85236113622318!5f0.400414248925198",
+          mapaLink: 'https://www.google.com/maps/@-8.1612302,-34.9295336,3a,75y,340.82h,95.53t,1.06r/data=!3m6!1e1!3m4!1srY6cJfio3jeBQPT0-slEJA!2e0!7i16384!8i8192'
         },
         {
           id: "caruaru",
@@ -2131,6 +2133,7 @@
           imagemUrl: "../../assets/images/2A - CARUARU.jpg",
           endereco: "Av Dos Estados, 1950,55014-545",
           mapa: "https://www.google.com/maps/embed?pb=!4v1682649960012!6m8!1m7!1sMx8QNXxs-a3vFhcq60L5bg!2m2!1d-8.267791996053962!2d-35.97926436265695!3f290.2115386585699!4f6.265221896108827!5f1.4733042810598036",
+          mapaLink: 'https://www.google.com/maps/@-8.267792,-35.9792644,3a,45.1y,299.14h,93.51t,1.02r/data=!3m6!1e1!3m4!1sMx8QNXxs-a3vFhcq60L5bg!2e0!7i16384!8i8192'
         },
       
       ];
@@ -2190,6 +2193,21 @@
           "_blank"
         );
       // FIM-----------------btn on clicks dos botoes dos cards-------------------------------------------
+
+      function cliqueAquiEVisiteNos() {
+        const idParam = urlParams.get("id");
+        if (idParam) {
+          let lugar = lugares.filter((x) => x.id == idParam)[0];
+          if (lugar) {
+            window.open(lugar.mapaLink, "_blank");
+            return;
+          }
+        }
+        window.open(
+          "https://www.google.com/maps/@-8.0969413,-34.9099013,3a,48.6y,292.07h,91.7t,0.92r/data=!3m6!1e1!3m4!1sO1qur3ahTrY0z1xG7EShRA!2e0!7i16384!8i8192",
+          "_blank"
+        );
+      }
 
       function formatacaoNumeroTelefone(numeroTelefone) {
         if (numeroTelefone.length == 11) {

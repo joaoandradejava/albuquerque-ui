@@ -21,7 +21,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/x-icon" href="../../assets/images/pam-pneus-favicon.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/images/pam-pneus-favicon.ico"
+    />
 
     <script type="module" src="./main.js"></script>
   </head>
@@ -451,7 +455,7 @@
       <div class="mt-4 mb-3" style="display: flex; justify-content: center">
         <button
           class="text-ligth text-uppercase text-center btn btn-escolher-servico"
-          onclick="window.open('https://www.google.com/maps/@-7.9122297,-34.9005901,3a,55y,239.36h,92.57t/data=!3m6!1e1!3m4!1smHI3LI4wnRtbj1O-RWYnLw!2e0!7i16384!8i8192','_blank')"
+          onclick="cliqueAquiEVisiteNos()"
         >
           Clique aqui e visite-nos
         </button>
@@ -462,7 +466,7 @@
         <div
           class="col-12 col-md-6 centralizar p-2 cursor-pointer"
           style="background-color: #d9dfeb"
-          onclick="window.open('https://www.google.com/maps/@-7.9122297,-34.9005901,3a,55y,239.36h,92.57t/data=!3m6!1e1!3m4!1smHI3LI4wnRtbj1O-RWYnLw!2e0!7i16384!8i8192','_blank')"
+          onclick="cliqueAquiEVisiteNos()"
         >
           <img
             src="../../assets/images/mapa-como-chegar.png"
@@ -683,7 +687,11 @@
             <h6 class="text-uppercase">Pagamentos</h6>
             <ul class="options-pagamentos-footer">
               <li>
-                <img src="../../assets/images/hipercard.png" width="30px" alt="" />
+                <img
+                  src="../../assets/images/hipercard.png"
+                  width="30px"
+                  alt=""
+                />
               </li>
               <li>
                 <img
@@ -696,7 +704,11 @@
                 <img src="../../assets/images/visa.png" width="30px" alt="" />
               </li>
               <li>
-                <img src="../../assets/images/diners.png" height="20px" alt="" />
+                <img
+                  src="../../assets/images/diners.png"
+                  height="20px"
+                  alt=""
+                />
               </li>
               <li>
                 <img src="../../assets/images/elo.png" height="20px" alt="" />
@@ -2116,14 +2128,17 @@
           imagemUrl: "../../assets/images/Pam - Abdias.jpg",
           endereco: "Av Eng Abdias de Carvalho, 175 - 50750-001",
           mapa: "https://www.google.com/maps/embed?pb=!4v1682653348013!6m8!1m7!1sKWBaNO47-ZWP2bgUkf69ow!2m2!1d-8.06155036931212!2d-34.90657779691558!3f171.30985244584525!4f-4.904949615308027!5f0.7820865974627469",
+          mapaLink:
+            "https://www.google.com/maps/@-8.0615504,-34.9065778,3a,75y,171.36h,85.54t,0.4r/data=!3m6!1e1!3m4!1sKWBaNO47-ZWP2bgUkf69ow!2e0!7i16384!8i8192",
         },
         {
           id: "caxanga",
           unidade: "Caxangá",
           imagemUrl: "../../assets/images/Pam - Caxanga.jpg",
-          endereco:
-            "Av Caxangá,731 - 50720-320",
+          endereco: "Av Caxangá,731 - 50720-320",
           mapa: "https://www.google.com/maps/embed?pb=!4v1682653401801!6m8!1m7!1stiW7MrCx_gW9D7w0L8G2JQ!2m2!1d-8.053739008097088!2d-34.91527447152505!3f209.20989247105075!4f4.470890112792944!5f0.7820865974627469",
+          mapaLink:
+            "https://www.google.com/maps/@-8.053739,-34.9152745,3a,75y,206.76h,96.02t/data=!3m6!1e1!3m4!1stiW7MrCx_gW9D7w0L8G2JQ!2e0!7i16384!8i8192",
         },
         {
           id: "imbiribeira",
@@ -2131,6 +2146,8 @@
           imagemUrl: "../../assets/images/Pam - Imbiribeira.jpg",
           endereco: "Av  Marechal Mascarenhas de Moraes, 2785 - 51150-003",
           mapa: "https://www.google.com/maps/embed?pb=!4v1682653463168!6m8!1m7!1syWDKXnn1PhnEu2Zl2QmpVw!2m2!1d-8.105725650274605!2d-34.91121165165891!3f104.16208174482912!4f2.5017579635551073!5f1.5703132847181993",
+          mapaLink:
+            "https://www.google.com/maps/@-8.1057257,-34.9112117,3a,49.3y,102.65h,88.38t,0.22r/data=!3m6!1e1!3m4!1syWDKXnn1PhnEu2Zl2QmpVw!2e0!7i16384!8i8192",
         },
         {
           id: "guarabira",
@@ -2138,8 +2155,9 @@
           imagemUrl: "../../assets/images/Pam - Guarabira.jpg",
           endereco: "Rua Otácilio Lira Cabral, S/N 582000-000",
           mapa: "https://www.google.com/maps/embed?pb=!4v1682653702513!6m8!1m7!1sWMjbkZA-ltuWm2RxjOo-Aw!2m2!1d-6.858694663271717!2d-35.49621788193887!3f96.45119755952989!4f4.195781795539119!5f1.7876223100816961",
+          mapaLink:
+            "https://www.google.com/maps/@-6.8586947,-35.4962179,3a,75y,92.24h,92.5t,0.21r/data=!3m6!1e1!3m4!1sWMjbkZA-ltuWm2RxjOo-Aw!2e0!7i16384!8i8192",
         },
-      
       ];
       var btnHamburguer = document.getElementById("hamburguer");
       let isPorVeiculoFilter = true;
@@ -2197,6 +2215,21 @@
           "_blank"
         );
       // FIM-----------------btn on clicks dos botoes dos cards-------------------------------------------
+
+      function cliqueAquiEVisiteNos() {
+        const idParam = urlParams.get("id");
+        if (idParam) {
+          let lugar = lugares.filter((x) => x.id == idParam)[0];
+          if (lugar) {
+            window.open(lugar.mapaLink, "_blank");
+            return;
+          }
+        }
+        window.open(
+          "https://www.google.com/maps/@-8.0615504,-34.9065778,3a,75y,171.36h,85.54t,0.4r/data=!3m6!1e1!3m4!1sKWBaNO47-ZWP2bgUkf69ow!2e0!7i16384!8i8192",
+          "_blank"
+        );
+      }
 
       function formatacaoNumeroTelefone(numeroTelefone) {
         if (numeroTelefone.length == 11) {

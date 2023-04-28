@@ -117,7 +117,7 @@
             <div class="row mb-3">
               <div class="col">
                 <button
-                  class="btn"
+                  class="btn btn-azul"
                   id="btnPernambuco"
                   onclick="showPernambuco()"
                 >
@@ -141,19 +141,6 @@
               <li>
                 <a href="filiais/index.html?id=caruaru&whatsapp=8140423223"
                   >Unidade - Caruaru</a
-                >
-              </li>
-            </ul>
-
-            <ul class="lista-unidades" id="listaParaiba">
-              <li>
-                <a href="filiais/index.html?id=bayeux&whatsapp=8331422020"
-                  >Unidade - Bayeux</a
-                >
-              </li>
-              <li>
-                <a href="filiais/index.html?id=sape&whatsapp=8331422020"
-                  >Unidade - Sapé</a
                 >
               </li>
             </ul>
@@ -373,38 +360,12 @@
       let isShowPernambucoDiv = true;
       let listaParaibaElement = document.getElementById("listaParaiba");
       let listaPernambucoElement = document.getElementById("listaPernambuco");
-      let btnPernambuco = document.getElementById("btnPernambuco");
-      let btnParaiba = document.getElementById("btnParaiba");
-      atualizarOAparecimentoDasListasDePernambucoEParaiba();
 
       btnHamburguer.onclick = () => {
         var menuHamburguer = document
           .getElementById("menu-hamburguer")
           .classList.toggle("menu-hamburguer");
       };
-
-      function showPernambuco() {
-        isShowPernambucoDiv = true;
-        atualizarOAparecimentoDasListasDePernambucoEParaiba();
-      }
-
-      function showParaiba() {
-        isShowPernambucoDiv = false;
-        atualizarOAparecimentoDasListasDePernambucoEParaiba();
-      }
-
-      function atualizarOAparecimentoDasListasDePernambucoEParaiba() {
-        listaParaibaElement.hidden = isShowPernambucoDiv;
-        listaPernambucoElement.hidden = !isShowPernambucoDiv;
-
-        if (isShowPernambucoDiv) {
-          btnPernambuco.classList.add("btn-azul");
-          btnParaiba.classList.remove("btn-azul");
-        } else {
-          btnPernambuco.classList.remove("btn-azul");
-          btnParaiba.classList.add("btn-azul");
-        }
-      }
     </script>
 
     <script
