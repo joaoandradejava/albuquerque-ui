@@ -316,6 +316,7 @@
                 </span>
                 <button
                   class="mt-4 btn btn-azul"
+                  id="btnSuspensaoCard"
                   onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de suspensão.','_blank')"
                 >
                   Contate-nos
@@ -333,6 +334,7 @@
                 </span>
                 <button
                   class="mt-4 btn btn-azul"
+                  id="btnMecanicaCard"
                   onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de mecânica.','_blank')"
                 >
                   Contate-nos
@@ -351,6 +353,7 @@
                 </span>
                 <button
                   class="mt-4 btn btn-azul"
+                  id="btnTrocaOleoCard"
                   onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de troca de óleo.','_blank')"
                 >
                   Contate-nos
@@ -368,6 +371,7 @@
                 </span>
                 <button
                   class="mt-4 btn btn-azul"
+                  id="btnPecasCard"
                   onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre as peças e serviços.','_blank')"
                 >
                   Contate-nos
@@ -387,6 +391,7 @@
                 </span>
                 <button
                   class="mt-4 btn btn-azul"
+                  id="btnAlinhamentoBalanceamentoCard"
                   onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de alinhamento e balanceamento.','_blank')"
                 >
                   Contate-nos
@@ -404,6 +409,7 @@
                 </span>
                 <button
                   class="mt-4 btn btn-azul"
+                  id="btnPneusCard"
                   onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre os pneus disponíveis.','_blank')"
                 >
                   Contate-nos
@@ -2155,6 +2161,39 @@
       modeloInputVeiculo.disabled = true;
       montarMarcaInputDoVeiculo();
       atualizarLugar();
+
+      //btn on clicks dos botoes dos cards
+      document.getElementById("btnSuspensaoCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre seus serviços de suspensão.`,
+          "_blank"
+        );
+      document.getElementById("btnMecanicaCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre seus serviços de mecânica.`,
+          "_blank"
+        );
+      document.getElementById("btnTrocaOleoCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre seus serviços de troca de óleo.`,
+          "_blank"
+        );
+      document.getElementById("btnPecasCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre as peças e serviços.`,
+          "_blank"
+        );
+      document.getElementById("btnAlinhamentoBalanceamentoCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre seus serviços de alinhamento e balanceamento.`,
+          "_blank"
+        );
+      document.getElementById("btnPneusCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre os pneus disponíveis.`,
+          "_blank"
+        );
+      // FIM-----------------btn on clicks dos botoes dos cards-------------------------------------------
 
       function formatacaoNumeroTelefone(numeroTelefone) {
         if (numeroTelefone.length == 11) {
