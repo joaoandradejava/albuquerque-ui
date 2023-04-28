@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <title>PAM Pneus</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./topo-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/pam-pneus-favicon.ico"
+    />
+  </head>
+
+  <body>
+    <div class="container-fluid p-1 p-md-4">
+      <div class="row align-items-center">
+        <div class="col-6 col-md-6">
+          <img
+            src="../assets/images/pam-pneus-logo.png"
+            height="100px"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+
+        <div class="col-6 d-md-none d-block navbar d-flex justify-content-end">
+          <button
+            id="hamburguer"
+            style="margin-right: 10%; border: none"
+            class="navbar-toggler"
+            type="button"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="col-6 col-md-6 mt-2 d-none d-md-block">
+          <ul class="menu-bar-topo">
+            <li><a href="">Home</a></li>
+            <li><a href="#unidades">Unidades</a></li>
+            <li>
+              <a
+                href=""
+                onclick="window.open('https://wa.me/558132990680?text=Olá, estou com interesse em saber mais sobre seus serviços.','_blank')"
+                >Whatsapp
+                <img
+                  src="../assets/images/whatsapp-preto-cima.png"
+                  height="13px"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row d-none" id="menu-hamburguer">
+        <div class="col">
+          <ul class="menu-bar-topo">
+            <li><a href="">Home</a></li>
+            <li><a href="#unidades">Unidades</a></li>
+            <li>
+              <a
+                href=""
+                onclick="window.open('https://wa.me/558132990680?text=Olá, estou com interesse em saber mais sobre seus serviços.','_blank')"
+                >Whatsapp
+                <img
+                  src="../assets/images/whatsapp-preto-cima.png"
+                  height="13px"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-1 p-md-4 text-light fundo">
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="fundo-comportamento">
+            <span class="texto-fundo-tamanho d-none d-md-block">
+              Manutenção <br />
+              automotiva com <br />
+              segurança,<br />
+              <b>Só na <br /></b>
+              <b>G Albuquerque</b>
+            </span>
+            <span class="texto-fundo-tamanho d-block d-md-none p-4">
+              Manutenção automotiva com segurança,
+              <b>Só na</b>
+              <b>G Albuquerque</b>
+            </span>
+            <div id="unidades"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="background-confira-unidades pt-1 pt-md-3 pb-5">
+      <div class="container mb-2">
+        <div class="row p-4 p-md-1">
+          <div class="col-12">
+            <h2 class="mb-3 confira-unidade-label">Confira nossas unidades</h2>
+            <div class="row mb-3">
+              <div class="col">
+                <button
+                  class="btn"
+                  id="btnPernambuco"
+                  onclick="showPernambuco()"
+                >
+                  Pernambuco
+                </button>
+                <button class="btn" id="btnParaiba" onclick="showParaiba()">
+                  Paraíba
+                </button>
+              </div>
+            </div>
+            <h4 class="fw-bold">Grupo G albuquerque</h4>
+
+            <ul class="lista-unidades" id="listaPernambuco">
+              <li>
+                <a href="filiais/index.html?id=abdias&whatsapp=8132990680"
+                  >Unidade - Abdias de Carvalho </a
+                >
+              </li>
+              
+              <li>
+                <a href="filiais/index.html?id=caxanga&whatsapp=8132990680"
+                  >Unidade - Caxangá</a
+                >
+              </li>
+              <li>
+                <a href="filiais/index.html?id=imbiribeira&whatsapp=8132990680"
+                  >Unidade - Imbiribeira</a
+                >
+              </li>
+            </ul>
+
+            <ul class="lista-unidades" id="listaParaiba">
+              <li>
+                <a href="filiais/index.html?id=guarabira&whatsapp=8331421407"
+                  >Unidade - Guarabira</a
+                >
+              </li>
+              
+            </ul>
+          </div>
+          <div class="col-12 col-md-6"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid fundo-escuro text-light p-5 mt-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div
+            class="col-12 col-md-3 d-flex justify-content-center align-items-center mb-4 mb-md-0"
+          >
+            <img
+              src="../assets/images/pam-pneus-logo.png"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+          >
+            <h6 class="text-uppercase">Fale conosco</h6>
+            <ul class="options-footer text-center text-md-start">
+              <li>(81) 3299-0680</li>
+              <li>Albuergue@atendimento.com</li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+          >
+            <h6 class="text-uppercase">Pagamentos</h6>
+            <ul class="options-pagamentos-footer">
+              <li>
+                <img src="../assets/images/hipercard.png" width="30px" alt="" />
+              </li>
+              <li>
+                <img
+                  src="../assets/images/mastercard.png"
+                  height="20px"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img src="../assets/images/visa.png" width="30px" alt="" />
+              </li>
+              <li>
+                <img src="../assets/images/diners.png" height="20px" alt="" />
+              </li>
+              <li>
+                <img src="../assets/images/elo.png" height="20px" alt="" />
+              </li>
+              <li>
+                <img
+                  src="../assets/images/american-express.png"
+                  height="20px"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img src="../assets/images/pix.png" height="20px" alt="" />
+              </li>
+              <li>
+                <img src="../assets/images/boleto.png" width="30px" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+          >
+            <h6 class="text-uppercase">Segue a gente</h6>
+            <ul class="options-footer-img">
+              <li>
+                <a
+                  onclick="window.open('https://www.instagram.com/pampneus/','_blank')"
+                  ><img
+                    src="../assets/images/insta-vermelho-baixo.png"
+                    height="32px"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a
+                  onclick="window.open('https://pt-br.facebook.com/people/Pam-Pneus/100063991724798/','_blank')"
+                  ><img
+                    src="../assets/images/face-vermelho-baixo.png"
+                    height="32px"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container-fluid text-light p-md-1 p-4 fundo-footer">
+      <div class="row mt-3 mb-3">
+        <div class="col" style="display: flex; justify-content: center">
+          <img
+            src="assets/images/logo-albuquerque-branco.png"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <h2 class="text-center">Somos o Grupo G Albuquerque</h2>
+          <span class="text-center d-block"
+            >Nosso objetivo é proporcionar uma excelente experiência de
+            atendimento e produtos para nossos clientes. Nossa equipe de
+            profissionais altamente capacitados está pronta para oferecer
+            soluções eficientes para manter seu veículo em ótimas condições.
+            Oferecemos serviços de manutenção preventiva, corretiva, reparos
+            elétricos e mecânicos, além de pneus. Nosso compromisso é oferecer o
+            melhor serviço possível com atendimento personalizado.
+          </span>
+          <span class="text-center d-block mt-3"
+            >⭐ Venha conhecer nosso serviço! ⭐
+          </span>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-12 col-md-8">
+          <div class="cards">
+            <div
+              class="card"
+              onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços.','_blank')"
+            >
+              <img src="assets/images/whatsapp-preto-baixo.png" alt="" />
+            </div>
+            <div
+              class="card"
+              onclick="window.open('https://www.instagram.com/galbuquerque_automecanica/','_blank')"
+            >
+              <img src="assets/images/insta-preto-baixo.png" alt="" />
+            </div>
+            <div
+              class="card"
+              onclick="window.open('https://www.facebook.com/GAlbuquerqueAutomecanica/?locale=pt_BR','_blank')"
+            >
+              <img src="assets/images/face-preto-baixo.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <button
+      type="button"
+      class="btn-flutuante"
+      data-bs-toggle="modal"
+      data-bs-target="#popupsobre"
+    >
+      <img src="../assets/images/btn-g-albu.png" height="50px" alt="" />
+    </button>
+
+    <div
+      class="modal fade"
+      id="popupsobre"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sobre</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <p>
+                    &emsp; &emsp;Nós somos a G Albuquerque, nosso objetivo é
+                    proporcionar uma excelente experiência de atendimento e
+                    produtos para nossos clientes. Nossa equipe de profissionais
+                    altamente capacitados está pronta para oferecer soluções
+                    eficientes para manter seu veículo em ótimas condições.
+                    Oferecemos serviços de manutenção preventiva, corretiva,
+                    reparos elétricos e mecânicos, além de pneus. Nosso
+                    compromisso é oferecer o melhor serviço possível com
+                    atendimento personalizado.
+                  </p>
+                  <br />
+                  <span class="text-center d-block"
+                    >⭐ Venha experimentar nosso serviço! ⭐</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var btnHamburguer = document.getElementById("hamburguer");
+      let isShowPernambucoDiv = true;
+      let listaParaibaElement = document.getElementById("listaParaiba");
+      let listaPernambucoElement = document.getElementById("listaPernambuco");
+      let btnPernambuco = document.getElementById("btnPernambuco");
+      let btnParaiba = document.getElementById("btnParaiba");
+      atualizarOAparecimentoDasListasDePernambucoEParaiba();
+
+      btnHamburguer.onclick = () => {
+        var menuHamburguer = document
+          .getElementById("menu-hamburguer")
+          .classList.toggle("menu-hamburguer");
+      };
+
+      function showPernambuco() {
+        isShowPernambucoDiv = true;
+        atualizarOAparecimentoDasListasDePernambucoEParaiba();
+      }
+
+      function showParaiba() {
+        isShowPernambucoDiv = false;
+        atualizarOAparecimentoDasListasDePernambucoEParaiba();
+      }
+
+      function atualizarOAparecimentoDasListasDePernambucoEParaiba() {
+        listaParaibaElement.hidden = isShowPernambucoDiv;
+        listaPernambucoElement.hidden = !isShowPernambucoDiv;
+
+        if (isShowPernambucoDiv) {
+          btnPernambuco.classList.add("btn-azul");
+          btnParaiba.classList.remove("btn-azul");
+        } else {
+          btnPernambuco.classList.remove("btn-azul");
+          btnParaiba.classList.add("btn-azul");
+        }
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

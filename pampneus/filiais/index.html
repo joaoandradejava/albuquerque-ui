@@ -1,0 +1,2369 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <title>PAM Pneus</title>
+    <link rel="stylesheet" href="./segunda-tela.css" />
+    <link rel="stylesheet" href="../topo-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <base target="_blank" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="../../assets/images/pam-pneus-favicon.ico" />
+
+    <script type="module" src="./main.js"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid p-1 p-md-3">
+      <div class="row align-items-center">
+        <div class="col-6 col-md-6">
+          <img
+            src="../../assets/images/pam-pneus-logo.png"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="col-6 d-md-none d-block navbar d-flex justify-content-end">
+          <button
+            id="hamburguer"
+            style="margin-right: 10%; border: none"
+            class="navbar-toggler"
+            type="button"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="col-6 col-md-6 d-none d-md-block">
+          <ul class="menu-bar-topo">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#comoChegar">Como chegar</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+          </ul>
+        </div>
+        <div class="row d-none" id="menu-hamburguer">
+          <div class="col">
+            <ul class="menu-bar-topo">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="#comoChegar">Como chegar</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#avaliacoes">Avaliações</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid fundo" id="fundoImagemLoja"></div>
+    <div class="fundo-azul text-light p-1 p-sm-0">
+      <span class="text-uppercase text-center d-block"
+        >Unidade <b id="unidadeHtml">Abreu e Lima</b></span
+      >
+    </div>
+    <div class="fundo-vermelho text-light p-1 p-sm-0">
+      <span class="text-uppercase text-center d-block" id="enderecoHtml"
+        >AV BRASIL, 93 - CENTRO, 53525-790</span
+      >
+    </div>
+
+    <div class="fundo-busca-pneu text-light">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="text-center mt-3">
+              Ache a cotação certa para o seu veículo
+            </h2>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <div class="cards-pneus">
+              <div
+                class="card-pneu"
+                id="medida"
+                onclick="selecionarTipoFiltro(false)"
+              >
+                <span
+                  ><img
+                    src="../../assets/images/regua.png"
+                    class="img-fluid"
+                    style="margin-right: 5px"
+                  />
+                  Por medida</span
+                >
+              </div>
+              <div
+                class="card-pneu"
+                id="veiculo"
+                onclick="selecionarTipoFiltro(true)"
+              >
+                <span
+                  ><img
+                    src="../../assets/images/carro.png"
+                    class="img-fluid"
+                    style="margin-right: 5px"
+                  />
+                  Por veiculo</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <!-- FILTER MEDIDA -->
+          <div
+            class="col"
+            style="
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              flex-flow: wrap;
+            "
+            id="filterMedida"
+          >
+            <div class="card-pneu-categoria">
+              <select id="tipoInput1" class="form-control w-full xl:w-4/12">
+                <option value="">Tipo</option>
+                <option value="Passeio">Passeio</option>
+                <option value="Performance">Performance</option>
+                <option value="SUV">SUV</option>
+                <option value="Carga">Carga</option>
+                <option value="Misto">Misto</option>
+                <option value="Off road">Off road</option>
+              </select>
+            </div>
+            <div class="card-pneu-categoria">
+              <select id="larguraInput" class="form-control w-full xl:w-4/12">
+                <option value="">Largura</option>
+                <option value="9.50">9.50</option>
+                <option value="10.50">10.50</option>
+                <option value="11.50">11.50</option>
+                <option value="12.50">12.50</option>
+                <option value="125">125</option>
+                <option value="135">135</option>
+                <option value="145">145</option>
+                <option value="155">155</option>
+                <option value="165">165</option>
+                <option value="175">175</option>
+                <option value="185">185</option>
+                <option value="195">195</option>
+                <option value="205">205</option>
+                <option value="215">215</option>
+                <option value="225">225</option>
+                <option value="235">235</option>
+                <option value="245">245</option>
+                <option value="255">255</option>
+                <option value="265">265</option>
+                <option value="275">275</option>
+                <option value="285">285</option>
+                <option value="295">295</option>
+                <option value="305">305</option>
+                <option value="315">315</option>
+                <option value="325">325</option>
+              </select>
+            </div>
+            <div class="card-pneu-categoria">
+              <select id="perfilInput" class="form-control w-full xl:w-4/12">
+                <option value="">Perfil</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+                <option value="60">60</option>
+                <option value="65">65</option>
+                <option value="70">70</option>
+                <option value="75">75</option>
+                <option value="80">80</option>
+                <option value="85">85</option>
+              </select>
+            </div>
+            <div class="card-pneu-categoria">
+              <select id="aroInput" class="form-control w-full xl:w-4/12">
+                <option value="">Aro</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+              </select>
+            </div>
+
+            <div class="card-pneu-categoria">
+              <select id="marcaInput" class="form-control w-full xl:w-4/12">
+                <option value="">Marca</option>
+                <option value="Bridgestone">Bridgestone</option>
+                <option value="Continental">Continental</option>
+                <option value="Dunlop">Dunlop</option>
+                <option value="Goodyear">Goodyear</option>
+                <option value="Hankook">Hankook</option>
+                <option value="Michelin">Michelin</option>
+                <option value="Pirelli">Pirelli</option>
+                <option value="Yokohama">Yokohama</option>
+              </select>
+            </div>
+
+            <div
+              class="card-pneu-categoria fundo-vermelho-card-categoria"
+              onclick="filtrar()"
+            >
+              <span class="text-uppercase"
+                ><img src="../assets/images/lupa.png" height="25px" alt="" />
+                buscar</span
+              >
+            </div>
+          </div>
+          <!------------------------------------------------>
+
+          <!-- FILTER Veiculo -->
+          <div
+            class="col"
+            style="
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              flex-flow: wrap;
+            "
+            id="filterVeiculo"
+          >
+            <div class="card-pneu-categoria">
+              <select id="tipoInput2" class="form-control w-full xl:w-4/12">
+                <option value="">Tipo</option>
+                <option value="Hatch">Hatch</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Esportivo">Esportivo</option>
+                <option value="Picape">Picape</option>
+                <option value="Cupê">Cupê</option>
+                <option value="SUV">SUV</option>
+                <option value="SUV Compacto">SUV Compacto</option>
+              </select>
+            </div>
+            <div class="card-pneu-categoria">
+              <select
+                class="form-control w-full xl:w-4/12 my-3"
+                id="marcaInput2"
+                onchange="selecionarMarca()"
+              >
+                <option value="" selected="">Marca</option>
+              </select>
+            </div>
+            <div class="card-pneu-categoria">
+              <select
+                class="form-control w-full xl:w-4/12 my-3"
+                id="modeloInput"
+              >
+                <option value="" selected="">Modelo</option>
+                <option value="outros">Outros</option>
+              </select>
+            </div>
+
+            <div
+              class="card-pneu-categoria fundo-vermelho-card-categoria"
+              onclick="filtrar()"
+            >
+              <span class="text-uppercase"
+                ><img src="../assets/images/lupa.png" height="25px" alt="" />
+                buscar</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-2 p-2" id="servicos">
+      <div class="row">
+        <div class="col">
+          <span
+            class="d-block fw-bold text-center text-uppercase"
+            style="font-size: 30px"
+            >Peças e Serviços</span
+          >
+        </div>
+      </div>
+      <div class="row mt-3 justify-content-center">
+        <div class="col-10">
+          <div class="cards">
+            <div class="card c-1-fundo text-light center-all">
+              <div class="front">
+                <span class="text-uppercase">Suspensão</span>
+              </div>
+              <div class="back p-3">
+                <span class="card-flip-text">
+                  A suspensão melhora a estabilidade e conforto do seu carro.
+                  Tecnologia avançada e peças de qualidade melhoram a
+                  performance.
+                </span>
+                <button
+                  class="mt-4 btn btn-azul"
+                  id="btnSuspensaoCard"
+                  onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de suspensão.','_blank')"
+                >
+                  Contate-nos
+                </button>
+              </div>
+            </div>
+            <div class="card c-2-fundo text-light center-all">
+              <div class="front">
+                <span class="text-uppercase">Mecânica geral</span>
+              </div>
+              <div class="back p-3">
+                <span class="card-flip-text">
+                  Nosso serviço mecânico resolve problemas do seu carro com
+                  eficiência. Contamos com equipe preparada e capacitada.
+                </span>
+                <button
+                  class="mt-4 btn btn-azul"
+                  id="btnMecanicaCard"
+                  onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de mecânica.','_blank')"
+                >
+                  Contate-nos
+                </button>
+              </div>
+            </div>
+            <div class="card c-3-fundo text-light center-all">
+              <div class="front">
+                <span class="text-uppercase">Troca de óleo</span>
+              </div>
+              <div class="back p-3">
+                <span class="card-flip-text">
+                  Nossa troca de óleo garante desempenho ideal do seu veículo.
+                  Equipe qualificada e óleos de qualidade mantêm o motor em
+                  condições ideais.
+                </span>
+                <button
+                  class="mt-4 btn btn-azul"
+                  id="btnTrocaOleoCard"
+                  onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de troca de óleo.','_blank')"
+                >
+                  Contate-nos
+                </button>
+              </div>
+            </div>
+            <div class="card c-4-fundo text-light center-all">
+              <div class="front">
+                <span class="text-uppercase">Peças</span>
+              </div>
+              <div class="back p-3">
+                <span class="card-flip-text">
+                  Nossas peças garantem desempenho superior para o seu veículo.
+                  Encontre a peça perfeita agendando seu atendimento.
+                </span>
+                <button
+                  class="mt-4 btn btn-azul"
+                  id="btnPecasCard"
+                  onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre as peças e serviços.','_blank')"
+                >
+                  Contate-nos
+                </button>
+              </div>
+            </div>
+            <div class="card c-5-fundo text-light center-all">
+              <div class="front">
+                <span class="text-uppercase d-block text-center"
+                  >Alinhamento e balanceamento</span
+                >
+              </div>
+              <div class="back p-3">
+                <span class="card-flip-text">
+                  Prolongue a vida útil dos pneus e evite problemas na direção.
+                  Realize o alinhamento e balanceamento conosco.
+                </span>
+                <button
+                  class="mt-4 btn btn-azul"
+                  id="btnAlinhamentoBalanceamentoCard"
+                  onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de alinhamento e balanceamento.','_blank')"
+                >
+                  Contate-nos
+                </button>
+              </div>
+            </div>
+            <div class="card c-6-fundo text-light center-all">
+              <div class="front">
+                <span class="text-uppercase">Pneus</span>
+              </div>
+              <div class="back p-3">
+                <span class="card-flip-text">
+                  Nossos pneus oferecem tranquilidade e conforto na direção, com
+                  tecnologia avançada e materiais de alta qualidade.
+                </span>
+                <button
+                  class="mt-4 btn btn-azul"
+                  id="btnPneusCard"
+                  onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre os pneus disponíveis.','_blank')"
+                >
+                  Contate-nos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row mt-3">
+          <div class="col" style="display: flex; justify-content: center">
+            <button
+              class="text-ligth text-uppercase text-center btn btn-escolher-servico"
+            >
+              Escolha um serviço
+            </button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="fundo-conheca-nosso-espaco text-light p-2 mt-3" id="comoChegar">
+      <span class="mt-2 text-uppercase d-block text-center fw-bold"
+        >Conheça o nosso espaço</span
+      >
+      <div class="mt-2" style="display: flex; justify-content: center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!4v1682223837673!6m8!1m7!1smHI3LI4wnRtbj1O-RWYnLw!2m2!1d-7.912229712938185!2d-34.90059009478548!3f239.3617279018131!4f2.5726450038717132!5f1.5280058584250606"
+          id="iframeMap"
+          width="900"
+          height="450"
+          style="border: 6px solid white; border-radius: 15px"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="mt-4 mb-3" style="display: flex; justify-content: center">
+        <button
+          class="text-ligth text-uppercase text-center btn btn-escolher-servico"
+          onclick="window.open('https://www.google.com/maps/@-7.9122297,-34.9005901,3a,55y,239.36h,92.57t/data=!3m6!1e1!3m4!1smHI3LI4wnRtbj1O-RWYnLw!2e0!7i16384!8i8192','_blank')"
+        >
+          Clique aqui e visite-nos
+        </button>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="col-12 col-md-6 centralizar p-2 cursor-pointer"
+          style="background-color: #d9dfeb"
+          onclick="window.open('https://www.google.com/maps/@-7.9122297,-34.9005901,3a,55y,239.36h,92.57t/data=!3m6!1e1!3m4!1smHI3LI4wnRtbj1O-RWYnLw!2e0!7i16384!8i8192','_blank')"
+        >
+          <img
+            src="../../assets/images/mapa-como-chegar.png"
+            height="80px"
+            alt=""
+          />
+          <div
+            style="
+              border-left: 2px solid black;
+              padding-left: 20px;
+              margin-left: 20px;
+            "
+          >
+            <span class="label-help">como</span><br />
+            <span class="label-help">chegar</span>
+          </div>
+        </div>
+        <div
+          class="col-12 col-md-6 centralizar p-2 cursor-pointer"
+          style="background-color: #d8ece1"
+          id="faleConoscoWhatsapp"
+          onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços.','_blank')"
+        >
+          <img
+            src="../../assets/images/celular-whatsapp.png"
+            height="80px"
+            alt=""
+          />
+          <div
+            id="avaliacoes"
+            style="
+              border-left: 2px solid black;
+              padding-left: 20px;
+              margin-left: 20px;
+            "
+          >
+            <span class="label-help">Fale conosco</span><br />
+            <span class="label-help">Pelo whatsapp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-4 p-md-1">
+      <div class="row mb-3">
+        <div class="col">
+          <span class="label-avaliacao"
+            ><span class="estrela">★</span>
+            <span class="estrela">★</span> Avaliações
+            <span class="estrela">★</span> <span class="estrela">★</span>
+          </span>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+          <div
+            class="avaliacao p-2"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-theme="dark"
+              style="
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <div class="carousel-inner p-3 p-md-2">
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      src="../../assets/images/avaliacao1.png"
+                      class="d-block h-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      src="../../assets/images/avaliacao2.png"
+                      class="d-block h-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      src="../../assets/images/avaliacao3.png"
+                      class="d-block h-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      src="../../assets/images/avaliacao4.png"
+                      class="d-block h-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      src="../../assets/images/avaliacao5.png"
+                      class="d-block h-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      src="../../assets/images/avaliacao6.png"
+                      class="d-block h-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      src="../../assets/images/avaliacao7.png"
+                      class="d-block h-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      src="../../assets/images/avaliacao8.png"
+                      class="d-block h-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      src="../../assets/images/avaliacao9.png"
+                      class="d-block h-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      src="../../assets/images/avaliacao10.png"
+                      class="d-block h-100 img-fluid"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid fundo-escuro text-light p-5 mt-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div
+            class="col-12 col-md-3 d-flex justify-content-center align-items-center mb-4 mb-md-0"
+          >
+            <img
+              src="../../assets/images/pam-pneus-logo.png"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+          >
+            <h6 class="text-uppercase">Fale conosco</h6>
+            <ul class="options-footer text-center text-md-start">
+              <li id="numeroWhatsappLabel">(81) 9 9181-2871</li>
+              <li>Albuergue@atendimento.com</li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+          >
+            <h6 class="text-uppercase">Pagamentos</h6>
+            <ul class="options-pagamentos-footer">
+              <li>
+                <img src="../../assets/images/hipercard.png" width="30px" alt="" />
+              </li>
+              <li>
+                <img
+                  src="../../assets/images/mastercard.png"
+                  height="20px"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img src="../../assets/images/visa.png" width="30px" alt="" />
+              </li>
+              <li>
+                <img src="../../assets/images/diners.png" height="20px" alt="" />
+              </li>
+              <li>
+                <img src="../../assets/images/elo.png" height="20px" alt="" />
+              </li>
+              <li>
+                <img
+                  src="../../assets/images/american-express.png"
+                  height="20px"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img src="../../assets/images/pix.png" height="20px" alt="" />
+              </li>
+              <li>
+                <img src="../../assets/images/boleto.png" width="30px" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+          >
+            <h6 class="text-uppercase">Segue a gente</h6>
+            <ul class="options-footer-img">
+              <li>
+                <a
+                  onclick="window.open('https://www.instagram.com/pampneus/','_blank')"
+                  ><img
+                    src="../../assets/images/insta-vermelho-baixo.png"
+                    height="32px"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a
+                  onclick="window.open('https://pt-br.facebook.com/people/Pam-Pneus/100063991724798/','_blank')"
+                  ><img
+                    src="../../assets/images/face-vermelho-baixo.png"
+                    height="32px"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-3 mb-2">
+      <div class="row">
+        <div class="col">
+          <ul class="options-rodape">
+            <li><span class="fw-bold">2023 Grupo G Albuquerque</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="btn-flutuante"
+      data-bs-toggle="modal"
+      data-bs-target="#popupsobre"
+    >
+      <img src="../../assets/images/btn-g-albu.png" height="50px" alt="" />
+    </button>
+
+    <div
+      class="modal fade"
+      id="popupsobre"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sobre</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <p>
+                    &emsp; &emsp;Nós somos a G Albuquerque, nosso objetivo é
+                    proporcionar uma excelente experiência de atendimento e
+                    produtos para nossos clientes. Nossa equipe de profissionais
+                    altamente capacitados está pronta para oferecer soluções
+                    eficientes para manter seu veículo em ótimas condições.
+                    Oferecemos serviços de manutenção preventiva, corretiva,
+                    reparos elétricos e mecânicos, além de pneus. Nosso
+                    compromisso é oferecer o melhor serviço possível com
+                    atendimento personalizado.
+                  </p>
+                  <br />
+                  <span class="text-center d-block"
+                    >⭐ Venha experimentar nosso serviço! ⭐</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const marcas = [
+        { id: 1, nome: "CHEVROLET" },
+        { id: 2, nome: "VOLKSWAGEN" },
+        { id: 3, nome: "FIAT" },
+        { id: 4, nome: "MERCEDES-BENZ" },
+        { id: 5, nome: "CITROEN" },
+        { id: 7, nome: "HONDA" },
+        { id: 8, nome: "SUBARU" },
+        { id: 10, nome: "FERRARI" },
+        { id: 12, nome: "LAMBORGHINI" },
+        { id: 13, nome: "FORD" },
+        { id: 14, nome: "HYUNDAI" },
+        { id: 15, nome: "JAC" },
+        { id: 16, nome: "KIA" },
+        { id: 17, nome: "GURGEL" },
+        { id: 18, nome: "DODGE" },
+        { id: 19, nome: "CHRYSLER" },
+        { id: 20, nome: "BENTLEY" },
+        { id: 22, nome: "PEUGEOT" },
+        { id: 23, nome: "TOYOTA" },
+        { id: 24, nome: "RENAULT" },
+        { id: 27, nome: "AGRALE" },
+        { id: 28, nome: "ALFA ROMEO" },
+        { id: 32, nome: "AUDI" },
+        { id: 36, nome: "BMW" },
+        { id: 43, nome: "NISSAN" },
+        { id: 47, nome: "CHERY" },
+        { id: 53, nome: "VOLVO" },
+        { id: 57, nome: "DKW-VEMAG" },
+        { id: 59, nome: "SUZUKI" },
+        { id: 70, nome: "PORSCHE" },
+        { id: 86, nome: "JAGUAR" },
+        { id: 87, nome: "JEEP" },
+        { id: 94, nome: "LADA" },
+        { id: 96, nome: "LAND ROVER" },
+        { id: 97, nome: "LEXUS" },
+        { id: 98, nome: "LIFAN" },
+        { id: 104, nome: "MASERATI" },
+        { id: 111, nome: "MITSUBISHI" },
+        { id: 113, nome: "MINI" },
+        { id: 114, nome: "MIURA" },
+        { id: 116, nome: "MP LAFER" },
+        { id: 124, nome: "PUMA" },
+        { id: 132, nome: "SHINERAY" },
+        { id: 141, nome: "SIMCA" },
+        { id: 142, nome: "SMART" },
+        { id: 149, nome: "TROLLER" },
+        { id: 150, nome: "UNIMOG" },
+        { id: 239, nome: "KARMANN GHIA" },
+      ];
+
+      let modelos = [
+        { numero: 25, nome: "INTEGRA" },
+        { numero: 25, nome: "LEGEND" },
+        { numero: 25, nome: "NSX" },
+        { numero: 27, nome: "MARRUA" },
+        { numero: 28, nome: "145" },
+        { numero: 28, nome: "147" },
+        { numero: 28, nome: "155" },
+        { numero: 28, nome: "156" },
+        { numero: 28, nome: "164" },
+        { numero: 28, nome: "166" },
+        { numero: 28, nome: "2300" },
+        { numero: 28, nome: "SPIDER" },
+        { numero: 156, nome: "HUMMER" },
+        { numero: 16, nome: "AM-825" },
+        { numero: 16, nome: "HI-TOPIC" },
+        { numero: 16, nome: "ROCSTA" },
+        { numero: 16, nome: "TOPIC" },
+        { numero: 16, nome: "TOWNER" },
+        { numero: 32, nome: "100" },
+        { numero: 32, nome: "80" },
+        { numero: 32, nome: "A1" },
+        { numero: 32, nome: "A3" },
+        { numero: 32, nome: "A4 SEDAN" },
+        { numero: 32, nome: "A5 COUPE" },
+        { numero: 32, nome: "A6 SEDAN" },
+        { numero: 32, nome: "A7" },
+        { numero: 32, nome: "A8" },
+        { numero: 32, nome: "Q3" },
+        { numero: 32, nome: "Q5" },
+        { numero: 32, nome: "Q7" },
+        { numero: 32, nome: "R8" },
+        { numero: 32, nome: "RS3" },
+        { numero: 32, nome: "RS4" },
+        { numero: 32, nome: "RS5" },
+        { numero: 32, nome: "RS6" },
+        { numero: 32, nome: "S3" },
+        { numero: 32, nome: "S4 SEDAN" },
+        { numero: 32, nome: "S6 SEDAN" },
+        { numero: 32, nome: "S8" },
+        { numero: 32, nome: "TT" },
+        { numero: 32, nome: "TTS" },
+        { numero: 157, nome: "BUGGY" },
+        { numero: 155, nome: "DEVILLE" },
+        { numero: 155, nome: "ELDORADO" },
+        { numero: 155, nome: "SEVILLE" },
+        { numero: 42, nome: "JAVALI" },
+        { numero: 6, nome: "MINI STAR FAMILY" },
+        { numero: 6, nome: "MINI STAR UTILITY" },
+        { numero: 47, nome: "CIELO" },
+        { numero: 47, nome: "FACE" },
+        { numero: 47, nome: "QQ" },
+        { numero: 47, nome: "S-18" },
+        { numero: 47, nome: "TIGGO" },
+        { numero: 19, nome: "300C" },
+        { numero: 19, nome: "CARAVAN" },
+        { numero: 19, nome: "CIRRUS" },
+        { numero: 19, nome: "GRAN CARAVAN" },
+        { numero: 19, nome: "LE BARON" },
+        { numero: 19, nome: "NEON" },
+        { numero: 19, nome: "PT CRUISER" },
+        { numero: 19, nome: "SEBRING" },
+        { numero: 19, nome: "STRATUS" },
+        { numero: 19, nome: "TOWN E COUNTRY" },
+        { numero: 19, nome: "VISION" },
+        { numero: 5, nome: "AIRCROSS" },
+        { numero: 5, nome: "AX" },
+        { numero: 5, nome: "BERLINGO" },
+        { numero: 5, nome: "BX" },
+        { numero: 5, nome: "C3" },
+        { numero: 5, nome: "C4" },
+        { numero: 5, nome: "C5" },
+        { numero: 5, nome: "C6" },
+        { numero: 5, nome: "C8" },
+        { numero: 5, nome: "DS3" },
+        { numero: 5, nome: "EVASION" },
+        { numero: 5, nome: "JUMPER" },
+        { numero: 5, nome: "XANTIA" },
+        { numero: 5, nome: "XM" },
+        { numero: 5, nome: "XSARA" },
+        { numero: 5, nome: "ZX" },
+        { numero: 50, nome: "CL-244" },
+        { numero: 50, nome: "CL-330" },
+        { numero: 51, nome: "ESPERO" },
+        { numero: 51, nome: "LANOS" },
+        { numero: 51, nome: "LEGANZA" },
+        { numero: 51, nome: "NUBIRA" },
+        { numero: 51, nome: "PRINCE" },
+        { numero: 51, nome: "RACER" },
+        { numero: 51, nome: "SUPER SALON" },
+        { numero: 51, nome: "TICO" },
+        { numero: 52, nome: "APPLAUSE" },
+        { numero: 52, nome: "CHARADE" },
+        { numero: 52, nome: "CUORE" },
+        { numero: 52, nome: "FEROZA" },
+        { numero: 52, nome: "GRAN MOVE" },
+        { numero: 52, nome: "MOVE VAN" },
+        { numero: 52, nome: "TERIOS" },
+        { numero: 18, nome: "AVENGER" },
+        { numero: 18, nome: "DAKOTA" },
+        { numero: 18, nome: "JOURNEY" },
+        { numero: 18, nome: "RAM" },
+        { numero: 18, nome: "STEALTH" },
+        { numero: 61, nome: "M-100" },
+        { numero: 61, nome: "PLUTUS" },
+        { numero: 61, nome: "START" },
+        { numero: 61, nome: "ULC" },
+        { numero: 63, nome: "ENGESA" },
+        { numero: 64, nome: "CAMPER" },
+        { numero: 64, nome: "MASTER" },
+        { numero: 10, nome: "348" },
+        { numero: 10, nome: "355" },
+        { numero: 10, nome: "360" },
+        { numero: 10, nome: "456" },
+        { numero: 10, nome: "550" },
+        { numero: 10, nome: "575M" },
+        { numero: 10, nome: "612" },
+        { numero: 10, nome: "CALIFORNIA" },
+        { numero: 10, nome: "F430" },
+        { numero: 10, nome: "F599" },
+        { numero: 3, nome: "147" },
+        { numero: 3, nome: "500" },
+        { numero: 3, nome: "BRAVA" },
+        { numero: 3, nome: "BRAVO" },
+        { numero: 3, nome: "COUPE" },
+        { numero: 3, nome: "DOBLO" },
+        { numero: 3, nome: "DUCATO CARGO" },
+        { numero: 3, nome: "DUNA" },
+        { numero: 3, nome: "ELBA" },
+        { numero: 3, nome: "FIORINO" },
+        { numero: 3, nome: "FREEMONT" },
+        { numero: 3, nome: "GRAND SIENA" },
+        { numero: 3, nome: "IDEA" },
+        { numero: 3, nome: "LINEA" },
+        { numero: 3, nome: "MAREA" },
+        { numero: 3, nome: "OGGI" },
+        { numero: 3, nome: "PALIO" },
+        { numero: 3, nome: "PANORAMA" },
+        { numero: 3, nome: "PREMIO" },
+        { numero: 3, nome: "PUNTO" },
+        { numero: 3, nome: "SIENA" },
+        { numero: 3, nome: "STILO" },
+        { numero: 3, nome: "STRADA" },
+        { numero: 3, nome: "TEMPRA" },
+        { numero: 3, nome: "TIPO" },
+        { numero: 3, nome: "UNO" },
+        { numero: 13, nome: "AEROSTAR" },
+        { numero: 13, nome: "ASPIRE" },
+        { numero: 13, nome: "BELINA" },
+        { numero: 13, nome: "CLUB WAGON" },
+        { numero: 13, nome: "CONTOUR" },
+        { numero: 13, nome: "CORCEL II" },
+        { numero: 13, nome: "COURIER" },
+        { numero: 13, nome: "CROWN VICTORIA" },
+        { numero: 13, nome: "DEL REY" },
+        { numero: 13, nome: "ECOSPORT" },
+        { numero: 13, nome: "EDGE" },
+        { numero: 13, nome: "ESCORT" },
+        { numero: 13, nome: "EXPEDITION" },
+        { numero: 13, nome: "EXPLORER" },
+        { numero: 13, nome: "F-100" },
+        { numero: 13, nome: "F-1000" },
+        { numero: 13, nome: "F-150" },
+        { numero: 13, nome: "F-250" },
+        { numero: 13, nome: "FIESTA" },
+        { numero: 13, nome: "FOCUS" },
+        { numero: 13, nome: "FURGLAINE" },
+        { numero: 13, nome: "FUSION" },
+        { numero: 13, nome: "IBIZA" },
+        { numero: 13, nome: "KA" },
+        { numero: 13, nome: "MONDEO" },
+        { numero: 13, nome: "MUSTANG" },
+        { numero: 13, nome: "PAMPA" },
+        { numero: 13, nome: "PROBE" },
+        { numero: 13, nome: "RANGER" },
+        { numero: 13, nome: "VERSAILLES ROYALE" },
+        { numero: 13, nome: "TAURUS" },
+        { numero: 13, nome: "THUNDERBIRD" },
+        { numero: 13, nome: "TRANSIT" },
+        { numero: 13, nome: "VERONA" },
+        { numero: 13, nome: "VERSAILLES" },
+        { numero: 13, nome: "WINDSTAR" },
+        { numero: 1, nome: "A-10" },
+        { numero: 1, nome: "A-20" },
+        { numero: 1, nome: "AGILE" },
+        { numero: 1, nome: "ASTRA" },
+        { numero: 1, nome: "BLAZER" },
+        { numero: 1, nome: "BONANZA" },
+        { numero: 1, nome: "C-10" },
+        { numero: 1, nome: "C-20" },
+        { numero: 1, nome: "CALIBRA" },
+        { numero: 1, nome: "CAMARO" },
+        { numero: 1, nome: "CAPRICE" },
+        { numero: 1, nome: "CAPTIVA" },
+        { numero: 1, nome: "CARAVAN" },
+        { numero: 1, nome: "CAVALIER" },
+        { numero: 1, nome: "CELTA" },
+        { numero: 1, nome: "CHEVY" },
+        { numero: 1, nome: "CHEYNNE" },
+        { numero: 1, nome: "COBALT" },
+        { numero: 1, nome: "CORSA" },
+        { numero: 1, nome: "CORVETTE" },
+        { numero: 1, nome: "CRUZE" },
+        { numero: 1, nome: "D-10" },
+        { numero: 1, nome: "D-20" },
+        { numero: 1, nome: "IPANEMA" },
+        { numero: 1, nome: "KADETT" },
+        { numero: 1, nome: "LUMINA" },
+        { numero: 1, nome: "MALIBU" },
+        { numero: 1, nome: "MERIVA" },
+        { numero: 1, nome: "MONTANA" },
+        { numero: 1, nome: "OMEGA" },
+        { numero: 1, nome: "OPALA" },
+        { numero: 1, nome: "PRISMA" },
+        { numero: 1, nome: "S10" },
+        { numero: 1, nome: "SILVERADO" },
+        { numero: 1, nome: "SONIC" },
+        { numero: 1, nome: "SONOMA" },
+        { numero: 1, nome: "SPACEVAN" },
+        { numero: 1, nome: "SS10" },
+        { numero: 1, nome: "SUBURBAN" },
+        { numero: 1, nome: "SYCLONE" },
+        { numero: 1, nome: "TIGRA" },
+        { numero: 1, nome: "TRACKER" },
+        { numero: 1, nome: "TRAFIC" },
+        { numero: 1, nome: "VECTRA" },
+        { numero: 1, nome: "VERANEIO" },
+        { numero: 1, nome: "ZAFIRA" },
+        { numero: 75, nome: "HOVER" },
+        { numero: 17, nome: "BR-800" },
+        { numero: 17, nome: "CARAJAS" },
+        { numero: 17, nome: "TOCANTINS" },
+        { numero: 17, nome: "XAVANTE" },
+        { numero: 17, nome: "VIP" },
+        { numero: 76, nome: "TOWNER" },
+        { numero: 7, nome: "ACCORD" },
+        { numero: 7, nome: "CITY" },
+        { numero: 7, nome: "CIVIC" },
+        { numero: 7, nome: "CR-V" },
+        { numero: 7, nome: "FIT" },
+        { numero: 7, nome: "ODYSSEY" },
+        { numero: 7, nome: "PASSPORT" },
+        { numero: 7, nome: "PRELUDE" },
+        { numero: 14, nome: "ACCENT" },
+        { numero: 14, nome: "ATOS" },
+        { numero: 14, nome: "AZERA" },
+        { numero: 14, nome: "COUPE" },
+        { numero: 14, nome: "ELANTRA" },
+        { numero: 14, nome: "EXCEL" },
+        { numero: 14, nome: "GALLOPER" },
+        { numero: 14, nome: "GENESIS" },
+        { numero: 14, nome: "H1" },
+        { numero: 14, nome: "H100" },
+        { numero: 14, nome: "I30" },
+        { numero: 14, nome: "IX35" },
+        { numero: 14, nome: "MATRIX" },
+        { numero: 14, nome: "PORTER" },
+        { numero: 14, nome: "SANTA FE" },
+        { numero: 14, nome: "SCOUPE" },
+        { numero: 14, nome: "SONATA" },
+        { numero: 14, nome: "TERRACAN" },
+        { numero: 14, nome: "TRAJET" },
+        { numero: 14, nome: "TUCSON" },
+        { numero: 14, nome: "VELOSTER" },
+        { numero: 14, nome: "VERACRUZ" },
+        { numero: 84, nome: "AMIGO" },
+        { numero: 84, nome: "HOMBRE" },
+        { numero: 84, nome: "RODEO" },
+        { numero: 15, nome: "J3" },
+        { numero: 15, nome: "J5" },
+        { numero: 15, nome: "J6" },
+        { numero: 86, nome: "DAIMLER" },
+        { numero: 86, nome: "S-TYPE" },
+        { numero: 86, nome: "X-TYPE" },
+        { numero: 86, nome: "MODELOS XJ" },
+        { numero: 86, nome: "MODELOS XK" },
+        { numero: 87, nome: "CHEROKEE" },
+        { numero: 87, nome: "COMMANDER" },
+        { numero: 87, nome: "COMPASS" },
+        { numero: 87, nome: "GRAND CHEROKEE" },
+        { numero: 87, nome: "WRANGLER" },
+        { numero: 88, nome: "TOPIC VAN" },
+        { numero: 89, nome: "JIPE MONTEZ" },
+        { numero: 89, nome: "PICAPE MONTEZ" },
+        { numero: 16, nome: "BESTA" },
+        { numero: 16, nome: "BONGO" },
+        { numero: 16, nome: "CADENZA" },
+        { numero: 16, nome: "CARENS" },
+        { numero: 16, nome: "CARNIVAL" },
+        { numero: 16, nome: "CERATO" },
+        { numero: 16, nome: "CERES" },
+        { numero: 16, nome: "CLARUS" },
+        { numero: 16, nome: "MAGENTIS" },
+        { numero: 16, nome: "MOHAVE" },
+        { numero: 16, nome: "OPIRUS" },
+        { numero: 16, nome: "OPTIMA" },
+        { numero: 16, nome: "PICANTO" },
+        { numero: 16, nome: "SEPHIA" },
+        { numero: 16, nome: "SHUMA" },
+        { numero: 16, nome: "SORENTO" },
+        { numero: 16, nome: "SOUL" },
+        { numero: 16, nome: "SPORTAGE" },
+        { numero: 94, nome: "LAIKA" },
+        { numero: 94, nome: "NIVA" },
+        { numero: 94, nome: "SAMARA" },
+        { numero: 12, nome: "GALLARDO" },
+        { numero: 12, nome: "MURCIELAGO" },
+        { numero: 96, nome: "DEFENDER" },
+        { numero: 96, nome: "DISCOVERY" },
+        { numero: 96, nome: "FREELANDER" },
+        { numero: 96, nome: "NEW RANGE" },
+        { numero: 96, nome: "RANGE ROVER" },
+        { numero: 97, nome: "ES" },
+        { numero: 97, nome: "GS" },
+        { numero: 97, nome: "IS-300" },
+        { numero: 97, nome: "LS" },
+        { numero: 97, nome: "RX" },
+        { numero: 97, nome: "SC" },
+        { numero: 98, nome: "320" },
+        { numero: 98, nome: "620" },
+        { numero: 100, nome: "H1" },
+        { numero: 101, nome: "ELAN" },
+        { numero: 101, nome: "ESPRIT" },
+        { numero: 102, nome: "SCORPIO" },
+        { numero: 104, nome: "222" },
+        { numero: 104, nome: "228" },
+        { numero: 104, nome: "3200" },
+        { numero: 104, nome: "430" },
+        { numero: 104, nome: "COUPE" },
+        { numero: 104, nome: "GHIBLI" },
+        { numero: 104, nome: "GRANCABRIO" },
+        { numero: 104, nome: "GRANSPORT" },
+        { numero: 104, nome: "GRANTURISMO" },
+        { numero: 104, nome: "QUATTROPORTE" },
+        { numero: 104, nome: "SHAMAL" },
+        { numero: 104, nome: "SPIDER" },
+        { numero: 106, nome: "PICK-UP" },
+        { numero: 108, nome: "323" },
+        { numero: 108, nome: "626" },
+        { numero: 108, nome: "929" },
+        { numero: 108, nome: "B-2500" },
+        { numero: 108, nome: "B2200" },
+        { numero: 108, nome: "MILLENIA" },
+        { numero: 108, nome: "MPV" },
+        { numero: 108, nome: "MX-3" },
+        { numero: 108, nome: "MX-5" },
+        { numero: 108, nome: "NAVAJO" },
+        { numero: 108, nome: "PROTEGE" },
+        { numero: 108, nome: "RX" },
+        { numero: 4, nome: "CLASSE A" },
+        { numero: 4, nome: "CLASSE B" },
+        { numero: 4, nome: "CLASSE R" },
+        { numero: 4, nome: "CLASSE GLK" },
+        { numero: 4, nome: "SPRINTER" },
+        { numero: 110, nome: "MYSTIQUE" },
+        { numero: 110, nome: "SABLE" },
+        { numero: 112, nome: "550" },
+        { numero: 112, nome: "MG6" },
+        { numero: 113, nome: "COOPER" },
+        { numero: 113, nome: "ONE" },
+        { numero: 111, nome: "3000" },
+        { numero: 111, nome: "AIRTREK" },
+        { numero: 111, nome: "ASX" },
+        { numero: 111, nome: "COLT" },
+        { numero: 111, nome: "DIAMANT" },
+        { numero: 111, nome: "ECLIPSE" },
+        { numero: 111, nome: "EXPO" },
+        { numero: 111, nome: "GALANT" },
+        { numero: 111, nome: "GRANDIS" },
+        { numero: 111, nome: "L200" },
+        { numero: 111, nome: "L300" },
+        { numero: 111, nome: "LANCER" },
+        { numero: 111, nome: "MIRAGE" },
+        { numero: 111, nome: "MONTERO" },
+        { numero: 111, nome: "OUTLANDER" },
+        { numero: 111, nome: "PAJERO" },
+        { numero: 111, nome: "SPACE WAGON" },
+        { numero: 114, nome: "BG-TRUCK" },
+        { numero: 43, nome: "350Z" },
+        { numero: 43, nome: "ALTIMA" },
+        { numero: 43, nome: "AX" },
+        { numero: 43, nome: "D-21" },
+        { numero: 43, nome: "FRONTIER" },
+        { numero: 43, nome: "KING-CAB" },
+        { numero: 43, nome: "LIVINA" },
+        { numero: 43, nome: "MARCH" },
+        { numero: 43, nome: "MAXIMA" },
+        { numero: 43, nome: "MURANO" },
+        { numero: 43, nome: "NX" },
+        { numero: 43, nome: "PATHFINDER" },
+        { numero: 43, nome: "PRIMERA" },
+        { numero: 43, nome: "QUEST" },
+        { numero: 43, nome: "SENTRA" },
+        { numero: 43, nome: "STANZA" },
+        { numero: 43, nome: "180SX" },
+        { numero: 43, nome: "TERRANO" },
+        { numero: 43, nome: "TIIDA" },
+        { numero: 43, nome: "VERSA" },
+        { numero: 43, nome: "X-TRAIL" },
+        { numero: 43, nome: "XTERRA" },
+        { numero: 43, nome: "ZX" },
+        { numero: 22, nome: "106" },
+        { numero: 22, nome: "205" },
+        { numero: 22, nome: "206" },
+        { numero: 22, nome: "207" },
+        { numero: 22, nome: "3008" },
+        { numero: 22, nome: "306" },
+        { numero: 22, nome: "307" },
+        { numero: 22, nome: "308" },
+        { numero: 22, nome: "405" },
+        { numero: 22, nome: "406" },
+        { numero: 22, nome: "407" },
+        { numero: 22, nome: "408" },
+        { numero: 22, nome: "504" },
+        { numero: 22, nome: "505" },
+        { numero: 22, nome: "508" },
+        { numero: 22, nome: "605" },
+        { numero: 22, nome: "607" },
+        { numero: 22, nome: "806" },
+        { numero: 22, nome: "807" },
+        { numero: 22, nome: "BOXER" },
+        { numero: 22, nome: "HOGGAR" },
+        { numero: 22, nome: "PARTNER" },
+        { numero: 22, nome: "RCZ" },
+        { numero: 123, nome: "GRAN VOYAGER" },
+        { numero: 123, nome: "SUNDANCE" },
+        { numero: 69, nome: "TRANS-AM" },
+        { numero: 69, nome: "TRANS-SPORT" },
+        { numero: 70, nome: "911" },
+        { numero: 70, nome: "BOXSTER" },
+        { numero: 70, nome: "CAYENNE" },
+        { numero: 70, nome: "CAYMAN" },
+        { numero: 70, nome: "PANAMERA" },
+        { numero: 24, nome: "21 SEDAN" },
+        { numero: 24, nome: "CLIO" },
+        { numero: 24, nome: "DUSTER" },
+        { numero: 24, nome: "EXPRESS" },
+        { numero: 24, nome: "FLUENCE" },
+        { numero: 24, nome: "KANGOO" },
+        { numero: 24, nome: "LAGUNA" },
+        { numero: 24, nome: "LOGAN" },
+        { numero: 24, nome: "MASTER" },
+        { numero: 24, nome: "MEGANE" },
+        { numero: 24, nome: "SAFRANE" },
+        { numero: 24, nome: "SANDERO" },
+        { numero: 24, nome: "SCENIC" },
+        { numero: 24, nome: "SYMBOL" },
+        { numero: 24, nome: "TRAFIC" },
+        { numero: 24, nome: "TWINGO" },
+        { numero: 137, nome: "9000" },
+        { numero: 162, nome: "SL-2" },
+        { numero: 130, nome: "CORDOBA" },
+        { numero: 130, nome: "IBIZA" },
+        { numero: 130, nome: "INCA" },
+        { numero: 142, nome: "FORTWO" },
+        { numero: 21, nome: "ACTYON SPORTS" },
+        { numero: 21, nome: "CHAIRMAN" },
+        { numero: 21, nome: "ISTANA" },
+        { numero: 21, nome: "KORANDO" },
+        { numero: 21, nome: "KYRON" },
+        { numero: 21, nome: "MUSSO" },
+        { numero: 21, nome: "REXTON" },
+        { numero: 8, nome: "FORESTER" },
+        { numero: 8, nome: "IMPREZA" },
+        { numero: 8, nome: "LEGACY" },
+        { numero: 8, nome: "OUTBACK" },
+        { numero: 8, nome: "SVX" },
+        { numero: 8, nome: "TRIBECA" },
+        { numero: 8, nome: "VIVIO" },
+        { numero: 59, nome: "BALENO" },
+        { numero: 59, nome: "GRAND VITARA" },
+        { numero: 59, nome: "IGNIS" },
+        { numero: 59, nome: "JIMNY" },
+        { numero: 59, nome: "SUPER CARRY" },
+        { numero: 59, nome: "SWIFT" },
+        { numero: 59, nome: "SX4" },
+        { numero: 59, nome: "VITARA" },
+        { numero: 59, nome: "WAGON R" },
+        { numero: 146, nome: "STARK" },
+        { numero: 23, nome: "AVALON" },
+        { numero: 23, nome: "BANDEIRANTE" },
+        { numero: 23, nome: "CAMRY" },
+        { numero: 23, nome: "CELICA" },
+        { numero: 23, nome: "COROLLA" },
+        { numero: 23, nome: "CORONA" },
+        { numero: 23, nome: "HILUX" },
+        { numero: 23, nome: "LAND CRUISER" },
+        { numero: 23, nome: "MR-2" },
+        { numero: 23, nome: "PASEO" },
+        { numero: 23, nome: "PREVIA" },
+        { numero: 23, nome: "RAV4" },
+        { numero: 23, nome: "SUPRA" },
+        { numero: 149, nome: "PANTANAL" },
+        { numero: 149, nome: "T-4" },
+        { numero: 53, nome: "400 SERIES" },
+        { numero: 53, nome: "850" },
+        { numero: 53, nome: "900 SERIES" },
+        { numero: 2, nome: "AMAROK" },
+        { numero: 2, nome: "APOLLO" },
+        { numero: 2, nome: "BORA" },
+        { numero: 2, nome: "CARAVELLE" },
+        { numero: 2, nome: "CORRADO" },
+        { numero: 2, nome: "EOS" },
+        { numero: 2, nome: "EUROVAN" },
+        { numero: 2, nome: "FOX" },
+        { numero: 2, nome: "FUSCA" },
+        { numero: 2, nome: "GOL" },
+        { numero: 2, nome: "GOLF" },
+        { numero: 2, nome: "JETTA" },
+        { numero: 2, nome: "KOMBI" },
+        { numero: 2, nome: "LOGUS" },
+        { numero: 2, nome: "PARATI" },
+        { numero: 2, nome: "PASSAT" },
+        { numero: 2, nome: "POINTER" },
+        { numero: 2, nome: "POLO" },
+        { numero: 2, nome: "SANTANA" },
+        { numero: 2, nome: "SAVEIRO" },
+        { numero: 2, nome: "SPACEFOX" },
+        { numero: 2, nome: "TIGUAN" },
+        { numero: 2, nome: "TOUAREG" },
+        { numero: 2, nome: "VOYAGE" },
+        { numero: 25, nome: "ZDX" },
+        { numero: 3, nome: "140" },
+        { numero: 2, nome: "BRASILIA" },
+        { numero: 13, nome: "BRASILVAN" },
+        { numero: 13, nome: "CORCEL" },
+        { numero: 3, nome: "PALIO WEEKEND" },
+        { numero: 13, nome: "FOCUS SEDAN" },
+        { numero: 13, nome: "FIESTA SEDAN" },
+        { numero: 13, nome: "FIESTA TRAIL" },
+        { numero: 22, nome: "207 SW" },
+        { numero: 13, nome: "ESCORT SW" },
+        { numero: 22, nome: "307 SEDAN" },
+        { numero: 22, nome: "307 SW" },
+        { numero: 5, nome: "C4 PALLAS" },
+        { numero: 5, nome: "C4 PICASSO" },
+        { numero: 5, nome: "C4 VTR" },
+        { numero: 24, nome: "CLIO SEDAN" },
+        { numero: 23, nome: "COROLLA FIELDER" },
+        { numero: 23, nome: "HILUX SW4" },
+        { numero: 24, nome: "MEGANE GRAND TOUR" },
+        { numero: 24, nome: "SANDERO STEPWAY" },
+        { numero: 5, nome: "XSARA PICASSO" },
+        { numero: 131, nome: "COLHEITADEIRA" },
+        { numero: 158, nome: "PICKUP F75" },
+        { numero: 17, nome: "X12" },
+        { numero: 1, nome: "BEL AIR" },
+        { numero: 36, nome: "RX" },
+        { numero: 1, nome: "C-14" },
+        { numero: 155, nome: "SRX4" },
+        { numero: 1, nome: "C-15" },
+        { numero: 1, nome: "BRASIL" },
+        { numero: 18, nome: "POLARA" },
+        { numero: 3, nome: "600" },
+        { numero: 13, nome: "F-01" },
+        { numero: 13, nome: "FALCON" },
+        { numero: 13, nome: "GALAXIE" },
+        { numero: 13, nome: "MAVERICK" },
+        { numero: 13, nome: "MODELO A" },
+        { numero: 13, nome: "NEW FIESTA" },
+        { numero: 82, nome: "LINHA FX" },
+        { numero: 124, nome: "GTS" },
+        { numero: 80, nome: "H3" },
+        { numero: 14, nome: "PRIME" },
+        { numero: 14, nome: "TIBURON" },
+        { numero: 87, nome: "JEEP" },
+        { numero: 87, nome: "CJ5" },
+        { numero: 239, nome: "TC" },
+        { numero: 4, nome: "CLASSE CLC" },
+        { numero: 4, nome: "CLASSE CLS" },
+        { numero: 110, nome: "MONTEREY" },
+        { numero: 114, nome: "TOPSPORT" },
+        { numero: 114, nome: "TARGA" },
+        { numero: 114, nome: "X8" },
+        { numero: 43, nome: "370Z" },
+        { numero: 124, nome: "GTB" },
+        { numero: 124, nome: "GTC" },
+        { numero: 124, nome: "GTE" },
+        { numero: 115, nome: "AUSTIN" },
+        { numero: 24, nome: "7TL" },
+        { numero: 24, nome: "19" },
+        { numero: 175, nome: "CONVERSÍVEL" },
+        { numero: 17, nome: "SUPERMINI" },
+        { numero: 2, nome: "TL" },
+        { numero: 3, nome: "TOPOLINO" },
+        { numero: 23, nome: "SR5" },
+        { numero: 23, nome: "VITZ" },
+        { numero: 2, nome: "VARIANT" },
+        { numero: 57, nome: "CANDANGO" },
+        { numero: 2, nome: "SP2" },
+        { numero: 258, nome: "RECORB" },
+        { numero: 2, nome: "POLAUTO" },
+        { numero: 24, nome: "GORDINI" },
+        { numero: 265, nome: "MINX" },
+        { numero: 23, nome: "ETIOS" },
+        { numero: 1, nome: "ONIX" },
+        { numero: 14, nome: "HB20" },
+        { numero: 36, nome: "330" },
+        { numero: 36, nome: "520" },
+        { numero: 36, nome: "730" },
+        { numero: 36, nome: "M1" },
+        { numero: 36, nome: "SERIE Z" },
+        { numero: 4, nome: "CLASSE SLK" },
+        { numero: 4, nome: "CLASSE C" },
+        { numero: 4, nome: "CLASSE E" },
+        { numero: 4, nome: "CLASSE CL" },
+        { numero: 4, nome: "CLASSE CLK" },
+        { numero: 4, nome: "CLASSE S" },
+        { numero: 4, nome: "CLASSE SL" },
+        { numero: 4, nome: "CLASSE SLS" },
+        { numero: 4, nome: "CLASSE G" },
+        { numero: 4, nome: "CLASSE GL" },
+        { numero: 4, nome: "CLASSE M" },
+        { numero: 288, nome: "1500" },
+        { numero: 14, nome: "EQUUS" },
+        { numero: 12, nome: "350 GT" },
+        { numero: 12, nome: "400 GT" },
+        { numero: 12, nome: "MIURA" },
+        { numero: 12, nome: "ISLERO" },
+        { numero: 12, nome: "ESPADA" },
+        { numero: 12, nome: "COUNTACH" },
+        { numero: 12, nome: "DIABLO" },
+        { numero: 12, nome: "ZAGATO" },
+        { numero: 12, nome: "ALAR" },
+        { numero: 12, nome: "LM002" },
+        { numero: 12, nome: "REVENTON" },
+        { numero: 12, nome: "ANKONIAN" },
+        { numero: 12, nome: "AVENTADOR" },
+        { numero: 12, nome: "SESTO ELEMENTO" },
+        { numero: 15, nome: "J3 TURIN" },
+        { numero: 15, nome: "J2" },
+        { numero: 24, nome: "SANDERO GT" },
+        { numero: 1, nome: "SPIN" },
+        { numero: 1, nome: "TRAILBLAZER" },
+        { numero: 5, nome: "C3 PICASSO" },
+        { numero: 5, nome: "GRAND C4 PICASSO" },
+        { numero: 5, nome: "JUMPER MINIBUS" },
+        { numero: 5, nome: "JUMPER VETRATO" },
+        { numero: 22, nome: "207 SEDAN" },
+        { numero: 22, nome: "207 QUIKSILVER" },
+        { numero: 22, nome: "207 ESCAPADE" },
+        { numero: 22, nome: "308 CC" },
+        { numero: 22, nome: "BOXER PASSAGEIRO" },
+        { numero: 13, nome: "NEW FIESTA SEDAN" },
+        { numero: 13, nome: "TRANSIT PASSAGEIRO" },
+        { numero: 13, nome: "TRANSIT CHASSI" },
+        { numero: 32, nome: "A4 AVANT" },
+        { numero: 32, nome: "S4 AVANT" },
+        { numero: 32, nome: "A5 SPORTBACK" },
+        { numero: 32, nome: "A5 CABRIOLET" },
+        { numero: 32, nome: "S5 COUPE" },
+        { numero: 32, nome: "S5 SPORTBACK" },
+        { numero: 32, nome: "S5 CABRIOLET" },
+        { numero: 32, nome: "A6 AVANT" },
+        { numero: 32, nome: "A6 ALLROAD" },
+        { numero: 32, nome: "S6 AVANT" },
+        { numero: 32, nome: "S7" },
+        { numero: 32, nome: "TT ROADSTER" },
+        { numero: 32, nome: "TT RS" },
+        { numero: 32, nome: "TT RS ROADSTER" },
+        { numero: 32, nome: "TTS ROADSTER" },
+        { numero: 32, nome: "R8 SPYDER" },
+        { numero: 32, nome: "R8 GT" },
+        { numero: 32, nome: "R8 GT SPYDER" },
+        { numero: 10, nome: "F12" },
+        { numero: 10, nome: "458 SPIDER" },
+        { numero: 10, nome: "458 ITALIA" },
+        { numero: 10, nome: "FF" },
+        { numero: 10, nome: "599" },
+        { numero: 10, nome: "SA" },
+        { numero: 10, nome: "CHALLENGE" },
+        { numero: 10, nome: "SUPERAMERICA" },
+        { numero: 10, nome: "F430 SPIDER" },
+        { numero: 10, nome: "430" },
+        { numero: 10, nome: "612 SESSANTA" },
+        { numero: 10, nome: "599 GTB" },
+        { numero: 10, nome: "SCUDERIA SPIDER" },
+        { numero: 10, nome: "512" },
+        { numero: 10, nome: "456 GT" },
+        { numero: 10, nome: "348 GTS" },
+        { numero: 10, nome: "348 SPIDER" },
+        { numero: 10, nome: "F355" },
+        { numero: 10, nome: "F355 SPIDER" },
+        { numero: 10, nome: "F50" },
+        { numero: 10, nome: "355 SPIDER" },
+        { numero: 10, nome: "360 MODENA" },
+        { numero: 111, nome: "PAJERO FULL" },
+        { numero: 111, nome: "PAJERO DAKAR" },
+        { numero: 111, nome: "PAJERO TR4" },
+        { numero: 111, nome: "LANCER SPORTBACK" },
+        { numero: 111, nome: "LANCER EVOLUTION" },
+        { numero: 111, nome: "L200 TRITON SAVANA" },
+        { numero: 111, nome: "L200 TRITON" },
+        { numero: 43, nome: "LIVINA X-GEAR" },
+        { numero: 43, nome: "GRAND LIVINA" },
+        { numero: 21, nome: "NEW ACTYON SPORTS" },
+        { numero: 23, nome: "PRIUS" },
+        { numero: 114, nome: "SPORT" },
+        { numero: 114, nome: "MTS" },
+        { numero: 114, nome: "SPIDER" },
+        { numero: 114, nome: "KABRIO" },
+        { numero: 114, nome: "SAGA" },
+        { numero: 114, nome: "SAGA II" },
+        { numero: 114, nome: "787" },
+        { numero: 114, nome: "X11" },
+        { numero: 295, nome: "GAIOLA" },
+        { numero: 18, nome: "NITRO" },
+        { numero: 18, nome: "CHALLENGER" },
+        { numero: 18, nome: "DART" },
+        { numero: 18, nome: "LE BARON" },
+        { numero: 18, nome: "CORDOBA" },
+        { numero: 18, nome: "CHARGER" },
+        { numero: 19, nome: "WINDSOR" },
+        { numero: 19, nome: "CROSSFIRE" },
+        { numero: 19, nome: "CORDOBA" },
+        { numero: 155, nome: "ESCALADE" },
+        { numero: 41, nome: "RIVIERA" },
+        { numero: 41, nome: "COUPE" },
+        { numero: 41, nome: "CENTURY" },
+        { numero: 41, nome: "APOLLO" },
+        { numero: 41, nome: "CENTURION" },
+        { numero: 41, nome: "EIGHT" },
+        { numero: 41, nome: "ELECTRA" },
+        { numero: 41, nome: "ESTATE WAGON" },
+        { numero: 41, nome: "GRAN SPORT" },
+        { numero: 41, nome: "GSX" },
+        { numero: 41, nome: "INVICTA" },
+        { numero: 41, nome: "LESABRE" },
+        { numero: 41, nome: "LIMITED" },
+        { numero: 41, nome: "PARK AVENUE" },
+        { numero: 41, nome: "RAINIER" },
+        { numero: 41, nome: "REATTA" },
+        { numero: 41, nome: "REGAL" },
+        { numero: 41, nome: "RENDEZVOUS" },
+        { numero: 41, nome: "ROADMASTER" },
+        { numero: 41, nome: "ROYAUM" },
+        { numero: 41, nome: "SKYHAWK" },
+        { numero: 41, nome: "SKYLARK" },
+        { numero: 41, nome: "SOMERSET" },
+        { numero: 41, nome: "SPECIAL" },
+        { numero: 41, nome: "SPORT WAGON" },
+        { numero: 41, nome: "SUPER" },
+        { numero: 41, nome: "TERRAZA" },
+        { numero: 41, nome: "WILDCAT" },
+        { numero: 41, nome: "LACROSSE" },
+        { numero: 41, nome: "ENCLAVE" },
+        { numero: 41, nome: "GL8" },
+        { numero: 41, nome: "HRV" },
+        { numero: 41, nome: "LUCERNE" },
+        { numero: 13, nome: "SIERRA" },
+        { numero: 51, nome: "BROUGHAM" },
+        { numero: 51, nome: "CHAIRMAN" },
+        { numero: 51, nome: "DAMAS" },
+        { numero: 51, nome: "GENTRA" },
+        { numero: 51, nome: "MAEPSY" },
+        { numero: 51, nome: "ISTANA" },
+        { numero: 51, nome: "KALOS" },
+        { numero: 51, nome: "KORANDO" },
+        { numero: 51, nome: "LACETTI" },
+        { numero: 51, nome: "LEMANS" },
+        { numero: 51, nome: "MATIZ" },
+        { numero: 51, nome: "MUSSO" },
+        { numero: 51, nome: "NEXIA" },
+        { numero: 51, nome: "REZZO" },
+        { numero: 51, nome: "ROYALE PRINCE" },
+        { numero: 51, nome: "ROYALE SALON" },
+        { numero: 51, nome: "STATESMAN" },
+        { numero: 51, nome: "TOSCA" },
+        { numero: 51, nome: "WINSTORM" },
+        { numero: 158, nome: "RURAL" },
+        { numero: 18, nome: "D100" },
+        { numero: 4, nome: "170" },
+        { numero: 18, nome: "CUSTOM ROYAL" },
+        { numero: 1, nome: "CLUB COUPE" },
+        { numero: 18, nome: "MAGNUM" },
+        { numero: 1, nome: "GMC 100" },
+        { numero: 69, nome: "SOLSTICE" },
+        { numero: 158, nome: "ITAMARATY" },
+        { numero: 86, nome: "MARK V" },
+        { numero: 124, nome: "GT" },
+        { numero: 145, nome: "CHAMPION" },
+        { numero: 3, nome: "BALILLA" },
+        { numero: 158, nome: "INTERLAGOS" },
+        { numero: 17, nome: "X15" },
+        { numero: 13, nome: "F-85" },
+        { numero: 70, nome: "SPEEDSTER 356" },
+        { numero: 88, nome: "TOPIC FURGAO" },
+        { numero: 88, nome: "TOPIC ESCOLAR" },
+        { numero: 4, nome: "300D" },
+        { numero: 4, nome: "CLASSE TE" },
+        { numero: 23, nome: "T-100" },
+        { numero: 24, nome: "MEGANE SEDAN" },
+        { numero: 32, nome: "A4 CABRIOLET" },
+        { numero: 82, nome: "LINHA G" },
+        { numero: 82, nome: "LINHA G COUPE" },
+        { numero: 82, nome: "LINHA G CONVERSIVEL" },
+        { numero: 82, nome: "LINHA M" },
+        { numero: 82, nome: "LINHA EX" },
+        { numero: 82, nome: "LINHA JX" },
+        { numero: 82, nome: "LINHA QX" },
+        { numero: 86, nome: "MODELOS XF" },
+        { numero: 86, nome: "F-TYPE" },
+        { numero: 86, nome: "MARK VII" },
+        { numero: 86, nome: "MARK VIII" },
+        { numero: 86, nome: "MARK IX" },
+        { numero: 86, nome: "MARK X" },
+        { numero: 86, nome: "E-TYPE" },
+        { numero: 86, nome: "C-TYPE" },
+        { numero: 86, nome: "D-TYPE" },
+        { numero: 86, nome: "MARK I" },
+        { numero: 86, nome: "MARK II" },
+        { numero: 124, nome: "GT4R" },
+        { numero: 124, nome: "SPYDER" },
+        { numero: 124, nome: "GTI" },
+        { numero: 124, nome: "AM1" },
+        { numero: 124, nome: "AM2" },
+        { numero: 124, nome: "AM3" },
+        { numero: 124, nome: "AM4" },
+        { numero: 124, nome: "AMV" },
+        { numero: 7, nome: "ACTY" },
+        { numero: 7, nome: "AIRWAVE" },
+        { numero: 7, nome: "ASCOT" },
+        { numero: 7, nome: "BALLADE" },
+        { numero: 7, nome: "BEAT" },
+        { numero: 7, nome: "CR-X" },
+        { numero: 7, nome: "CONCERTO" },
+        { numero: 7, nome: "CR-Z" },
+        { numero: 7, nome: "DOMANI" },
+        { numero: 7, nome: "EDIX" },
+        { numero: 7, nome: "ELEMENT" },
+        { numero: 7, nome: "EV PLUS" },
+        { numero: 7, nome: "FCX" },
+        { numero: 7, nome: "FR-V" },
+        { numero: 7, nome: "HR-V" },
+        { numero: 7, nome: "HSC" },
+        { numero: 7, nome: "INSIGHT" },
+        { numero: 25, nome: "TL" },
+        { numero: 7, nome: "LIFE DUNK" },
+        { numero: 7, nome: "LOGO" },
+        { numero: 7, nome: "MOBILIO" },
+        { numero: 25, nome: "MDX" },
+        { numero: 7, nome: "ORTHIA" },
+        { numero: 7, nome: "PARTNER VAN" },
+        { numero: 7, nome: "PILOT" },
+        { numero: 7, nome: "RIDGELINE" },
+        { numero: 7, nome: "S2000" },
+        { numero: 7, nome: "S600" },
+        { numero: 7, nome: "S500" },
+        { numero: 7, nome: "S800" },
+        { numero: 7, nome: "STEPWGN" },
+        { numero: 7, nome: "STREAM" },
+        { numero: 7, nome: "THATS" },
+        { numero: 7, nome: "VAMOZ" },
+        { numero: 7, nome: "Z" },
+        { numero: 7, nome: "ZEST" },
+        { numero: 59, nome: "AERIO" },
+        { numero: 59, nome: "ALTO" },
+        { numero: 59, nome: "APV" },
+        { numero: 59, nome: "KEI" },
+        { numero: 59, nome: "LAPIN" },
+        { numero: 59, nome: "MR WAGON" },
+        { numero: 59, nome: "XL-7" },
+        { numero: 59, nome: "VERONA" },
+        { numero: 158, nome: "JEEP CJ" },
+        { numero: 22, nome: "306 CABRIOLET" },
+        { numero: 57, nome: "BELCAR" },
+        { numero: 90, nome: "M715" },
+        { numero: 22, nome: "407 SW" },
+        { numero: 22, nome: "307 CC" },
+        { numero: 1, nome: "STYLELINE" },
+        { numero: 13, nome: "ANGLIA" },
+        { numero: 26, nome: "GT2" },
+        { numero: 1, nome: "YUKON" },
+        { numero: 54, nome: "SPORTSMAN" },
+        { numero: 24, nome: "21 NEVADA" },
+        { numero: 11, nome: "VEYRON" },
+        { numero: 10, nome: "ENZO" },
+        { numero: 22, nome: "306 SW" },
+        { numero: 28, nome: "TI 80" },
+        { numero: 70, nome: "SPYDER 550" },
+        { numero: 10, nome: "380 GTB" },
+        { numero: 149, nome: "T-5" },
+        { numero: 18, nome: "KINGSWAY" },
+        { numero: 1, nome: "SSR" },
+        { numero: 1, nome: "IMPALA" },
+        { numero: 22, nome: "208" },
+        { numero: 1, nome: "GRAND BLAZER" },
+        { numero: 53, nome: "100 SERIES" },
+        { numero: 53, nome: "200 SERIES" },
+        { numero: 53, nome: "300 SERIES" },
+        { numero: 53, nome: "66" },
+        { numero: 53, nome: "700 SERIES" },
+        { numero: 53, nome: "AMAZON" },
+        { numero: 53, nome: "C303" },
+        { numero: 53, nome: "DUETT" },
+        { numero: 53, nome: "L3314" },
+        { numero: 53, nome: "OV 4" },
+        { numero: 53, nome: "P1800" },
+        { numero: 53, nome: "SUGGA" },
+        { numero: 13, nome: "TT" },
+        { numero: 5, nome: "ONCE" },
+        { numero: 13, nome: "DE LUXE" },
+        { numero: 13, nome: "CUSTOM" },
+        { numero: 13, nome: "T-BUCKET" },
+        { numero: 17, nome: "G15" },
+        { numero: 111, nome: "PAJERO FULL 3D" },
+        { numero: 111, nome: "PAJERO SPORT" },
+        { numero: 36, nome: "120 CABRIO" },
+        { numero: 36, nome: "320 TOURING" },
+        { numero: 36, nome: "330 CABRIO" },
+        { numero: 36, nome: "SERIE 5 TOURING" },
+        { numero: 36, nome: "SERIE 6 CABRIO" },
+        { numero: 36, nome: "SERIE M CONVERSIVEL" },
+        { numero: 36, nome: "M5 TOURING" },
+        { numero: 36, nome: "SERIE Z ROADSTER" },
+        { numero: 13, nome: "KA SPORT" },
+        { numero: 2, nome: "CC" },
+        { numero: 16, nome: "CERATO KOUP" },
+        { numero: 1, nome: "ASTRO" },
+        { numero: 23, nome: "COROLLA XRS" },
+        { numero: 23, nome: "ETIOS SEDAN" },
+        { numero: 13, nome: "FREESTYLE" },
+        { numero: 110, nome: "COUGAR" },
+        { numero: 102, nome: "XUV 500" },
+        { numero: 102, nome: "XYLO" },
+        { numero: 102, nome: "BOLERO" },
+        { numero: 102, nome: "THAR" },
+        { numero: 102, nome: "AXE" },
+        { numero: 102, nome: "LEGEND" },
+        { numero: 87, nome: "CJ3" },
+        { numero: 102, nome: "ARMADA" },
+        { numero: 102, nome: "CHASSI" },
+        { numero: 102, nome: "SCORPIO PICK-UP" },
+        { numero: 6, nome: "STAR TRUCK" },
+        { numero: 6, nome: "STAR" },
+        { numero: 6, nome: "STAR VAN CARGO" },
+        { numero: 6, nome: "STAR VAN PASSAGEIROS" },
+        { numero: 141, nome: "ALVORADA" },
+        { numero: 141, nome: "CHAMBORD" },
+        { numero: 141, nome: "PROFISSIONAL" },
+        { numero: 141, nome: "VEDETTE" },
+        { numero: 141, nome: "ARONDE" },
+        { numero: 141, nome: "1200S" },
+        { numero: 141, nome: "1000" },
+        { numero: 14, nome: "HB20X" },
+        { numero: 14, nome: "HB20S" },
+        { numero: 1, nome: "MONZA" },
+        { numero: 1, nome: "CHEVETTE" },
+        { numero: 98, nome: "X60" },
+        { numero: 1, nome: "TRAX" },
+        { numero: 36, nome: "118" },
+        { numero: 36, nome: "120" },
+        { numero: 36, nome: "130" },
+        { numero: 36, nome: "BAVARIA" },
+        { numero: 36, nome: "C-2800" },
+        { numero: 36, nome: "318" },
+        { numero: 36, nome: "320" },
+        { numero: 36, nome: "318 CABRIO" },
+        { numero: 36, nome: "325 CABRIO" },
+        { numero: 36, nome: "530" },
+        { numero: 36, nome: "540" },
+        { numero: 36, nome: "550" },
+        { numero: 36, nome: "740" },
+        { numero: 36, nome: "750" },
+        { numero: 36, nome: "760" },
+        { numero: 341, nome: "MATRIX 4X4" },
+        { numero: 132, nome: "A7" },
+        { numero: 132, nome: "A9" },
+        { numero: 132, nome: "A9 CARGO" },
+        { numero: 132, nome: "T20" },
+        { numero: 132, nome: "T20 BAU" },
+        { numero: 132, nome: "T22" },
+        { numero: 64, nome: "SUPER 90 COUPE" },
+        { numero: 17, nome: "X20" },
+        { numero: 17, nome: "ITAIPU" },
+        { numero: 17, nome: "G800" },
+        { numero: 17, nome: "XEF" },
+        { numero: 17, nome: "MOTOMACHINE" },
+        { numero: 17, nome: "BUGATO" },
+        { numero: 17, nome: "QT" },
+        { numero: 57, nome: "CAICARA" },
+        { numero: 57, nome: "CARCARA" },
+        { numero: 57, nome: "FISSORE" },
+        { numero: 57, nome: "MALZONI" },
+        { numero: 57, nome: "VEMAGUET" },
+        { numero: 5, nome: "C4 LOUNGE" },
+        { numero: 108, nome: "CX-7" },
+        { numero: 147, nome: "TR" },
+        { numero: 147, nome: "LUCENA" },
+        { numero: 147, nome: "SEVETSE" },
+        { numero: 147, nome: "RAGGE" },
+        { numero: 53, nome: "C70" },
+        { numero: 53, nome: "C30" },
+        { numero: 53, nome: "544" },
+        { numero: 53, nome: "S40" },
+        { numero: 53, nome: "S60" },
+        { numero: 53, nome: "S70" },
+        { numero: 53, nome: "S80" },
+        { numero: 53, nome: "V40" },
+        { numero: 53, nome: "V50" },
+        { numero: 53, nome: "V60" },
+        { numero: 53, nome: "V70" },
+        { numero: 53, nome: "S90" },
+        { numero: 53, nome: "XC60" },
+        { numero: 53, nome: "XC70" },
+        { numero: 53, nome: "XC90" },
+        { numero: 53, nome: "P1900" },
+        { numero: 53, nome: "PV36" },
+        { numero: 53, nome: "PV444" },
+        { numero: 53, nome: "PV544" },
+        { numero: 53, nome: "PV51" },
+        { numero: 53, nome: "PV654" },
+        { numero: 53, nome: "C50" },
+        { numero: 4, nome: "190" },
+        { numero: 4, nome: "CLASSE CLA" },
+        { numero: 4, nome: "CLASSE V" },
+        { numero: 4, nome: "VANEO" },
+        { numero: 4, nome: "CITAN" },
+        { numero: 4, nome: "VARIO" },
+        { numero: 4, nome: "CLASSE S CLASSICO" },
+        { numero: 15, nome: "J3S" },
+        { numero: 345, nome: "PICK-UP" },
+        { numero: 345, nome: "VAN" },
+        { numero: 5, nome: "C3 SOLARIS" },
+        { numero: 5, nome: "C3 XTR" },
+        { numero: 5, nome: "C4 SOLARIS" },
+        { numero: 5, nome: "C5 BREAK/TOURER" },
+        { numero: 5, nome: "XSARA BREAK" },
+        { numero: 5, nome: "XSARA VTS" },
+        { numero: 5, nome: "XANTIA BREAK" },
+        { numero: 5, nome: "XM BREAK" },
+        { numero: 5, nome: "C15" },
+        { numero: 5, nome: "NEMO" },
+        { numero: 5, nome: "VISA" },
+        { numero: 5, nome: "C1" },
+        { numero: 5, nome: "C2" },
+        { numero: 5, nome: "C3 PLURIEL" },
+        { numero: 5, nome: "DS4" },
+        { numero: 5, nome: "DS5" },
+        { numero: 5, nome: "JUMPY" },
+        { numero: 5, nome: "C-CROSSER" },
+        { numero: 5, nome: "C35" },
+        { numero: 5, nome: "C25" },
+        { numero: 5, nome: "CX" },
+        { numero: 5, nome: "CX BREAK" },
+        { numero: 5, nome: "AXEL" },
+        { numero: 5, nome: "DYANE" },
+        { numero: 5, nome: "GS/GSA" },
+        { numero: 5, nome: "GS/GSA BREAK" },
+        { numero: 5, nome: "MEHARI" },
+        { numero: 5, nome: "SAXO" },
+        { numero: 5, nome: "SM" },
+        { numero: 5, nome: "ELYSEE" },
+        { numero: 24, nome: "MASTER MINIBUS" },
+        { numero: 47, nome: "CELER" },
+        { numero: 47, nome: "CELER SEDAN" },
+        { numero: 47, nome: "CIELO SEDAN" },
+        { numero: 32, nome: "A1 SPORTBACK" },
+        { numero: 32, nome: "A1 QUATTRO" },
+        { numero: 32, nome: "A3 SPORTBACK" },
+        { numero: 32, nome: "RS4 AVANT" },
+        { numero: 32, nome: "A8L W12" },
+        { numero: 32, nome: "R8 V10" },
+        { numero: 13, nome: "RANGER CD" },
+        { numero: 15, nome: "T140" },
+        { numero: 36, nome: "X1" },
+        { numero: 36, nome: "X3" },
+        { numero: 36, nome: "X5" },
+        { numero: 36, nome: "X6" },
+        { numero: 36, nome: "840" },
+        { numero: 36, nome: "850" },
+        { numero: 36, nome: "645" },
+        { numero: 36, nome: "650" },
+        { numero: 7, nome: "FIT TWIST" },
+        { numero: 346, nome: "MP4" },
+        { numero: 346, nome: "F1" },
+        { numero: 13, nome: "MONDEO SW" },
+        { numero: 13, nome: "ESCORT SEDAN" },
+        { numero: 13, nome: "ESCORT CONVERSIVEL" },
+        { numero: 108, nome: "MX-6" },
+        { numero: 1, nome: "CORISCO" },
+        { numero: 1, nome: "CHEVELLE" },
+        { numero: 13, nome: "EXCURSION" },
+        { numero: 2, nome: "TOURAN" },
+        { numero: 13, nome: "F-10000" },
+        { numero: 22, nome: "HOGGAR ESCAPADE" },
+        { numero: 13, nome: "PHAETON" },
+        { numero: 2, nome: "TRANSPORTER" },
+        { numero: 16, nome: "GRAND BESTA" },
+        { numero: 43, nome: "200SX" },
+        { numero: 43, nome: "240SX" },
+        { numero: 19, nome: "300M" },
+        { numero: 19, nome: "300C TOURING" },
+        { numero: 13, nome: "TORINO" },
+        { numero: 1, nome: "VENTURE" },
+        { numero: 1, nome: "FLEETLINE" },
+        { numero: 1, nome: "FLEETMASTER" },
+        { numero: 1, nome: "DELUXE" },
+        { numero: 13, nome: "ESCORT XR3" },
+        { numero: 1, nome: "MASTER" },
+        { numero: 120, nome: "TORONADO" },
+        { numero: 120, nome: "SIX" },
+        { numero: 120, nome: "EIGHT" },
+        { numero: 120, nome: "DELUXE" },
+        { numero: 120, nome: "SERIES 60" },
+        { numero: 120, nome: "SERIES 70" },
+        { numero: 120, nome: "SERIES 80" },
+        { numero: 120, nome: "SERIES 90" },
+        { numero: 120, nome: "STARFIRE" },
+        { numero: 120, nome: "442" },
+        { numero: 120, nome: "CUTLASS" },
+        { numero: 120, nome: "CUTLASS SUPREME" },
+        { numero: 120, nome: "CUTLASS SALON" },
+        { numero: 120, nome: "CUTLASS CALAIS" },
+        { numero: 120, nome: "CUTLASS CIERA" },
+        { numero: 120, nome: "CUSTOM CRUISER" },
+        { numero: 120, nome: "VISTA CRUISER" },
+        { numero: 120, nome: "F-85" },
+        { numero: 120, nome: "FIRENZA" },
+        { numero: 120, nome: "ACHIEVA" },
+        { numero: 120, nome: "ALERO" },
+        { numero: 120, nome: "AURORA" },
+        { numero: 120, nome: "BRAVADA" },
+        { numero: 120, nome: "INTRIGUE" },
+        { numero: 120, nome: "SILHOUETTE" },
+        { numero: 123, nome: "SUPERBIRD" },
+        { numero: 123, nome: "FURY" },
+        { numero: 123, nome: "SPECIAL" },
+        { numero: 123, nome: "PROWLER" },
+        { numero: 123, nome: "TRAIL DUSTER" },
+        { numero: 123, nome: "VOYAGER" },
+        { numero: 123, nome: "SCAMP" },
+        { numero: 123, nome: "ARROW" },
+        { numero: 123, nome: "PT50" },
+        { numero: 123, nome: "PT57" },
+        { numero: 123, nome: "PT81" },
+        { numero: 123, nome: "PT105" },
+        { numero: 123, nome: "PT125" },
+        { numero: 123, nome: "EXPRESS" },
+        { numero: 123, nome: "VOYAGER EXPRESSO" },
+        { numero: 123, nome: "NEON" },
+        { numero: 123, nome: "LASER" },
+        { numero: 123, nome: "CARAVELLE" },
+        { numero: 123, nome: "STATION WAGON" },
+        { numero: 123, nome: "MODEL Q" },
+        { numero: 123, nome: "MODEL P6" },
+        { numero: 31, nome: "DB9 COUPE" },
+        { numero: 31, nome: "DB9 VOLANTE" },
+        { numero: 31, nome: "VIRAGE COUPE" },
+        { numero: 31, nome: "RAPIDE S" },
+        { numero: 31, nome: "V12 VANTAGE" },
+        { numero: 31, nome: "V8 VANTAGE COUPE" },
+        { numero: 31, nome: "V8 VANTAGE ROADSTER" },
+        { numero: 31, nome: "V8 VANTAGE S COUPE" },
+        { numero: 31, nome: "V8 VANTAGE S ROADSTER" },
+        { numero: 31, nome: "VANQUISH COUPE" },
+        { numero: 31, nome: "VANQUISH VOLANTE" },
+        { numero: 31, nome: "V12 ZAGATO" },
+        { numero: 31, nome: "DB5" },
+        { numero: 31, nome: "DBS" },
+        { numero: 31, nome: "DBS VOLANTE" },
+        { numero: 31, nome: "CYGNET" },
+        { numero: 31, nome: "ONE-77" },
+        { numero: 31, nome: "DBR9" },
+        { numero: 36, nome: "M3" },
+        { numero: 36, nome: "M5" },
+        { numero: 36, nome: "M6" },
+        { numero: 36, nome: "X6 M" },
+        { numero: 113, nome: "CABRIO" },
+        { numero: 113, nome: "COUPE" },
+        { numero: 113, nome: "ROADSTER" },
+        { numero: 113, nome: "COUNTRYMAN" },
+        { numero: 113, nome: "PACEMAN" },
+        { numero: 113, nome: "JOHN COOPER WORKS" },
+        { numero: 122, nome: "ZONDA" },
+        { numero: 8, nome: "NEW XV" },
+        { numero: 8, nome: "IMPREZA WRX HATCH" },
+        { numero: 8, nome: "IMPREZA WRX STI HATCH" },
+        { numero: 8, nome: "IMPREZA WRX STI SEDAN" },
+        { numero: 8, nome: "IMPREZA WRX SEDAN" },
+        { numero: 23, nome: "ETIOS CROSS" },
+        { numero: 12, nome: "HURACAN" },
+        { numero: 2, nome: "UP" },
+        { numero: 195, nome: "EXPLORER" },
+        { numero: 142, nome: "FORTWO CABRIO" },
+        { numero: 26, nome: "GT" },
+        { numero: 26, nome: "GTL" },
+        { numero: 26, nome: "GTM" },
+        { numero: 26, nome: "C2" },
+        { numero: 26, nome: "CRX" },
+        { numero: 26, nome: "AC 2000" },
+        { numero: 99, nome: "AVIATOR" },
+        { numero: 99, nome: "BLACKWOOD" },
+        { numero: 99, nome: "CAPRI" },
+        { numero: 99, nome: "CONTINENTAL" },
+        { numero: 99, nome: "LS" },
+        { numero: 99, nome: "MARK" },
+        { numero: 99, nome: "MARK LT" },
+        { numero: 99, nome: "MKR" },
+        { numero: 99, nome: "MKS" },
+        { numero: 99, nome: "MKX" },
+        { numero: 99, nome: "MKZ" },
+        { numero: 99, nome: "NAVIGATOR" },
+        { numero: 99, nome: "PREMIERE" },
+        { numero: 99, nome: "TOWN CAR" },
+        { numero: 99, nome: "VERSAILLES" },
+        { numero: 99, nome: "ZEPHYR" },
+        { numero: 1, nome: "CLASSIC" },
+        { numero: 21, nome: "ACTYON" },
+        { numero: 1, nome: "MARAJO" },
+        { numero: 1, nome: "SUPREMA" },
+        { numero: 2, nome: "NEW BEETLE" },
+        { numero: 2, nome: "QUANTUM" },
+        { numero: 2, nome: "CROSSFOX" },
+        { numero: 3, nome: "MILLE" },
+        { numero: 534, nome: "GC2" },
+        { numero: 534, nome: "EC7" },
+        { numero: 98, nome: "530" },
+        { numero: 3, nome: "MOBI" },
+        { numero: 3, nome: "TORO" },
+        { numero: 87, nome: "RENEGADE" },
+        { numero: 24, nome: "DUSTER OROCH" },
+        { numero: 24, nome: "SANDERO RS" },
+        { numero: 14, nome: "HB20R" },
+        { numero: 14, nome: "GRAND SANTA FE" },
+        { numero: 2, nome: "GOLF VARIANT" },
+        { numero: 2, nome: "SPACE CROSS" },
+        { numero: 22, nome: "2008" },
+        { numero: 16, nome: "QUORIS" },
+        { numero: 16, nome: "GRAND CARNIVAL" },
+        { numero: 15, nome: "T8" },
+        { numero: 15, nome: "T6" },
+        { numero: 15, nome: "T5" },
+        { numero: 13, nome: "KA SEDAN" },
+        { numero: 13, nome: "FOCUS FASTBACK" },
+      ];
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+
+      let lugares = [
+        {
+          id: "abdias",
+          unidade: "Abdias de Carvalho ",
+          imagemUrl: "../../assets/images/Pam - Abdias.jpg",
+          endereco: "Av Eng Abdias de Carvalho, 175 - 50750-001",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1682653348013!6m8!1m7!1sKWBaNO47-ZWP2bgUkf69ow!2m2!1d-8.06155036931212!2d-34.90657779691558!3f171.30985244584525!4f-4.904949615308027!5f0.7820865974627469",
+        },
+        {
+          id: "caxanga",
+          unidade: "Caxangá",
+          imagemUrl: "../../assets/images/Pam - Caxanga.jpg",
+          endereco:
+            "Av Caxangá,731 - 50720-320",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1682653401801!6m8!1m7!1stiW7MrCx_gW9D7w0L8G2JQ!2m2!1d-8.053739008097088!2d-34.91527447152505!3f209.20989247105075!4f4.470890112792944!5f0.7820865974627469",
+        },
+        {
+          id: "imbiribeira",
+          unidade: "Imbiribeira",
+          imagemUrl: "../../assets/images/Pam - Imbiribeira.jpg",
+          endereco: "Av  Marechal Mascarenhas de Moraes, 2785 - 51150-003",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1682653463168!6m8!1m7!1syWDKXnn1PhnEu2Zl2QmpVw!2m2!1d-8.105725650274605!2d-34.91121165165891!3f104.16208174482912!4f2.5017579635551073!5f1.5703132847181993",
+        },
+        {
+          id: "guarabira",
+          unidade: "Guarabira",
+          imagemUrl: "../../assets/images/Pam - Guarabira.jpg",
+          endereco: "Rua Otácilio Lira Cabral, S/N 582000-000",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1682653702513!6m8!1m7!1sWMjbkZA-ltuWm2RxjOo-Aw!2m2!1d-6.858694663271717!2d-35.49621788193887!3f96.45119755952989!4f4.195781795539119!5f1.7876223100816961",
+        },
+      
+      ];
+      var btnHamburguer = document.getElementById("hamburguer");
+      let isPorVeiculoFilter = true;
+      let divMedida = document.getElementById("medida");
+      let divVeiculo = document.getElementById("veiculo");
+
+      let divFilterMedida = document.getElementById("filterMedida");
+      let divFilterVeiculo = document.getElementById("filterVeiculo");
+      atualizarDivSelecionada();
+      let marcaInputVeiculo = document.getElementById("marcaInput2");
+      let modeloInputVeiculo = document.getElementById("modeloInput");
+      let numeroWhatsapp = urlParams.get("whatsapp")
+        ? urlParams.get("whatsapp")
+        : "8140423223";
+      document.getElementById("numeroWhatsappLabel").innerHTML =
+        formatacaoNumeroTelefone(numeroWhatsapp);
+      document.getElementById("faleConoscoWhatsapp").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre seus serviços.`,
+          "_blank"
+        );
+      modeloInputVeiculo.disabled = true;
+      montarMarcaInputDoVeiculo();
+      atualizarLugar();
+
+      //btn on clicks dos botoes dos cards
+      document.getElementById("btnSuspensaoCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre seus serviços de suspensão.`,
+          "_blank"
+        );
+      document.getElementById("btnMecanicaCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre seus serviços de mecânica.`,
+          "_blank"
+        );
+      document.getElementById("btnTrocaOleoCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre seus serviços de troca de óleo.`,
+          "_blank"
+        );
+      document.getElementById("btnPecasCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre as peças e serviços.`,
+          "_blank"
+        );
+      document.getElementById("btnAlinhamentoBalanceamentoCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre seus serviços de alinhamento e balanceamento.`,
+          "_blank"
+        );
+      document.getElementById("btnPneusCard").onclick = () =>
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=Olá, estou com interesse em saber mais sobre os pneus disponíveis.`,
+          "_blank"
+        );
+      // FIM-----------------btn on clicks dos botoes dos cards-------------------------------------------
+
+      function formatacaoNumeroTelefone(numeroTelefone) {
+        if (numeroTelefone.length == 11) {
+          return numeroTelefone.replace(
+            /^(\d{2})(\d{1})(\d{4})(\d{4})$/,
+            "($1) $2 $3-$4"
+          );
+        }
+
+        return numeroTelefone.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1) $2-$3");
+      }
+
+      function atualizarLugar() {
+        const idParam = urlParams.get("id");
+
+        if (idParam) {
+          let lugar = lugares.filter((x) => x.id == idParam)[0];
+          if (lugar) {
+            let unidade = (document.getElementById("unidadeHtml").innerHTML =
+              lugar.unidade);
+            let endereco = (document.getElementById("enderecoHtml").innerHTML =
+              lugar.endereco);
+            let mapa = (document.getElementById("iframeMap").src = lugar.mapa);
+            let fundoImagem = (document.getElementById(
+              "fundoImagemLoja"
+            ).style.backgroundImage = `url('${lugar.imagemUrl}')`);
+          }
+        }
+      }
+
+      function montarMarcaInputDoVeiculo() {
+        marcas.forEach((m) => {
+          marcaInputVeiculo.options[marcaInputVeiculo.options.length] =
+            new Option(m.nome, m.id.toString());
+        });
+      }
+
+      function defaultModeloOption() {
+        modeloInputVeiculo.innerHTML = "";
+        modeloInputVeiculo.options[modeloInputVeiculo.options.length] =
+          new Option("Modelo", "");
+        modeloInputVeiculo.options[modeloInputVeiculo.options.length] =
+          new Option("Outros", "outros");
+      }
+
+      function selecionarMarca() {
+        defaultModeloOption();
+
+        if (marcaInputVeiculo.value) {
+          modeloInputVeiculo.disabled = false;
+          numberId = marcaInputVeiculo.value;
+          modelos
+            .filter((x) => x.numero == numberId)
+            .forEach((m) => {
+              modeloInputVeiculo.options[modeloInputVeiculo.options.length] =
+                new Option(m.nome, m.numero.toString());
+            });
+        } else {
+          modeloInputVeiculo.disabled = true;
+        }
+      }
+
+      function selecionarTipoFiltro(valor) {
+        isPorVeiculoFilter = valor;
+        atualizarDivSelecionada();
+      }
+
+      function atualizarDivSelecionada() {
+        if (isPorVeiculoFilter) {
+          divVeiculo.classList.add("selecionado");
+          divMedida.classList.remove("selecionado");
+          divFilterVeiculo.hidden = false;
+          divFilterMedida.hidden = true;
+        } else {
+          divMedida.classList.add("selecionado");
+          divVeiculo.classList.remove("selecionado");
+          divFilterVeiculo.hidden = true;
+          divFilterMedida.hidden = false;
+        }
+      }
+
+      function filtrar() {
+        let mensagemWhatsapp = "";
+
+        if (isPorVeiculoFilter) {
+          mensagemWhatsapp =
+            "Olá, estou interessado em saber a cotação de pneu para o carro";
+          let tipoValue = document.getElementById("tipoInput2").value;
+          let marcaValue = document.getElementById("marcaInput2");
+          let modeloValue = document.getElementById("modeloInput");
+          if (!tipoValue && !marcaValue.value && !modeloValue.value) {
+            alert("selecione algum filtro");
+            return;
+          }
+
+          if (tipoValue) {
+            mensagemWhatsapp += ` do tipo ${tipoValue} `;
+          }
+          if (marcaValue.value) {
+            mensagemWhatsapp += ` da marca ${marcaValue.selectedOptions[0].text} `;
+          }
+
+          if (modeloValue.value) {
+            mensagemWhatsapp += ` do modelo ${modeloValue.selectedOptions[0].text} `;
+          }
+        } else {
+          mensagemWhatsapp =
+            "Olá, estou interessado em saber a cotação do pneu";
+          let tipoValue = document.getElementById("tipoInput1").value;
+          let larguraValue = document.getElementById("larguraInput").value;
+          let perfilValue = document.getElementById("perfilInput").value;
+          let aroValue = document.getElementById("aroInput").value;
+          let marcaValue = document.getElementById("marcaInput").value;
+
+          if (
+            !tipoValue &&
+            !larguraValue &&
+            !perfilValue &&
+            !aroValue & !marcaValue
+          ) {
+            alert("selecione algum filtro");
+            return;
+          }
+
+          if (tipoValue) {
+            mensagemWhatsapp += ` do tipo ${tipoValue} `;
+          }
+
+          if (larguraValue) {
+            mensagemWhatsapp += ` da largura ${larguraValue} `;
+          }
+
+          if (perfilValue) {
+            mensagemWhatsapp += ` do perfil ${perfilValue} `;
+          }
+
+          if (aroValue) {
+            mensagemWhatsapp += ` do aro ${aroValue} `;
+          }
+
+          if (marcaValue) {
+            mensagemWhatsapp += ` da marca ${marcaValue} `;
+          }
+        }
+
+        window.open(
+          `https://wa.me/55${numeroWhatsapp}?text=${mensagemWhatsapp.trim()}`,
+          "_blank"
+        );
+      }
+
+      btnHamburguer.onclick = () => {
+        var menuHamburguer = document
+          .getElementById("menu-hamburguer")
+          .classList.toggle("menu-hamburguer");
+      };
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

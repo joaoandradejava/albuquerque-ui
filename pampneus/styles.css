@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.fundo {
+  background: url("../assets/images/LojaTopoGradientePAM.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 450px;
+}
+
+.fundo-comportamento {
+  margin-left: 10%;
+}
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .fundo-comportamento {
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.menu-bar-topo {
+  justify-content: space-around;
+}
+
+.texto-fundo-tamanho {
+  font-size: 50px;
+  display: block;
+  line-height: 55px;
+}
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .texto-fundo-tamanho {
+    font-size: 40px;
+    line-height: 45px;
+    margin-top: 45px;
+  }
+}
+
+.fundo-footer {
+  background-image: url("assets/images/pneu-footer.png") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-confira-unidades {
+  background: url("assets/images/mapa-pontos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+
+.confira-unidade-label {
+  font-size: 32px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 520px) {
+  .confira-unidade-label {
+    font-size: 27px;
+  }
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  margin: 5px 5%;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.btn-azul {
+  background-color: #FF0000 !important;
+  color: white !important;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.fundo-escuro {
+  background-color: #000000;
+}
+
+.btn-azul:hover {
+  background-color: #28436d;
+  color: white;
+}
+
+.btn {
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  color: black;
+}
+
+.options-pagamentos-footer {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.options-pagamentos-footer li {
+  background-color: white;
+  margin: 5px;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-footer {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.options-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.options-footer a:hover {
+  text-decoration: underline;
+}
+
+.options-footer-img {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 5%;
+  padding: 0;
+  margin: 0;
+}
+
+.options-footer-img li {
+  margin: 5px;
+}
+
+.options-footer-img li a:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 0px) and (max-width: 520px) {
+  .btn {
+    width: 100px;
+    font-size: 0.75rem;
+  }
+}
+
+.lista-unidades li {
+  margin: 20px 0px;
+}
