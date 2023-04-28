@@ -18,7 +18,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 300px;
+  height: 600px;
 }
 
 .fundo-azul {
@@ -346,10 +346,9 @@ body {
   align-items: center;
   font-weight: bold;
   margin: 5px;
-
 }
 
-.card-pneu-categoria select{
+.card-pneu-categoria select {
   text-align: center;
   font-weight: bold;
 }
@@ -367,7 +366,7 @@ body {
 }
 
 .fundo-vermelho-card-categoria {
-  background-color: red;
+  background-color: #ca171d;
   color: white;
 }
 
@@ -377,6 +376,10 @@ body {
 
 .selecionado {
   background-color: gray;
+}
+
+.selecionado:hover {
+  cursor: inherit;
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
