@@ -110,7 +110,7 @@
     </div>
 
     <div class="background-confira-unidades pt-1 pt-md-3 pb-5">
-      <div class="container mb-2">
+      <div class="container">
         <div class="row p-4 p-md-1">
           <div class="col-12">
             <h2 class="mb-3 confira-unidade-label">Confira nossas unidades</h2>
@@ -150,11 +150,152 @@
       </div>
     </div>
 
-    <div class="container-fluid fundo-escuro text-light p-5 mt-4">
+    <div style="background-color: #f1f1f1;" class="p-2 mt-3">
+      <div class="container p-2"  id="servicos">
+        <div class="row">
+          <div class="col">
+            <span
+              class="d-block fw-bold text-center text-uppercase"
+              style="font-size: 30px"
+              >Uma oficina completa para <br> cuidar do seu carro!</span
+            >
+          </div>
+        </div>
+        <div class="row mt-3 justify-content-center">
+          <div class="col-10">
+            <div class="cards">
+              <div class="card c-1-fundo text-light center-all">
+                <div class="front">
+                  <span class="text-uppercase">Suspensão</span>
+                </div>
+                <div class="back p-3">
+                  <span class="card-flip-text">
+                    A suspensão melhora a estabilidade e conforto do seu carro.
+                    Tecnologia avançada e peças de qualidade melhoram a
+                    performance.
+                  </span>
+                  <button
+                    class="mt-4 btn btn-azul"
+                    id="btnSuspensaoCard"
+                    onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de suspensão.','_blank')"
+                  >
+                    Contate-nos
+                  </button>
+                </div>
+              </div>
+              <div class="card c-2-fundo text-light center-all">
+                <div class="front">
+                  <span class="text-uppercase">Mecânica geral</span>
+                </div>
+                <div class="back p-3">
+                  <span class="card-flip-text">
+                    Nosso serviço mecânico resolve problemas do seu carro com
+                    eficiência. Contamos com equipe preparada e capacitada.
+                  </span>
+                  <button
+                    class="mt-4 btn btn-azul"
+                    id="btnMecanicaCard"
+                    onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de mecânica.','_blank')"
+                  >
+                    Contate-nos
+                  </button>
+                </div>
+              </div>
+              <div class="card c-3-fundo text-light center-all">
+                <div class="front">
+                  <span class="text-uppercase">Troca de óleo</span>
+                </div>
+                <div class="back p-3">
+                  <span class="card-flip-text">
+                    Nossa troca de óleo garante desempenho ideal do seu veículo.
+                    Equipe qualificada e óleos de qualidade mantêm o motor em
+                    condições ideais.
+                  </span>
+                  <button
+                    class="mt-4 btn btn-azul"
+                    id="btnTrocaOleoCard"
+                    onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de troca de óleo.','_blank')"
+                  >
+                    Contate-nos
+                  </button>
+                </div>
+              </div>
+              <div class="card c-4-fundo text-light center-all">
+                <div class="front">
+                  <span class="text-uppercase">Peças</span>
+                </div>
+                <div class="back p-3">
+                  <span class="card-flip-text">
+                    Nossas peças garantem desempenho superior para o seu veículo.
+                    Encontre a peça perfeita agendando seu atendimento.
+                  </span>
+                  <button
+                    class="mt-4 btn btn-azul"
+                    id="btnPecasCard"
+                    onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre as peças e serviços.','_blank')"
+                  >
+                    Contate-nos
+                  </button>
+                </div>
+              </div>
+              <div class="card c-5-fundo text-light center-all">
+                <div class="front">
+                  <span class="text-uppercase d-block text-center"
+                    >Alinhamento e balanceamento</span
+                  >
+                </div>
+                <div class="back p-3">
+                  <span class="card-flip-text">
+                    Prolongue a vida útil dos pneus e evite problemas na direção.
+                    Realize o alinhamento e balanceamento conosco.
+                  </span>
+                  <button
+                    class="mt-4 btn btn-azul"
+                    id="btnAlinhamentoBalanceamentoCard"
+                    onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre seus serviços de alinhamento e balanceamento.','_blank')"
+                  >
+                    Contate-nos
+                  </button>
+                </div>
+              </div>
+              <div class="card c-6-fundo text-light center-all">
+                <div class="front">
+                  <span class="text-uppercase">Pneus</span>
+                </div>
+                <div class="back p-3">
+                  <span class="card-flip-text">
+                    Nossos pneus oferecem tranquilidade e conforto na direção, com
+                    tecnologia avançada e materiais de alta qualidade.
+                  </span>
+                  <button
+                    class="mt-4 btn btn-azul"
+                    id="btnPneusCard"
+                    onclick="window.open('https://wa.me/5581991812871?text=Olá, estou com interesse em saber mais sobre os pneus disponíveis.','_blank')"
+                  >
+                    Contate-nos
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row mt-3">
+            <div class="col" style="display: flex; justify-content: center">
+              <button
+                class="text-ligth text-uppercase text-center btn btn-escolher-servico"
+              >
+                Escolha um serviço
+              </button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid fundo-escuro text-light p-5">
       <div class="container">
         <div class="row justify-content-center">
           <div
-            class="col-12 col-md-3 d-flex justify-content-center align-items-center mb-4 mb-md-0"
+            class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-4 mb-md-0"
           >
             <img
               src="../assets/images/logo-2a-auto-mecanica-branca.jpeg"
@@ -164,7 +305,7 @@
           </div>
 
           <div
-            class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+            class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
           >
             <h6 class="text-uppercase">Fale conosco</h6>
             <ul class="options-footer text-center text-md-start">
@@ -172,47 +313,9 @@
               <li>Albuergue@atendimento.com</li>
             </ul>
           </div>
+          
           <div
-            class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
-          >
-            <h6 class="text-uppercase">Pagamentos</h6>
-            <ul class="options-pagamentos-footer">
-              <li>
-                <img src="../assets/images/hipercard.png" width="30px" alt="" />
-              </li>
-              <li>
-                <img
-                  src="../assets/images/mastercard.png"
-                  height="20px"
-                  alt=""
-                />
-              </li>
-              <li>
-                <img src="../assets/images/visa.png" width="30px" alt="" />
-              </li>
-              <li>
-                <img src="../assets/images/diners.png" height="20px" alt="" />
-              </li>
-              <li>
-                <img src="../assets/images/elo.png" height="20px" alt="" />
-              </li>
-              <li>
-                <img
-                  src="../assets/images/american-express.png"
-                  height="20px"
-                  alt=""
-                />
-              </li>
-              <li>
-                <img src="../assets/images/pix.png" height="20px" alt="" />
-              </li>
-              <li>
-                <img src="../assets/images/boleto.png" width="30px" alt="" />
-              </li>
-            </ul>
-          </div>
-          <div
-            class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
+            class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
           >
             <h6 class="text-uppercase">Segue a gente</h6>
             <ul class="options-footer-img">

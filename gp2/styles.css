@@ -61,11 +61,11 @@ body {
 }
 
 .background-confira-unidades {
-  background: url("assets/images/mapa-pontos.png");
+  background: url("../assets/images/mapa-pontos.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 300px;
 }
 
 .confira-unidade-label {
@@ -183,4 +183,107 @@ body {
 
 .lista-unidades li {
   margin: 20px 0px;
+}
+
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 240px;
+  height: 240px;
+  margin: 10px 0px;
+  float: left;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-azul {
+  background-color: #355993;
+  color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn-azul:hover {
+  background-color: #28436d;
+  color: white;
+}
+
+.card-flip-text {
+  font-size: 14px;
+}
+
+.front,
+.back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.c-1-fundo {
+  background: url("../assets/images/suspencao.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.c-2-fundo {
+  background: url("../assets/images/mecanica.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.c-3-fundo {
+  background: url("../assets/images/troca-de-oleo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.c-4-fundo {
+  background: url("../assets/images/pecas.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.c-5-fundo {
+  background: url("../assets/images/alinhamento.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.c-6-fundo {
+  background: url("../assets/images/pneu.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
