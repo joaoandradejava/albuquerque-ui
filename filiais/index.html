@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <meta http-equiv="Cache-Control" content="no-store">
+
     <meta HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
   <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
     <meta charset="UTF-8" />
@@ -433,6 +435,7 @@
           style="border: 6px solid white; border-radius: 15px"
           allowfullscreen=""
           loading="eager"
+          sandbox="allow-scripts"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
@@ -2212,7 +2215,7 @@
               lugar.unidade);
             let endereco = (document.getElementById("enderecoHtml").innerHTML =
               lugar.endereco);
-            let mapa = (document.getElementById("iframeMap").src = lugar.mapa + '?random=' + Math.random());
+            let mapa = (document.getElementById("iframeMap").src = lugar.mapa);
             document.getElementById;
             let fundoImagem = (document.getElementById(
               "fundoImagemLoja"
