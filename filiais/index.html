@@ -2162,7 +2162,8 @@
       // FIM-----------------btn on clicks dos botoes dos cards-------------------------------------------
 
       const iframeMapa = document.getElementById("iframeMap");
-      iframeMapa.addEventListener("load", function () {
+
+      iframeMapa.addEventListener("onload", function () {
         const idParam = urlParams.get("id");
 
         if (idParam) {
