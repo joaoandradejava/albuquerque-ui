@@ -348,6 +348,13 @@ body {
   margin: 5px;
 }
 
+.botao-cotacao {
+  width: 200px !important;
+  font-size: 0.8rem;
+  gap: 30px;
+  padding: 10px;
+}
+
 .card-pneu-categoria select {
   text-align: center;
   font-weight: bold;

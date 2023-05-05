@@ -87,9 +87,9 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <h2 class="text-center mt-3">
-              Ache a cotação certa para o seu veículo
-            </h2>
+            <h2 class="text-center mt-3"><i>
+              Receba agora sua cotação via Whatsapp
+            </i></h2>
           </div>
         </div>
         <div class="row mt-3">
@@ -215,27 +215,16 @@
               </select>
             </div>
 
-            <div class="card-pneu-categoria">
-              <select id="marcaInput" class="form-control w-full xl:w-4/12">
-                <option value="">Marca</option>
-                <option value="Bridgestone">Bridgestone</option>
-                <option value="Continental">Continental</option>
-                <option value="Dunlop">Dunlop</option>
-                <option value="Goodyear">Goodyear</option>
-                <option value="Hankook">Hankook</option>
-                <option value="Michelin">Michelin</option>
-                <option value="Pirelli">Pirelli</option>
-                <option value="Yokohama">Yokohama</option>
-              </select>
-            </div>
+            
 
             <div
-              class="card-pneu-categoria fundo-vermelho-card-categoria"
+              class="card-pneu-categoria botao-cotacao fundo-vermelho-card-categoria"
               onclick="filtrar()"
             >
-              <span class="text-uppercase"
-                ><img src="../assets/images/lupa.png" height="25px" alt="" />
-                buscar</span
+            <img src="../assets/images/lupa.png" height="18px" alt="" />
+              <span class="text-uppercase" 
+                >
+                cotação via whatsapp</span
               >
             </div>
           </div>
@@ -284,12 +273,13 @@
             </div>
 
             <div
-              class="card-pneu-categoria fundo-vermelho-card-categoria"
+              class="card-pneu-categoria botao-cotacao fundo-vermelho-card-categoria"
               onclick="filtrar()"
             >
-              <span class="text-uppercase"
-                ><img src="../assets/images/lupa.png" height="25px" alt="" />
-                buscar</span
+            <img src="../assets/images/lupa.png" height="18px" alt="" />
+              <span class="text-uppercase" 
+                >
+                cotação via whatsapp</span
               >
             </div>
           </div>
@@ -457,8 +447,8 @@
           class="text-ligth text-uppercase text-center btn btn-escolher-servico"
           onclick="cliqueAquiEVisiteNos()"
         >
-          Clique aqui e visite-nos
-        </button>
+        Clique aqui e faça um tour 360º
+      </button>
       </div>
     </div>
     <div class="container-fluid">
@@ -466,7 +456,7 @@
         <div
           class="col-12 col-md-6 centralizar p-2 cursor-pointer"
           style="background-color: #d9dfeb"
-          onclick="cliqueAquiEVisiteNos()"
+          onclick="comoChegar()"
         >
           <img
             src="../../assets/images/mapa-como-chegar.png"
@@ -2084,7 +2074,8 @@
           mapa: "https://www.google.com/maps/embed?pb=!4v1683041366117!6m8!1m7!1sCAoSLEFGMVFpcE9reEdpWW5uWFRRcmxIVE5Oa18wSUJvQUNsWTFPb201a1l2VkRi!2m2!1d-8.061961634472938!2d-34.90648969281649!3f215.6985568448817!4f-4.0311098999818995!5f0.4000000000000002",
           mapaLink:
             "https://www.google.com/maps/@-8.0619616,-34.9064897,0a,64.6y,188.62h,83.76t/data=!3m4!1e1!3m2!1sAF1QipOkxGiYnnXTQrlHTNNk_0IBoAClY1Oom5kYvVDb!2e10?source=apiv3",
-        },
+          visiteNos: 'https://www.google.com/maps/place/PAM+Pneus+Abdias+de+Carvalho/@-8.0617737,-34.9091139,17z/data=!3m1!4b1!4m14!1m7!3m6!1s0x7ab193c05a725ad:0x961a5964e378cdbc!2sPAM+Pneus+Abdias+de+Carvalho!8m2!3d-8.061779!4d-34.906539!16s%2Fg%2F11p17yhfvj!3m5!1s0x7ab193c05a725ad:0x961a5964e378cdbc!8m2!3d-8.061779!4d-34.906539!16s%2Fg%2F11p17yhfvj'
+          },
         {
           id: "caxanga",
           unidade: "Caxangá",
@@ -2093,7 +2084,8 @@
           mapa: "https://www.google.com/maps/embed?pb=!4v1683041507775!6m8!1m7!1sCAoSLEFGMVFpcFBxOEtWTVhVTHVGc29aM2RLRFY2cDlNVmZuZnJNTmM5TG1yNGJK!2m2!1d-8.053943486389596!2d-34.91532247184882!3f211.44269926941777!4f-6.653067875829578!5f0.4000000000000002",
           mapaLink:
             "https://www.google.com/maps/@-8.0539435,-34.9153225,0a,97.3y,211.44h,83.35t/data=!3m4!1e1!3m2!1sAF1QipPq8KVMXULuFsoZ3dKDV6p9MVfnfrMNc9Lmr4bJ!2e10?source=apiv3",
-        },
+          visiteNos: 'https://www.google.com/maps/place/PAM+Pneus+Caxanga/@-8.0539692,-34.9199506,17z/data=!3m1!4b1!4m6!3m5!1s0x7ab1991019f2003:0xc471ec3e5b732e52!8m2!3d-8.0539745!4d-34.9153372!16s%2Fg%2F11jyjd732j'
+          },
         {
           id: "imbiribeira",
           unidade: "Imbiribeira",
@@ -2102,6 +2094,7 @@
           mapa: "https://www.google.com/maps/embed?pb=!4v1683041468929!6m8!1m7!1sCAoSLEFGMVFpcFBCMzZGVUQwRGQya0JXa1p6RGFmQXRlUHdRZTJBbnQzUjRkU0xj!2m2!1d-8.10598636227711!2d-34.91061624637893!3f288.86573079903684!4f-1.2886051734642336!5f0.4000000000000002",
           mapaLink:
             "https://www.google.com/maps/@-8.1059864,-34.9106162,0a,97.3y,288.87h,88.71t/data=!3m4!1e1!3m2!1sAF1QipPB36FUD0Dd2kBWkZzDafAtePwQe2Ant3R4dSLc!2e10?source=apiv3",
+            visiteNos: 'https://www.google.com/maps/place/PAM+Pneus+Imbiribeira/@-8.1059116,-34.9135809,17z/data=!3m1!4b1!4m6!3m5!1s0x7ab1efebf5d5d11:0x805e73b01ba3a810!8m2!3d-8.1059169!4d-34.911006!16s%2Fg%2F1tfkwj03'
         },
         {
           id: "guarabira",
@@ -2111,6 +2104,7 @@
           mapa: "https://www.google.com/maps/embed?pb=!4v1683041538390!6m8!1m7!1sCAoSLEFGMVFpcE1TY0RmcmV4aHFVTFlYQTNURTRDU3ktR3dyTllrNEF0VTlFTmls!2m2!1d-6.858889000148992!2d-35.49597777554669!3f78.74918048455515!4f-5.458507976104741!5f0.4000000000000002",
           mapaLink:
             "https://www.google.com/maps/@-6.858889,-35.4959778,0a,97.3y,78.75h,84.54t/data=!3m4!1e1!3m2!1sAF1QipMScDfrexhqULYXA3TE4CSy-GwrNYk4AtU9ENil!2e10?source=apiv3",
+            visiteNos: 'https://www.google.com/maps/place/PAM+Pneus+Guarabira/@-6.8586756,-35.498735,17z/data=!3m1!4b1!4m6!3m5!1s0x7adb56711c04b6b:0x1bc611607d8b2c41!8m2!3d-6.8586809!4d-35.4961601!16s%2Fg%2F11k53tlm7j'
         },
       ];
       var btnHamburguer = document.getElementById("hamburguer");
@@ -2169,6 +2163,21 @@
           "_blank"
         );
       // FIM-----------------btn on clicks dos botoes dos cards-------------------------------------------
+
+      function comoChegar(){
+        const idParam = urlParams.get("id");
+        if (idParam) {
+          let lugar = lugares.filter((x) => x.id == idParam)[0];
+          if (lugar) {
+            window.open(lugar.visiteNos, "_blank");
+            return;
+          }
+        }
+        window.open(
+          "https://www.google.com/maps/@-7.9122297,-34.9005901,3a,55y,239.36h,92.57t/data=!3m6!1e1!3m4!1smHI3LI4wnRtbj1O-RWYnLw!2e0!7i16384!8i8192",
+          "_blank"
+        );
+      }
 
       function cliqueAquiEVisiteNos() {
         const idParam = urlParams.get("id");
@@ -2296,13 +2305,12 @@
           let larguraValue = document.getElementById("larguraInput").value;
           let perfilValue = document.getElementById("perfilInput").value;
           let aroValue = document.getElementById("aroInput").value;
-          let marcaValue = document.getElementById("marcaInput").value;
 
           if (
             !tipoValue &&
             !larguraValue &&
             !perfilValue &&
-            !aroValue & !marcaValue
+            !aroValue 
           ) {
             alert("selecione algum filtro");
             return;
@@ -2324,9 +2332,7 @@
             mensagemWhatsapp += ` do aro ${aroValue} `;
           }
 
-          if (marcaValue) {
-            mensagemWhatsapp += ` da marca ${marcaValue} `;
-          }
+          
         }
 
         window.open(

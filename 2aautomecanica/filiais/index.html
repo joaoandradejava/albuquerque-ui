@@ -83,9 +83,9 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <h2 class="text-center mt-3">
-              Ache a cotação certa para o seu veículo
-            </h2>
+            <h2 class="text-center mt-3"><i>
+              Receba agora sua cotação via Whatsapp
+            </i></h2>
           </div>
         </div>
         <div class="row mt-3">
@@ -211,27 +211,16 @@
               </select>
             </div>
 
-            <div class="card-pneu-categoria">
-              <select id="marcaInput" class="form-control w-full xl:w-4/12">
-                <option value="">Marca</option>
-                <option value="Bridgestone">Bridgestone</option>
-                <option value="Continental">Continental</option>
-                <option value="Dunlop">Dunlop</option>
-                <option value="Goodyear">Goodyear</option>
-                <option value="Hankook">Hankook</option>
-                <option value="Michelin">Michelin</option>
-                <option value="Pirelli">Pirelli</option>
-                <option value="Yokohama">Yokohama</option>
-              </select>
-            </div>
+            
 
             <div
-              class="card-pneu-categoria fundo-vermelho-card-categoria"
+              class="card-pneu-categoria botao-cotacao fundo-vermelho-card-categoria"
               onclick="filtrar()"
             >
-              <span class="text-uppercase"
-                ><img src="../assets/images/lupa.png" height="25px" alt="" />
-                buscar</span
+            <img src="../assets/images/lupa.png" height="18px" alt="" />
+              <span class="text-uppercase" 
+                >
+                cotação via whatsapp</span
               >
             </div>
           </div>
@@ -280,12 +269,13 @@
             </div>
 
             <div
-              class="card-pneu-categoria fundo-vermelho-card-categoria"
+              class="card-pneu-categoria botao-cotacao fundo-vermelho-card-categoria"
               onclick="filtrar()"
             >
-              <span class="text-uppercase"
-                ><img src="../assets/images/lupa.png" height="25px" alt="" />
-                buscar</span
+            <img src="../assets/images/lupa.png" height="18px" alt="" />
+              <span class="text-uppercase" 
+                >
+                cotação via whatsapp</span
               >
             </div>
           </div>
@@ -453,8 +443,8 @@
           class="text-ligth text-uppercase text-center btn btn-escolher-servico"
           onclick="cliqueAquiEVisiteNos()"
         >
-          Clique aqui e visite-nos
-        </button>
+        Clique aqui e faça um tour 360º
+      </button>
       </div>
     </div>
     <div class="container-fluid">
@@ -462,7 +452,7 @@
         <div
           class="col-12 col-md-6 centralizar p-2 cursor-pointer"
           style="background-color: #d9dfeb"
-          onclick="cliqueAquiEVisiteNos()"
+          onclick="comoChegar()"
         >
           <img
             src="../../assets/images/mapa-como-chegar.png"
@@ -2078,7 +2068,8 @@
           imagemUrl: "../../assets/images/2A - Prazeres.jpg",
           endereco: "Av Marechal Masc de Moraes ,1736, 51170-000",
           mapa: "https://www.google.com/maps/embed?pb=!4v1683047401200!6m8!1m7!1sCAoSLEFGMVFpcE1Nc3BwbHhNVWhDc0xkR3l6akVvc3Mya2pQZGZ5ODFKMTJadDBf!2m2!1d-8.096961522242347!2d-34.91011989708425!3f311.6417821464341!4f10.912622063040516!5f0.4000000000000002",
-          mapaLink: "https://www.google.com/maps/@-8.0969615,-34.9101199,3a,90y,302.96h,97.45t/data=!3m7!1e1!3m5!1sAF1QipMMspplxMUhCsLdGyzjEoss2kjPdfy81J12Zt0_!2e10!3e12!7i6000!8i3000"
+          mapaLink: "https://www.google.com/maps/@-8.0969615,-34.9101199,3a,90y,302.96h,97.45t/data=!3m7!1e1!3m5!1sAF1QipMMspplxMUhCsLdGyzjEoss2kjPdfy81J12Zt0_!2e10!3e12!7i6000!8i3000",
+          visiteNos: 'https://www.google.com/maps/place/2A+Automec%C3%A2nica+Continental+Imbiribeira/@-8.0969405,-34.9127453,17z/data=!3m1!4b1!4m6!3m5!1s0x7ab1f09342450c1:0xa8a8045cd39956ef!8m2!3d-8.0969458!4d-34.9101704!16s%2Fg%2F11mvg2t3hw'
         },
         {
           id: "jaboatao",
@@ -2087,7 +2078,8 @@
           endereco:
             "Av Dr Júlio Maranhão, 306, 54325-440",
           mapa: "https://www.google.com/maps/embed?pb=!4v1683047358153!6m8!1m7!1sCAoSLEFGMVFpcE5nRWcxSzNxNFRiMDRCZktTWXZXajkta1ZaM3gyT1B3ei10VWdF!2m2!1d-8.161077915616401!2d-34.92956017324614!3f251.16906137005162!4f-3.931316326929945!5f0.4000000000000002",
-          mapaLink: 'https://www.google.com/maps/@-8.1610779,-34.9295602,0a,112.6y,267.35h,84.68t/data=!3m4!1e1!3m2!1sAF1QipNgEg1K3q4Tb04BfKSYvWj9-kVZ3x2OPwz-tUgE!2e10?source=apiv3'
+          mapaLink: 'https://www.google.com/maps/@-8.1610779,-34.9295602,0a,112.6y,267.35h,84.68t/data=!3m4!1e1!3m2!1sAF1QipNgEg1K3q4Tb04BfKSYvWj9-kVZ3x2OPwz-tUgE!2e10?source=apiv3',
+          visiteNos: 'https://www.google.com/maps/place/2A+Automec%C3%A2nica+Continental+Prazeres/@-8.1611454,-34.9321642,17z/data=!3m1!4b1!4m6!3m5!1s0x7ab1e2d296e1a29:0x30977c0a484fd5ab!8m2!3d-8.1611507!4d-34.9295893!16s%2Fg%2F11cs3q7jv4'
         },
         {
           id: "caruaru",
@@ -2095,7 +2087,8 @@
           imagemUrl: "../../assets/images/2A - CARUARU.jpg",
           endereco: "Av Dos Estados, 1950,55014-545",
           mapa: "https://www.google.com/maps/embed?pb=!4v1683041931917!6m8!1m7!1sCAoSLEFGMVFpcE5Mc0J5RW5LaDZ5anVPd2hCSXVrNTVlc3dDZl9sWnhnS0NkNng5!2m2!1d-8.267643425565838!2d-35.97958943150965!3f41.347969080877476!4f2.473880981829879!5f0.4000000000000002",
-          mapaLink: 'https://www.google.com/maps/@-8.2676434,-35.9795894,0a,97.3y,41.35h,92.47t/data=!3m4!1e1!3m2!1sAF1QipNLsByEnKh6yjuOwhBIuk55eswCf_lZxgKCd6x9!2e10?source=apiv3'
+          mapaLink: 'https://www.google.com/maps/@-8.2676434,-35.9795894,0a,97.3y,41.35h,92.47t/data=!3m4!1e1!3m2!1sAF1QipNLsByEnKh6yjuOwhBIuk55eswCf_lZxgKCd6x9!2e10?source=apiv3',
+          visiteNos: 'https://www.google.com/maps/place/2A+Automec%C3%A2nica+Continental+Caruaru/@-8.2676695,-35.9820571,17z/data=!3m1!4b1!4m6!3m5!1s0x7a98bbc6d6088b3:0x18b4bebc7eb0d0cc!8m2!3d-8.2676748!4d-35.9794822!16s%2Fg%2F11rzsxcqg0'
         },
       
       ];
@@ -2155,6 +2148,21 @@
           "_blank"
         );
       // FIM-----------------btn on clicks dos botoes dos cards-------------------------------------------
+
+      function comoChegar(){
+        const idParam = urlParams.get("id");
+        if (idParam) {
+          let lugar = lugares.filter((x) => x.id == idParam)[0];
+          if (lugar) {
+            window.open(lugar.visiteNos, "_blank");
+            return;
+          }
+        }
+        window.open(
+          "https://www.google.com/maps/@-7.9122297,-34.9005901,3a,55y,239.36h,92.57t/data=!3m6!1e1!3m4!1smHI3LI4wnRtbj1O-RWYnLw!2e0!7i16384!8i8192",
+          "_blank"
+        );
+      }
 
       function cliqueAquiEVisiteNos() {
         const idParam = urlParams.get("id");
@@ -2282,13 +2290,12 @@
           let larguraValue = document.getElementById("larguraInput").value;
           let perfilValue = document.getElementById("perfilInput").value;
           let aroValue = document.getElementById("aroInput").value;
-          let marcaValue = document.getElementById("marcaInput").value;
 
           if (
             !tipoValue &&
             !larguraValue &&
             !perfilValue &&
-            !aroValue & !marcaValue
+            !aroValue 
           ) {
             alert("selecione algum filtro");
             return;
@@ -2310,9 +2317,7 @@
             mensagemWhatsapp += ` do aro ${aroValue} `;
           }
 
-          if (marcaValue) {
-            mensagemWhatsapp += ` da marca ${marcaValue} `;
-          }
+          
         }
 
         window.open(
