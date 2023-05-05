@@ -2164,6 +2164,12 @@
         );
       // FIM-----------------btn on clicks dos botoes dos cards-------------------------------------------
 
+        const srcIframe = 'https://www.google.com/maps/embed?pb=!4v1683041141469!6m8!1m7!1sCAoSLEFGMVFpcFBmT3NYR0tQeXpWa29IaExWUlo2aHM1UEZ5dXRMa0FaT21LWk5s!2m2!1d-8.086107336622533!2d-34.94539620733344!3f298.09031414454194!4f-14.841809599735384!5f0.4000000000000002'
+
+       const iframeMapa =  document.getElementById('iframeMap');
+       iframeMapa.addEventListener('load', function() {
+        iframeMapa.src = srcIframe;
+      });
       function comoChegar(){
         const idParam = urlParams.get("id");
         if (idParam) {
@@ -2204,7 +2210,7 @@
 
         return numeroTelefone.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1) $2-$3");
       }
-
+      
       function atualizarLugar() {
         const idParam = urlParams.get("id");
 
@@ -2215,8 +2221,12 @@
               lugar.unidade);
             let endereco = (document.getElementById("enderecoHtml").innerHTML =
               lugar.endereco);
-            let mapa = (document.getElementById("iframeMap").src = lugar.mapa);
-            document.getElementById;
+            if(lugar.mapa) {
+              let mapa = (document.getElementById("iframeMap").src = lugar.mapa);
+              srcIframe = lugar.mapa
+            }
+            
+
             let fundoImagem = (document.getElementById(
               "fundoImagemLoja"
             ).style.backgroundImage = `url('${lugar.imagemUrl}')`);
