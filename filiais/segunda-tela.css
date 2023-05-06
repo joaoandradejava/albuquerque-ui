@@ -53,14 +53,12 @@ body {
   transition: transform 0.4s;
   transform-style: preserve-3d;
   -webkit-transition: all .4s ease-in-out;
-	-webkit-transform-style: preserve-3d;
-
+  -webkit-transform-style: preserve-3d;
 }
 
 .back {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
