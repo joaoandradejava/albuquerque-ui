@@ -200,11 +200,16 @@ body {
   margin: 10px 0px;
   float: left;
   transition: transform 0.4s;
+  -webkit-transform-style: preserve-3d;
+
   transform-style: preserve-3d;
+  
 }
 
 .back {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -231,11 +236,15 @@ body {
 .back {
   position: absolute;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
 }
 
 .card:hover {
   cursor: pointer;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+
   transition: transform 0.5s;
 }
 
