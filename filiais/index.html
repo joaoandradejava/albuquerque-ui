@@ -491,7 +491,7 @@
       </div>
     </div>
 
-    <div class="container p-4 p-md-1">
+    <div class="container p-4 p-md-1 mb-3">
       <div class="row mb-3">
         <div class="col">
           <span class="label-avaliacao"
@@ -640,7 +640,85 @@
       </div>
     </div>
 
-    <div class="container-fluid fundo-escuro text-light p-5 mt-4">
+    <div id="footerSecundario">
+      <!-- INICIO -->
+      <div class="container-fluid p-2 p-md-4 text-light fundo-footer">
+        <div class="row mt-3 mb-2">
+          <div class="col" style="display: flex; justify-content: center">
+            <img
+              src="../assets/images/logoGTopo.png"
+              width="300px"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 mb-3">
+            <h2 class="text-center">Somos o Grupo G Albuquerque</h2>
+            <span class="text-center d-block"
+              >Nosso objetivo é proporcionar uma excelente experiência de
+              atendimento e produtos para nossos clientes. Nossa equipe de
+              profissionais altamente capacitados está pronta para oferecer
+              soluções eficientes para manter seu veículo em ótimas condições.
+              Oferecemos serviços de manutenção preventiva, corretiva, reparos
+              elétricos e mecânicos, além de pneus. Nosso compromisso é oferecer
+              o melhor serviço possível com atendimento personalizado.
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- INICIO -->
+
+      <div
+        class="pt-2"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          background-color: #aab2ba;
+        "
+      >
+        <div style="flex-grow: 3">
+          <div
+            style="
+              width: 61%;
+              margin: 0 auto;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              flex-wrap: wrap;
+              align-items: center;
+            "
+          >
+            <img src="../assets/images/logo1.png" alt="" />
+            <img src="../assets/images/logo4.png" alt="" />
+            <img src="../assets/images/logo6.png" alt="" />
+            <img src="../assets/images/logo8.png" alt="" />
+            <img src="../assets/images/logo3.png" alt="" />
+            <img src="../assets/images/logo7.png" alt="" />
+            <img src="../assets/images/logo2.png" alt="" />
+            <img src="../assets/images/logo5.png" alt="" />
+            <img src="../assets/images/logo10.png" alt="" />
+            <img src="../assets/images/logo9.png" alt="" />
+          </div>
+        </div>
+        <div
+          style="
+            flex-grow: 1;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+          "
+          class="d-none d-md-block"
+        >
+          <img src="../assets/images/pnues.png" width="100px" alt="qwqw" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid fundo-escuro text-light p-5">
       <div class="container">
         <div class="row justify-content-center">
           <div
@@ -703,15 +781,14 @@
     </div>
 
     <button
-      type="button"
-      class="btn-flutuante"
-      data-bs-toggle="modal"
-      data-bs-target="#popupsobre"
-    >
-      <img src="../assets/images/btn-g-albu.png" height="50px" alt="" />
-    </button>
+    type="button"
+    class="btn-flutuante"
+    onclick="clicarAparecerFooterSecundario()"
+  >
+    <img src="../assets/images/btn-g-albu.png" height="50px" alt="" />
+  </button>
 
-    <div
+    <!-- <div
       class="modal fade"
       id="popupsobre"
       tabindex="-1"
@@ -763,7 +840,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <script>
       const marcas = [
@@ -2161,6 +2238,19 @@
       // FIM-----------------btn on clicks dos botoes dos cards-------------------------------------------
 
       const iframeMapa = document.getElementById("iframeMap");
+      let footerSecundario = document.getElementById("footerSecundario");
+      let isAparecerFooterSecundario = false;
+
+      footerSecundario.hidden = !isAparecerFooterSecundario;
+
+      function clicarAparecerFooterSecundario() {
+        isAparecerFooterSecundario = !isAparecerFooterSecundario;
+        footerSecundario.hidden = !isAparecerFooterSecundario;
+        document
+          .getElementById("footerSecundario")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
 
       iframeMapa.addEventListener("onload", function () {
         const idParam = urlParams.get("id");
