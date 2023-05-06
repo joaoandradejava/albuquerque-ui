@@ -236,8 +236,7 @@ body {
 .back {
   position: absolute;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-
+  -webkit-backface-visibility: hidden; 
 }
 
 .card:hover {
