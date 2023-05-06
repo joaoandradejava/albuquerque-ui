@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./topo-styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
@@ -498,6 +500,23 @@
         </div>
         <div class="flip-card-back">
           <h2>Hello!</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-100 h-screen flex flex-col justify-center items-center">
+      <div class="relative w-64 h-64">
+        <div class="absolute inset-0 bg-blue-500 transform rotate-y-0 transition duration-500 ease-in-out card">
+          <div class="absolute inset-0 bg-gray-50 opacity-75"></div>
+          <div class="absolute inset-0 p-6 flex flex-col justify-center items-center">
+            <h2 class="text-2xl text-gray-900 font-bold mb-2">Hello</h2>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-blue-500 transform rotate-y-180 transition duration-500 ease-in-out card">
+          <div class="absolute inset-0 bg-gray-50 opacity-75"></div>
+          <div class="absolute inset-0 p-6 flex flex-col justify-center items-center">
+            <h2 class="text-2xl text-gray-900 font-bold mb-2">Olá Mundo</h2>
+          </div>
         </div>
       </div>
     </div>
