@@ -53,8 +53,13 @@ body {
   }
 }
 
+.btn-escolher-servico {
+  background-color: #ca171d !important;
+  color: white !important;
+}
+
 .fundo-footer {
-  background-image: url("assets/images/pneu-footer.png") !important;
+  background-image: url("../assets/images/pneu-footer.png") !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

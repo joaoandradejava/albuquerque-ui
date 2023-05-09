@@ -69,6 +69,13 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.fundo-footer {
+  background-image: url("../../assets/images/pneu-footer.png") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .botao-cotacao {
   width: 200px !important;
   font-size: 0.8rem;
