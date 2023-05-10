@@ -440,3 +440,9 @@ body {
     height: 15px !important;
   }
 }
+
+
+.btn-escolher-servico {
+  background-color: #ca171d;
+  color: white;
+}
