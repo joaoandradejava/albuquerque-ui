@@ -371,6 +371,10 @@ body {
   cursor: inherit;
 }
 
+.btn {
+  background-color: #70A958 !important ;
+}
+
 .botao-cotacao {
   width: 200px !important;
   font-size: 0.8rem;
