@@ -415,6 +415,21 @@ body {
   cursor: pointer;
 }
 
+.selecionado {
+  background-color: gray;
+}
+
+.selecionado:hover {
+  cursor: inherit;
+}
+
+.botao-cotacao {
+  width: 200px !important;
+  font-size: 0.8rem;
+  gap: 30px;
+  padding: 10px;
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
   .card-pneu {
     width: 100%;
