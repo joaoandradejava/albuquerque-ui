@@ -2114,7 +2114,6 @@
       let footerSecundario = document.getElementById("footerSecundario");
       let isAparecerFooterSecundario = false;
 
-      footerSecundario.hidden = !isAparecerFooterSecundario;
 
       function clicarAparecerFooterSecundario() {
         isAparecerFooterSecundario = !isAparecerFooterSecundario;
@@ -2311,6 +2310,9 @@
       let btnPernambuco = document.getElementById("btnPernambuco");
       let btnParaiba = document.getElementById("btnParaiba");
 
+      let isShowPernambucoDiv = true;
+      atualizarOAparecimentoDasListasDePernambucoEParaiba();
+
       function showPernambuco() {
         isShowPernambucoDiv = true;
         atualizarOAparecimentoDasListasDePernambucoEParaiba();
@@ -2319,6 +2321,19 @@
       function showParaiba() {
         isShowPernambucoDiv = false;
         atualizarOAparecimentoDasListasDePernambucoEParaiba();
+      }
+
+      function atualizarOAparecimentoDasListasDePernambucoEParaiba() {
+        listaParaibaElement.hidden = isShowPernambucoDiv;
+        listaPernambucoElement.hidden = !isShowPernambucoDiv;
+
+        if (isShowPernambucoDiv) {
+          btnPernambuco.classList.add("btn-azul");
+          btnParaiba.classList.remove("btn-azul");
+        } else {
+          btnPernambuco.classList.remove("btn-azul");
+          btnParaiba.classList.add("btn-azul");
+        }
       }
     </script>
 
