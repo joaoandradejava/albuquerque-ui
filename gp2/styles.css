@@ -376,6 +376,7 @@ body {
   font-size: 0.8rem;
   gap: 30px;
   padding: 10px;
+  text-align: center !important;
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {

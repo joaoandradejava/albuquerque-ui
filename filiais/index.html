@@ -2229,15 +2229,8 @@
       let footerSecundario = document.getElementById("footerSecundario");
       let isAparecerFooterSecundario = false;
 
-      footerSecundario.hidden = !isAparecerFooterSecundario;
 
-      function clicarAparecerFooterSecundario() {
-        isAparecerFooterSecundario = !isAparecerFooterSecundario;
-        footerSecundario.hidden = !isAparecerFooterSecundario;
-        document
-          .getElementById("footerSecundario")
-          .scrollIntoView({ behavior: "smooth" });
-      }
+      
 
       iframeMapa.addEventListener("onload", function () {
         const idParam = urlParams.get("id");

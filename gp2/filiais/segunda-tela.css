@@ -74,6 +74,7 @@ body {
   font-size: 0.8rem;
   gap: 30px;
   padding: 10px;
+  text-align: center !important;
 }
 
 .btn-azul {
