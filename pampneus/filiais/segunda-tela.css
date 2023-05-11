@@ -63,7 +63,7 @@ body {
 }
 
 .btn-azul {
-  background-color: #FF0000;
+  background-color: #ca171d;
   color: white;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -85,7 +85,7 @@ body {
 }
 
 .btn-azul:hover {
-  background-color: #df0606;
+  background-color: #ca171d;
   color: white;
 }
 
@@ -160,7 +160,7 @@ body {
 }
 
 .btn-escolher-servico:hover {
-  background-color: rgb(172, 1, 1) !important ;
+  background-color: #ca171d !important ;
   color: white;
 }
 
@@ -332,6 +332,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-radius: 10px;
 }
 
 .card-pneu {
@@ -344,11 +345,13 @@ body {
   align-items: center;
   font-weight: bold;
   margin: 5px;
+  border-radius: 10px;
   padding: 5px;
 }
 
 .card-pneu:hover {
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .card-pneu-categoria {
@@ -361,40 +364,49 @@ body {
   align-items: center;
   font-weight: bold;
   margin: 5px;
+  border-radius: 10px;
 }
 
 .card-pneu-categoria select {
   text-align: center;
   font-weight: bold;
+  border-radius: 10px;
 }
 
 .card-pneu-categoria select:hover {
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .card-pneu-categoria select:disabled {
   cursor: not-allowed;
+  border-radius: 10px;
 }
 
 .card-pneu-categoria select option {
   font-weight: bold;
+  border-radius: 10px;
 }
 
 .fundo-vermelho-card-categoria {
   background-color: #ca171d;
   color: white;
+  border-radius: 10px;
 }
 
 .card-pneu-categoria:hover {
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .selecionado {
   background-color: gray;
+  border-radius: 10px;
 }
 
 .selecionado:hover {
   cursor: inherit;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
