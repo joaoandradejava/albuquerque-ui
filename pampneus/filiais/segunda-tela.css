@@ -80,6 +80,9 @@ align-items: center;
   align-items: center; 
 }
 
+.card.flipped {
+  transform: rotateY(180deg);
+}
 .btn-azul {
   background-color: #ca171d;
   color: white;

@@ -316,7 +316,6 @@
                   </button>
                 </div>
               </div>
-              
             </div>
             <div class="card c-2-fundo text-light center-all">
               <div class="front">
@@ -722,20 +721,19 @@
                 align-items: center;
               "
             >
-                <button
+              <button
                 onclick="window.open('https://wa.me/558192306706?text=Olá, estou com interesse em saber mais sobre seus serviços.','_blank')"
-
-                  class="btn"
-                  style="
-                    width: 160px;
-                    padding: 5px;
-                    border: none;
-                    background-color: #ca171d;
-                    color: white;
-                  "
-                >
-                  Contatos
-                </button>
+                class="btn"
+                style="
+                  width: 160px;
+                  padding: 5px;
+                  border: none;
+                  background-color: #ca171d;
+                  color: white;
+                "
+              >
+                Contatos
+              </button>
             </div>
           </div>
         </div>
@@ -2157,8 +2155,7 @@
           mapa: "https://www.google.com/maps/embed?pb=!4v1683041366117!6m8!1m7!1sCAoSLEFGMVFpcE9reEdpWW5uWFRRcmxIVE5Oa18wSUJvQUNsWTFPb201a1l2VkRi!2m2!1d-8.061961634472938!2d-34.90648969281649!3f215.6985568448817!4f-4.0311098999818995!5f0.4000000000000002",
           mapaLink:
             "https://www.google.com/maps/@-8.0619616,-34.9064897,0a,64.6y,188.62h,83.76t/data=!3m4!1e1!3m2!1sAF1QipOkxGiYnnXTQrlHTNNk_0IBoAClY1Oom5kYvVDb!2e10?source=apiv3",
-          visiteNos:
-            "https://g.page/r/CbzNeONkWRqWEBM/review",
+          visiteNos: "https://g.page/r/CbzNeONkWRqWEBM/review",
           linkAvaliacao: "https://g.page/r/CbzNeONkWRqWEBM/review",
         },
         {
@@ -2255,6 +2252,12 @@
       // FIM-----------------btn on clicks dos botoes dos cards-------------------------------------------
 
       const iframeMapa = document.getElementById("iframeMap");
+
+      const card = document.querySelector(".card-filho");
+
+      card.addEventListener("click", function () {
+        card.classList.toggle("flipped");
+      });
 
       iframeMapa.addEventListener("onload", function () {
         const idParam = urlParams.get("id");
