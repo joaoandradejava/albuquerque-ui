@@ -661,7 +661,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div
-            class="col-12 col-md-3 d-flex justify-content-center align-items-center mb-4 mb-md-0"
+            class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-4 mb-md-0"
           >
             <img
               src="../../assets/images/pam-pneus-logo.png"
@@ -674,21 +674,6 @@
             style="font-size: 20px"
             class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
           >
-            <span class="text-uppercase fw-bold">Início</span>
-            <ul class="options-footer text-center text-md-start">
-              <li><a href="">Home</a></li>
-            </ul>
-          </div>
-
-          <div
-            style="font-size: 20px"
-            class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center d-md-block mb-4 mb-md-0"
-          >
-            <span class="text-uppercase fw-bold">Suporte</span>
-            <ul class="options-footer text-center text-md-start">
-              <li><span>Telefones</span></li>
-            </ul>
-          </div>
 
           <div
             style="background-color: black"
@@ -744,7 +729,7 @@
 
                   class="btn"
                   style="
-                    width: 150px;
+                    width: 160px;
                     padding: 5px;
                     border: none;
                     background-color: #ca171d;
@@ -2175,7 +2160,7 @@
           mapaLink:
             "https://www.google.com/maps/@-8.0619616,-34.9064897,0a,64.6y,188.62h,83.76t/data=!3m4!1e1!3m2!1sAF1QipOkxGiYnnXTQrlHTNNk_0IBoAClY1Oom5kYvVDb!2e10?source=apiv3",
           visiteNos:
-            "https://www.google.com/maps/dir//pam+pneus+abdias+de+carvalho/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x7ab193c05a725ad:0x961a5964e378cdbc?sa=X&ved=2ahUKEwjarMD3keH8AhUuqpUCHRumDi8Q9Rd6BAg9EAU",
+            "https://g.page/r/CbzNeONkWRqWEBM/review",
           linkAvaliacao: "https://g.page/r/CbzNeONkWRqWEBM/review",
         },
         {
@@ -2339,7 +2324,14 @@
               lugar.unidade);
             let endereco = (document.getElementById("enderecoHtml").innerHTML =
               lugar.endereco);
-            let mapa = (document.getElementById("iframeMap").src = lugar.mapa);
+            if (lugar.mapa) {
+              let mapa = (document.getElementById("iframeMap").src =
+                lugar.mapa);
+              srcIframe = lugar.mapa;
+            }
+            document
+              .getElementById("linkAvaliacaoHref")
+              .setAttribute("href", lugar.linkAvaliacao);
             let fundoImagem = (document.getElementById(
               "fundoImagemLoja"
             ).style.backgroundImage = `url('${lugar.imagemUrl}')`);
