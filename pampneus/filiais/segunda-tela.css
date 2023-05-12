@@ -55,11 +55,11 @@ body {
 }
 
 .back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
 }
 
 .btn-azul {
@@ -95,14 +95,14 @@ body {
 
 .front,
 .back {
-  position: absolute;
-  backface-visibility: hidden;
+  position: absolute !important;
+  backface-visibility: hidden !important;
 }
 
 .card:hover {
   cursor: pointer;
-  transform: rotateY(180deg);
-  transition: transform 0.5s;
+  transform: rotateY(180deg) !important;
+  transition: transform 0.5s !important;
 }
 
 .center-all {
