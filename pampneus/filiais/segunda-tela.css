@@ -49,7 +49,10 @@ body {
   width: 240px;
   height: 240px;
   margin: 10px 0px;
+  float: left;
+  transition: transform 0.4s;
   perspective: 1000px !important;
+  transform-style: preserve-3d;
 }
 
 .card-filho {
@@ -63,6 +66,7 @@ body {
 
 .front {
   transform: rotateY(0deg) !important;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,18 +80,9 @@ body {
   align-items: center;
 }
 
-.card-filho.flipped {
+.card.flipped {
   transform: rotateY(180deg) !important;
 }
-
-.front,
-.back {
-  position: absolute !important;
-  width: 100% !important;
-  height: 100% !important;
-  backface-visibility: hidden !important;
-}
-
 .btn-azul {
   background-color: #ca171d;
   color: white;
@@ -119,7 +114,13 @@ body {
   font-size: 14px;
 }
 
-
+.front,
+.back {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  backface-visibility: hidden !important;
+}
 
 .card:hover {
   cursor: pointer;
