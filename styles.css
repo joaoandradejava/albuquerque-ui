@@ -65,7 +65,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 430px;
 }
 
 .confira-unidade-label {
@@ -185,7 +185,6 @@ body {
   margin: 20px 0px;
 }
 
-
 .cards {
   display: flex;
   align-items: center;
@@ -203,7 +202,6 @@ body {
   -webkit-transform-style: preserve-3d;
 
   transform-style: preserve-3d;
-  
 }
 
 .back {
@@ -236,7 +234,7 @@ body {
 .back {
   position: absolute;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden;
 }
 
 .card:hover {
@@ -296,15 +294,6 @@ body {
   font-size: 20px;
 }
 
-
-
-
-
-
-
-
-
-
 .flip-card {
   background-color: transparent;
   width: 300px;
@@ -320,12 +309,14 @@ body {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover,.flip-card:focus .flip-card-inner {
+.flip-card:hover,
+.flip-card:focus .flip-card-inner {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -351,7 +342,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   height: 330px;
-  
 }
 
 .cards-pneus {
@@ -392,7 +382,6 @@ body {
   margin: 5px;
   border-radius: 10px;
 }
-
 
 .card-pneu-categoria select {
   text-align: center;
@@ -455,7 +444,6 @@ body {
     height: 15px !important;
   }
 }
-
 
 .btn-escolher-servico {
   background-color: #ca171d;

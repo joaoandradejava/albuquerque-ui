@@ -393,6 +393,15 @@ body {
   text-align: center !important;
 }
 
+.cor-botao-visita {
+  background-color: #c72429 !important;
+}
+
+.cor-botao-visita:hover {
+  background-color: #811619 !important;
+}
+
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
   .card-pneu {
     width: 100%;

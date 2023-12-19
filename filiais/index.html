@@ -36,6 +36,7 @@
             <img
               src="../assets/images/logo-albuquerque.png"
               class="img-fluid"
+              width="280px"
               alt=""
             />
           </a>
@@ -637,7 +638,8 @@
             class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-4 mb-md-0"
           >
             <img
-              src="../assets/images/logo-albuquerque-branco.png"
+              src="../assets/images/logo-albuquerque.png"
+              width="280px"
               class="img-fluid"
               alt=""
             />
@@ -2117,6 +2119,17 @@
       const urlParams = new URLSearchParams(queryString);
 
       let lugares = [
+      {
+          id: "recife",
+          unidade: "Recife",
+          imagemUrl: "../assets/images/GP2 - Ipsep.jpg",
+          endereco: "Av Recife, 2305 - 51350-670",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1683041724837!6m8!1m7!1sCAoSLEFGMVFpcE5NLWNPMVJEdVg0TjUzcTMxTmdEYUpLcmVwNWd1em1CNElWTE5Y!2m2!1d-8.110577066477736!2d-34.92705991052049!3f238.084124570217!4f-7.6882864701312315!5f0.4000000000000002",
+          mapaLink:
+            "https://www.google.com/maps/@-8.1105771,-34.9270599,0a,97.3y,238.08h,82.31t/data=!3m4!1e1!3m2!1sAF1QipNM-cO1RDuX4N53q31NgDaJKrep5guzmB4IVLNX!2e10?source=apiv3",
+          visiteNos:
+            "https://www.google.com/maps/dir//gp2+oficina+recife/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x7ab1ff23581d2ef:0xdf11808e72ba7365?sa=X&ved=2ahUKEwjjrd7m5e_8AhWzlJUCHWA8D08Q9Rd6BAhBEAU",
+        },
         {
           id: "abreu",
           unidade: "Abreu e Lima",
@@ -2165,6 +2178,42 @@
           visiteNos:
             "https://www.google.com/maps/dir//G+ALBUQUERQUE+bAYEUX/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x7ace8ba5d88b03f:0xa892fac298ba6038?sa=X&ved=2ahUKEwjYk-nCkuH8AhX2qpUCHe6GD60Q9Rd6BAhOEAQ",
           linkAvaliacao: "https://g.page/r/CT9CQ5tb5gXeEBM/review",
+        },
+        {
+          id: "recife2",
+          unidade: "Recife",
+          imagemUrl: "../assets/images/2A - Prazeres.jpg",
+          endereco: "Av Marechal Masc de Moraes ,1736, 51170-000",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1683047401200!6m8!1m7!1sCAoSLEFGMVFpcE1Nc3BwbHhNVWhDc0xkR3l6akVvc3Mya2pQZGZ5ODFKMTJadDBf!2m2!1d-8.096961522242347!2d-34.91011989708425!3f311.6417821464341!4f10.912622063040516!5f0.4000000000000002",
+          mapaLink:
+            "https://www.google.com/maps/@-8.0969615,-34.9101199,3a,90y,302.96h,97.45t/data=!3m7!1e1!3m5!1sAF1QipMMspplxMUhCsLdGyzjEoss2kjPdfy81J12Zt0_!2e10!3e12!7i6000!8i3000",
+          visiteNos:
+            "https://www.google.com/maps/dir//a+automecanica+imbiribeira/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x7ab1f09342450c1:0xa8a8045cd39956ef?sa=X&ved=2ahUKEwipipSPkuH8AhWqpZUCHUotBmEQ9Rd6BAhQEAU",
+          linkAvaliacao: "https://g.page/r/Ce9WmdNcBKioEBM/review",
+        },
+        {
+          id: "jaboatao",
+          unidade: "Jaboatão",
+          imagemUrl: "../assets/images/2A - Imbiribeira.jpg",
+          endereco: "Av Dr Júlio Maranhão, 306, 54325-440",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1683047358153!6m8!1m7!1sCAoSLEFGMVFpcE5nRWcxSzNxNFRiMDRCZktTWXZXajkta1ZaM3gyT1B3ei10VWdF!2m2!1d-8.161077915616401!2d-34.92956017324614!3f251.16906137005162!4f-3.931316326929945!5f0.4000000000000002",
+          mapaLink:
+            "https://www.google.com/maps/@-8.1610779,-34.9295602,0a,112.6y,267.35h,84.68t/data=!3m4!1e1!3m2!1sAF1QipNgEg1K3q4Tb04BfKSYvWj9-kVZ3x2OPwz-tUgE!2e10?source=apiv3",
+          visiteNos:
+            "https://www.google.com/maps/dir//2A+AUTOMEC%C3%82NICA+Continental+-+Prazeres/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x7ab1e2d296e1a29:0x30977c0a484fd5ab?sa=X&hl=pt-BR&ved=2ahUKEwiErPSckuH8AhXSsJUCHVCQBpIQ9Rd6BAhXEAQ",
+          linkAvaliacao: "https://g.page/r/CavVT0gKfJcwEBM/review",
+        },
+        {
+          id: "caruaru",
+          unidade: "Caruaru",
+          imagemUrl: "../assets/images/2A - CARUARU.jpg",
+          endereco: "Av Dos Estados, 1950,55014-545",
+          mapa: "https://www.google.com/maps/embed?pb=!4v1683041931917!6m8!1m7!1sCAoSLEFGMVFpcE5Mc0J5RW5LaDZ5anVPd2hCSXVrNTVlc3dDZl9sWnhnS0NkNng5!2m2!1d-8.267643425565838!2d-35.97958943150965!3f41.347969080877476!4f2.473880981829879!5f0.4000000000000002",
+          mapaLink:
+            "https://www.google.com/maps/@-8.2676434,-35.9795894,0a,97.3y,41.35h,92.47t/data=!3m4!1e1!3m2!1sAF1QipNLsByEnKh6yjuOwhBIuk55eswCf_lZxgKCd6x9!2e10?source=apiv3",
+          visiteNos:
+            "https://www.google.com/maps/dir//2A+AUTOMEC%C3%82NICA+Continental+-+Caruaru/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x7a98bbc6d6088b3:0x18b4bebc7eb0d0cc?sa=X&hl=pt-BR&ved=2ahUKEwjMhNmkkuH8AhUap5UCHaY0A1wQ9Rd6BAhREAQ",
+          linkAvaliacao: "https://g.page/r/CczQsH68vrQYEBM/review",
         },
       ];
       var btnHamburguer = document.getElementById("hamburguer");

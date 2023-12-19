@@ -13,6 +13,14 @@ body {
   overflow-x: hidden;
 }
 
+.cor-botao-visita {
+  background-color: #c72429 !important;
+}
+
+.cor-botao-visita:hover {
+  background-color: #811619 !important;
+}
+
 .fundo {
   background: url("../assets/images/LojaTopoGradienteGP2.png");
   background-size: cover;
